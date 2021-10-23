@@ -14,6 +14,14 @@ namespace Hilton.View
 {
     public partial class frmInicioSesion : Form
     {
+        //Atributos proximos a usar para validar el tipo de usuario que entro
+        public static string IdUsuario { get ; set; }
+        public static string Nombre { get ; set; }
+
+        public static string CodigoUsuario { get; set; }
+
+        public static string Rol;
+
         public frmInicioSesion()
         {
             InitializeComponent();
@@ -36,7 +44,7 @@ namespace Hilton.View
                     {
 
                         MessageBox.Show("Bienvenido al Sistema", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Form1 fp = new Form1();
+                        FrmPrincipal fp = new FrmPrincipal();
                         fp.Show();
                         this.Hide();
                     }

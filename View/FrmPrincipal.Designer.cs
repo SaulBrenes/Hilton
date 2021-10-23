@@ -1,7 +1,7 @@
 ﻿
 namespace Hilton
 {
-    partial class Form1
+    partial class FrmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -39,16 +39,16 @@ namespace Hilton
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cancelacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosContradosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manetenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contratacionesExternasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.PagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manetenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,11 +136,22 @@ namespace Hilton
             this.reservasToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.reservasToolStripMenuItem.Text = "Reservas";
             // 
-            // cancelacionesToolStripMenuItem
+            // serviciosContradosToolStripMenuItem
             // 
-            this.cancelacionesToolStripMenuItem.Name = "cancelacionesToolStripMenuItem";
-            this.cancelacionesToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.cancelacionesToolStripMenuItem.Text = "Cancelaciones";
+            this.serviciosContradosToolStripMenuItem.Name = "serviciosContradosToolStripMenuItem";
+            this.serviciosContradosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.serviciosContradosToolStripMenuItem.Text = "Servicios Contratados";
+            // 
+            // contratacionesExternasToolStripMenuItem
+            // 
+            this.contratacionesExternasToolStripMenuItem.Name = "contratacionesExternasToolStripMenuItem";
+            this.contratacionesExternasToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.contratacionesExternasToolStripMenuItem.Text = "Contrataciones Externas";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(198, 6);
             // 
             // PagosToolStripMenuItem
             // 
@@ -148,23 +159,17 @@ namespace Hilton
             this.PagosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.PagosToolStripMenuItem.Text = "Pagos";
             // 
-            // serviciosContradosToolStripMenuItem
+            // cancelacionesToolStripMenuItem
             // 
-            this.serviciosContradosToolStripMenuItem.Name = "serviciosContradosToolStripMenuItem";
-            this.serviciosContradosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.serviciosContradosToolStripMenuItem.Text = "Servicios Contratados";
+            this.cancelacionesToolStripMenuItem.Name = "cancelacionesToolStripMenuItem";
+            this.cancelacionesToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.cancelacionesToolStripMenuItem.Text = "Cancelaciones";
             // 
             // manetenimientoToolStripMenuItem
             // 
             this.manetenimientoToolStripMenuItem.Name = "manetenimientoToolStripMenuItem";
             this.manetenimientoToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.manetenimientoToolStripMenuItem.Text = "Manetenimiento";
-            // 
-            // contratacionesExternasToolStripMenuItem
-            // 
-            this.contratacionesExternasToolStripMenuItem.Name = "contratacionesExternasToolStripMenuItem";
-            this.contratacionesExternasToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.contratacionesExternasToolStripMenuItem.Text = "Contrataciones Externas";
             // 
             // reportesToolStripMenuItem
             // 
@@ -193,12 +198,7 @@ namespace Hilton
             this.rolToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.rolToolStripMenuItem.Text = "Rol";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(198, 6);
-            // 
-            // Form1
+            // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -206,8 +206,11 @@ namespace Hilton
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
-            this.Text = "Formulario Principal";
+            this.Name = "FrmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Centro de convenciones HILTON";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
