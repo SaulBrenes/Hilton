@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using Hilton.Data;
+using Hilton.Model;
 
-namespace Hilton.Data
+namespace Hilton.Model
 {
-    class DUsuario
+    class MUsuario
     {
 
         public DataTable Validar_Acceso(string usuario, string contraseña)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hilton.Data
+namespace Hilton.Model
 {
     class Conexión
     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hilton.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,13 @@ namespace Hilton
         private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void salonesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSalon frmSalon = new FrmSalon();
+            frmSalon.MdiParent = this;
+            frmSalon.Show();
         }
     }
 }

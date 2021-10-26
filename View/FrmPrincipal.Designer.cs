@@ -85,6 +85,7 @@ namespace Hilton
             this.salonesToolStripMenuItem.Name = "salonesToolStripMenuItem";
             this.salonesToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.salonesToolStripMenuItem.Text = "Salones";
+            this.salonesToolStripMenuItem.Click += new System.EventHandler(this.salonesToolStripMenuItem_Click);
             // 
             // EventosToolStripMenuItem
             // 
@@ -204,6 +205,7 @@ namespace Hilton
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 326);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPrincipal";

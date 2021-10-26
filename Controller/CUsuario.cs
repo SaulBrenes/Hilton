@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using Hilton.Data;
+using Hilton.Model;
 
 //SistemaEjemploUNI
 namespace Hilton.Controller
@@ -15,7 +15,7 @@ namespace Hilton.Controller
     {
         public static DataTable Validar_acceso(string usuario, string contraseña)
         {
-            return new DUsuario().Validar_Acceso(usuario, contraseña);
+            return new MUsuario().Validar_Acceso(usuario, contraseña);
         }
 
     }
