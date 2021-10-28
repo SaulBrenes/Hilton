@@ -51,6 +51,24 @@
     <Compile Include="Model\Conexión.cs" />
     <Compile Include="Model\MSalones.cs" />
     <Compile Include="Model\MUsuario.cs" />
+    <Compile Include="View\FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmEmpresaMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmEmpresaMantenimiento.Designer.cs">
+      <DependentUpon>FrmEmpresaMantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +89,12 @@
     <Compile Include="View\FrmSalon.Designer.cs">
       <DependentUpon>FrmSalon.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmServicios.Designer.cs">
+      <DependentUpon>FrmServicios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -81,6 +105,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmEmpresaMantenimiento.resx">
+      <DependentUpon>FrmEmpresaMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmSalon.resx">
       <DependentUpon>FrmSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmServicios.resx">
+      <DependentUpon>FrmServicios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -32,15 +32,14 @@ namespace Hilton
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.catálogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.EventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empresasDeMantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empresasDeMantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.operacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.serviciosContradosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contratacionesExternasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.PagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +62,7 @@ namespace Hilton
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(676, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(676, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,111 +70,105 @@ namespace Hilton
             // 
             this.catálogosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salonesToolStripMenuItem,
-            this.EventosToolStripMenuItem,
-            this.empleadosToolStripMenuItem,
             this.serviciosToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.clientesToolStripMenuItem,
+            this.empleadosToolStripMenuItem,
             this.empresasDeMantenimientoToolStripMenuItem,
-            this.clientesToolStripMenuItem});
+            this.toolStripSeparator3});
+            this.catálogosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
-            this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(95, 25);
             this.catálogosToolStripMenuItem.Text = "Catálogos ";
             // 
             // salonesToolStripMenuItem
             // 
             this.salonesToolStripMenuItem.Name = "salonesToolStripMenuItem";
-            this.salonesToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.salonesToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.salonesToolStripMenuItem.Text = "Salones";
             this.salonesToolStripMenuItem.Click += new System.EventHandler(this.salonesToolStripMenuItem_Click);
-            // 
-            // EventosToolStripMenuItem
-            // 
-            this.EventosToolStripMenuItem.Name = "EventosToolStripMenuItem";
-            this.EventosToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.EventosToolStripMenuItem.Text = "Eventos";
-            // 
-            // empleadosToolStripMenuItem
-            // 
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.empleadosToolStripMenuItem.Text = "Empleados";
             // 
             // serviciosToolStripMenuItem
             // 
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             // 
-            // empresasDeMantenimientoToolStripMenuItem
+            // toolStripSeparator2
             // 
-            this.empresasDeMantenimientoToolStripMenuItem.Name = "empresasDeMantenimientoToolStripMenuItem";
-            this.empresasDeMantenimientoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.empresasDeMantenimientoToolStripMenuItem.Text = "Empresas de mantenimiento";
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(275, 6);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.empleadosToolStripMenuItem.Text = "Empleados";
+            // 
+            // empresasDeMantenimientoToolStripMenuItem
+            // 
+            this.empresasDeMantenimientoToolStripMenuItem.Name = "empresasDeMantenimientoToolStripMenuItem";
+            this.empresasDeMantenimientoToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.empresasDeMantenimientoToolStripMenuItem.Text = "Empresas de mantenimiento";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(275, 6);
             // 
             // operacionesToolStripMenuItem
             // 
             this.operacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reservasToolStripMenuItem,
-            this.serviciosContradosToolStripMenuItem,
-            this.contratacionesExternasToolStripMenuItem,
+            this.eventosToolStripMenuItem,
             this.toolStripSeparator1,
             this.PagosToolStripMenuItem,
             this.cancelacionesToolStripMenuItem,
             this.manetenimientoToolStripMenuItem});
+            this.operacionesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
-            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(109, 25);
             this.operacionesToolStripMenuItem.Text = "Operaciones";
             // 
-            // reservasToolStripMenuItem
+            // eventosToolStripMenuItem
             // 
-            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.reservasToolStripMenuItem.Text = "Reservas";
-            // 
-            // serviciosContradosToolStripMenuItem
-            // 
-            this.serviciosContradosToolStripMenuItem.Name = "serviciosContradosToolStripMenuItem";
-            this.serviciosContradosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.serviciosContradosToolStripMenuItem.Text = "Servicios Contratados";
-            // 
-            // contratacionesExternasToolStripMenuItem
-            // 
-            this.contratacionesExternasToolStripMenuItem.Name = "contratacionesExternasToolStripMenuItem";
-            this.contratacionesExternasToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.contratacionesExternasToolStripMenuItem.Text = "Contrataciones Externas";
+            this.eventosToolStripMenuItem.Name = "eventosToolStripMenuItem";
+            this.eventosToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.eventosToolStripMenuItem.Text = "Manejo de Eventos";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(198, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(208, 6);
             // 
             // PagosToolStripMenuItem
             // 
             this.PagosToolStripMenuItem.Name = "PagosToolStripMenuItem";
-            this.PagosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.PagosToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.PagosToolStripMenuItem.Text = "Pagos";
             // 
             // cancelacionesToolStripMenuItem
             // 
             this.cancelacionesToolStripMenuItem.Name = "cancelacionesToolStripMenuItem";
-            this.cancelacionesToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.cancelacionesToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.cancelacionesToolStripMenuItem.Text = "Cancelaciones";
             // 
             // manetenimientoToolStripMenuItem
             // 
             this.manetenimientoToolStripMenuItem.Name = "manetenimientoToolStripMenuItem";
-            this.manetenimientoToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.manetenimientoToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.manetenimientoToolStripMenuItem.Text = "Manetenimiento";
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(84, 25);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // seguridadToolStripMenuItem
@@ -183,20 +176,21 @@ namespace Hilton
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuarioToolStripMenuItem,
             this.rolToolStripMenuItem});
+            this.seguridadToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(93, 25);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
             // 
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
             this.usuarioToolStripMenuItem.Text = "Usuario";
             // 
             // rolToolStripMenuItem
             // 
             this.rolToolStripMenuItem.Name = "rolToolStripMenuItem";
-            this.rolToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.rolToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
             this.rolToolStripMenuItem.Text = "Rol";
             // 
             // FrmPrincipal
@@ -226,11 +220,9 @@ namespace Hilton
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem catálogosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salonesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem EventosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem operacionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PagosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
@@ -239,10 +231,11 @@ namespace Hilton
         private System.Windows.Forms.ToolStripMenuItem rolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empresasDeMantenimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem serviciosContradosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manetenimientoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contratacionesExternasToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem eventosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 
