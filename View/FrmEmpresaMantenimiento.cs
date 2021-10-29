@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hilton.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,17 +45,141 @@ namespace Hilton.View
         private void Habilitar(bool valor)
         {
             this.txtNombre.Enabled = valor;
-            //this.mtxtCodigo.Enabled = valor;
-            //this.nudcapacidadmax.Enabled = valor;
-            //this.nudPrecioHora.Enabled = valor;
+            txtDireccion.Enabled = valor;
+            mtxtTelefono.Enabled = valor;
         }
         private void Limpiar()
         {
             this.txtNombre.Text = string.Empty;
-            //this.mtxtCodigo.Text = string.Empty;
-            //nudcapacidadmax.Value = 0;
-            //nudPrecioHora.Value = 0;
+            txtDireccion.Text = string.Empty;
+            mtxtTelefono.Text = string.Empty;
         }
 
+        private void FrmEmpresaMantenimiento_Load(object sender, EventArgs e)
+        {
+            MostrarDatos();
+            Botones();
+            txtBuscar.Focus();
+
+        }
+
+        private void MostrarDatos()
+        {
+            dgvEmpresas.DataSource = CEmpresaMantenimiento.MostrarEmpresas();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            dgvEmpresas.DataSource = CEmpresaMantenimiento.BuscarEmpresa(txtBuscar.Text);
+        }
+
+        private void btnEstado_Click(object sender, EventArgs e)
+        {
+            string rpta;
+            if (this.dgvEmpresas.SelectedRows.Count == 1)
+            {
+                try
+                {
+
+                    rpta = CEmpresaMantenimiento.EstadoEmpresa(Convert.ToInt32(this.dgvEmpresas.CurrentRow.Cells[0].Value));
+                    if (rpta == "OK")
+                        MessageBox.Show("El estado ha sido actualizado", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("El estado no pudo ser actualizado", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                }
+                MostrarDatos();
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.IsNuevo = false;
+            this.IsEditar = false;
+            this.Botones();
+            this.Limpiar();
+            this.dgvEmpresas.CurrentCell = null;
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            this.IsNuevo = true;
+            this.IsEditar = false;
+            this.Botones();
+            this.Limpiar();
+            this.txtNombre.Focus();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvEmpresas.SelectedRows.Count == 1)
+            {
+                this.txtNombre.Text = Convert.ToString(this.dgvEmpresas.CurrentRow.Cells[1].Value);
+                this.mtxtTelefono.Text = (this.dgvEmpresas.CurrentRow.Cells[2].Value.ToString());
+                this.txtDireccion.Text =(this.dgvEmpresas.CurrentRow.Cells[3].Value.ToString());
+                this.IsNuevo = false;
+                this.IsEditar = true;
+                this.Botones();
+                this.txtNombre.Focus();
+
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una Fila antes de Editar", "Sistema HILTON", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string rpta = "";
+
+                if (this.IsNuevo)
+                {
+                    rpta = CEmpresaMantenimiento.AgregarEmpresa(txtNombre.Text,txtDireccion.Text, mtxtTelefono.Text);
+
+                }
+                else
+                {
+                    rpta = CEmpresaMantenimiento.ActualizarEmpresa(Convert.ToInt32(this.dgvEmpresas.CurrentRow.Cells[0].Value), txtNombre.Text, txtDireccion.Text, mtxtTelefono.Text);
+
+                }
+
+                if (rpta.Equals("OK"))
+                {
+                    if (this.IsNuevo)
+                    {
+
+                        MessageBox.Show("Datos Ingresados", "Sistema Hilton", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Datos Actualizados", "Sistema Hilon", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+
+                    MessageBox.Show(rpta, "Sistema Hilton", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                this.IsNuevo = false;
+                this.IsEditar = false;
+                this.Botones();
+                this.Limpiar();
+
+                MostrarDatos();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
     }
 }
