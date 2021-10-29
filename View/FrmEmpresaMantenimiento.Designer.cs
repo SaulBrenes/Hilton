@@ -41,7 +41,7 @@ namespace Hilton.View
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEstado = new System.Windows.Forms.Button();
@@ -50,11 +50,15 @@ namespace Hilton.View
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresas)).BeginInit();
             this.panel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnGuardar);
+            this.groupBox1.Controls.Add(this.btnNuevo);
+            this.groupBox1.Controls.Add(this.btnEditar);
+            this.groupBox1.Controls.Add(this.btnEstado);
+            this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.mtxtTelefono);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtDireccion);
@@ -65,7 +69,7 @@ namespace Hilton.View
             this.groupBox1.Location = new System.Drawing.Point(435, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(50);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(297, 211);
+            this.groupBox1.Size = new System.Drawing.Size(297, 234);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Campos";
@@ -133,7 +137,7 @@ namespace Hilton.View
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(435, 211);
+            this.panel1.Size = new System.Drawing.Size(435, 234);
             this.panel1.TabIndex = 7;
             // 
             // dgvEmpresas
@@ -146,7 +150,7 @@ namespace Hilton.View
             this.dgvEmpresas.Location = new System.Drawing.Point(0, 43);
             this.dgvEmpresas.Name = "dgvEmpresas";
             this.dgvEmpresas.ReadOnly = true;
-            this.dgvEmpresas.Size = new System.Drawing.Size(435, 168);
+            this.dgvEmpresas.Size = new System.Drawing.Size(435, 191);
             this.dgvEmpresas.TabIndex = 5;
             // 
             // panel2
@@ -166,7 +170,7 @@ namespace Hilton.View
             this.txtBuscar.Location = new System.Drawing.Point(68, 10);
             this.txtBuscar.MaximumSize = new System.Drawing.Size(416, 30);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(274, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(339, 22);
             this.txtBuscar.TabIndex = 3;
             // 
             // label5
@@ -178,55 +182,53 @@ namespace Hilton.View
             this.label5.TabIndex = 2;
             this.label5.Text = "Buscar:";
             // 
-            // flowLayoutPanel1
+            // btnGuardar
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnNuevo);
-            this.flowLayoutPanel1.Controls.Add(this.btnEditar);
-            this.flowLayoutPanel1.Controls.Add(this.btnEstado);
-            this.flowLayoutPanel1.Controls.Add(this.btnCancelar);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 181);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(435, 30);
-            this.flowLayoutPanel1.TabIndex = 8;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(91, 201);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 18;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(3, 3);
+            this.btnNuevo.Location = new System.Drawing.Point(33, 171);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(99, 23);
-            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 14;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(108, 3);
+            this.btnEditar.Location = new System.Drawing.Point(114, 171);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(99, 23);
-            this.btnEditar.TabIndex = 5;
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 15;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnEstado
             // 
             this.btnEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstado.Location = new System.Drawing.Point(213, 3);
+            this.btnEstado.Location = new System.Drawing.Point(195, 171);
             this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(99, 23);
-            this.btnEstado.TabIndex = 6;
+            this.btnEstado.Size = new System.Drawing.Size(75, 23);
+            this.btnEstado.TabIndex = 16;
             this.btnEstado.Text = "Estado";
             this.btnEstado.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(318, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(176, 201);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(99, 23);
-            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -234,8 +236,7 @@ namespace Hilton.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 211);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(732, 234);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmEmpresaMantenimiento";
@@ -247,7 +248,6 @@ namespace Hilton.View
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresas)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -265,7 +265,7 @@ namespace Hilton.View
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox mtxtTelefono;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEstado;

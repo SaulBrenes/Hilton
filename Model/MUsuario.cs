@@ -47,6 +47,10 @@ namespace Hilton.Model
             {
                 DtResultado = null;
             }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
             return DtResultado;
 
         }

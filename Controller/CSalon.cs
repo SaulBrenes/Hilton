@@ -14,5 +14,24 @@ namespace Hilton.Controller
         {
             return MSalones.MostrarSalones();
         }
+
+        public static DataTable BuscarSalon(string dato) {
+            return MSalones.BuscarSalones(dato);
+        }
+
+        public static string AgregarSalon(string codigo, string nombre, float precioHora, int capacidadMax)
+        {
+            return MSalones.AgregarSalon(codigo, nombre, precioHora, capacidadMax);
+        }
+
+        public static string ActualizarSalon(int idSalon, string codigo, string nombre, float precioHora, int capacidadMax)
+        {
+            return MSalones.ActualizarSalon(idSalon, codigo, nombre, precioHora, capacidadMax);
+        }
+
+        public static string EstadoSalon (int idSalon)
+        {
+            return MSalones.EstadoSalon(idSalon);
+        }
     }
 }

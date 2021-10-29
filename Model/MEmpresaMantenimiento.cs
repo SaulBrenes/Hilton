@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Hilton.Model
 {
-    class MSalones
+    class MEmpresaMantenimiento
     {
-        public static DataTable MostrarSalones()
+        public static DataTable MostrarEmpresasMantenimiento()
         {
-            DataTable dtResultado = new DataTable("MostrarSalones");
+            DataTable dtResultado = new DataTable("MostrarEmpresas");
             SqlConnection SqlCon = new SqlConnection();
             try
             {
@@ -20,7 +20,7 @@ namespace Hilton.Model
 
                 SqlCommand sqlCom = new SqlCommand();
                 sqlCom.Connection = SqlCon;
-                sqlCom.CommandText = "MostrarSalones";
+                sqlCom.CommandText = "MostrarEmpresasMantenimiento";
                 sqlCom.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter sqlData = new SqlDataAdapter(sqlCom);
@@ -29,6 +29,7 @@ namespace Hilton.Model
             catch (Exception ex)
             {
                 dtResultado = null;
+
             }
             finally
             {
@@ -36,10 +37,10 @@ namespace Hilton.Model
             }
             return dtResultado;
         }
-
-        public static DataTable BuscarSalones(string dato)
+        
+        public static DataTable BuscarEmpresas(string dato)
         {
-            DataTable dtResultado = new DataTable("MostrarSalones");
+            DataTable dtResultado = new DataTable("MostrarEmpresas");
             SqlConnection SqlCon = new SqlConnection();
 
             try
@@ -48,7 +49,7 @@ namespace Hilton.Model
 
                 SqlCommand sqlCom = new SqlCommand();
                 sqlCom.Connection = SqlCon;
-                sqlCom.CommandText = "BuscarSalon";
+                sqlCom.CommandText = "BuscarEmpresaMantenimiento";
                 sqlCom.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParDato = new SqlParameter();
@@ -61,7 +62,7 @@ namespace Hilton.Model
                 SqlDataAdapter sqlData = new SqlDataAdapter(sqlCom);
                 sqlData.Fill(dtResultado);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 dtResultado = null;
             }
@@ -72,8 +73,8 @@ namespace Hilton.Model
 
             return dtResultado;
         }
-
-        public static string AgregarSalon(string codigo, string nombre, float precioHora, int capacidadMax)
+    
+        public static string EstadoEmpresa(int idEmpresa)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -85,36 +86,72 @@ namespace Hilton.Model
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "AgregarSalon";
+                SqlCmd.CommandText = "EstadoEmpresaMantenimiento";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 // Parámetros del Procedimiento Almacenado
 
-                SqlParameter ParCodigo = new SqlParameter();
-                ParCodigo.ParameterName = "@codigo";
-                ParCodigo.SqlDbType = SqlDbType.VarChar;
-                ParCodigo.Size = 2;
-                ParCodigo.Value = codigo;
-                SqlCmd.Parameters.Add(ParCodigo);
+                SqlParameter ParIdEmpresa = new SqlParameter();
+                ParIdEmpresa.ParameterName = "@idEmpresa";
+                ParIdEmpresa.SqlDbType = SqlDbType.Int;
+                ParIdEmpresa.Value = idEmpresa;
+                SqlCmd.Parameters.Add(ParIdEmpresa);
 
-                SqlParameter ParNombre = new SqlParameter();
-                ParNombre.ParameterName = "@nombre";
-                ParNombre.SqlDbType = SqlDbType.VarChar;
-                ParNombre.Size = 50;
-                ParNombre.Value = nombre;
-                SqlCmd.Parameters.Add(ParNombre);
 
-                SqlParameter ParPrecioHora = new SqlParameter();
-                ParPrecioHora.ParameterName = "@precioHora";
-                ParPrecioHora.SqlDbType = SqlDbType.Float;
-                ParPrecioHora.Value = precioHora;
-                SqlCmd.Parameters.Add(ParPrecioHora);
+                //Ejecutamos nuestro comando
 
-                SqlParameter ParCapacidadMax = new SqlParameter();
-                ParCapacidadMax.ParameterName = "@capacidadMax";
-                ParCapacidadMax.SqlDbType = SqlDbType.Int;
-                ParCapacidadMax.Value = capacidadMax;
-                SqlCmd.Parameters.Add(ParCapacidadMax);
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se actualizo el estado";
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+
+        }
+        
+        public static string AgregarEmpresa(string nombre, string direccion, string telefono)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = Conexión.Cn;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "AgregarEmpresaMantenimiento";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                // Parámetros del Procedimiento Almacenado
+
+                SqlParameter Parnombre = new SqlParameter();
+                Parnombre.ParameterName = "@nombre";
+                Parnombre.SqlDbType = SqlDbType.NVarChar;
+                Parnombre.Size = 80;
+                Parnombre.Value = nombre;
+                SqlCmd.Parameters.Add(Parnombre);
+
+                SqlParameter Pardireccion = new SqlParameter();
+                Pardireccion.ParameterName = "@direccion";
+                Pardireccion.SqlDbType = SqlDbType.NVarChar;
+                Pardireccion.Size = 100;
+                Pardireccion.Value = direccion;
+                SqlCmd.Parameters.Add(Pardireccion);
+
+                SqlParameter ParTelefono = new SqlParameter();
+                ParTelefono.ParameterName = "@telefono";
+                ParTelefono.SqlDbType = SqlDbType.NVarChar;
+                Parnombre.Size = 8;
+                ParTelefono.Value = telefono;
+                SqlCmd.Parameters.Add(ParTelefono);
 
                 //Ejecutamos nuestro comando
 
@@ -132,7 +169,7 @@ namespace Hilton.Model
             return rpta;
         }
 
-        public static string ActualizarSalon(int idSalon,string codigo, string nombre, float precioHora, int capacidadMax)
+        public static string ActualizarEmpresa(int idEmpresa, string nombre, string direccion, string telefono)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -144,85 +181,40 @@ namespace Hilton.Model
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "ActualizarSalon";
+                SqlCmd.CommandText = "ActualizarEmpresaMantenimiento";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 // Parámetros del Procedimiento Almacenado
+                SqlParameter ParIdEmpresa = new SqlParameter();
+                ParIdEmpresa.ParameterName = "@idEmpresa";
+                ParIdEmpresa.SqlDbType = SqlDbType.Int;
+                ParIdEmpresa.Value = idEmpresa;
+                SqlCmd.Parameters.Add(ParIdEmpresa);
 
-                SqlParameter ParIdSalon = new SqlParameter();
-                ParIdSalon.ParameterName = "@idSalon";
-                ParIdSalon.SqlDbType = SqlDbType.Int;
-                ParIdSalon.Value = idSalon;
-                SqlCmd.Parameters.Add(ParIdSalon);
+                SqlParameter Parnombre = new SqlParameter();
+                Parnombre.ParameterName = "@nombre";
+                Parnombre.SqlDbType = SqlDbType.NVarChar;
+                Parnombre.Size = 80;
+                Parnombre.Value = nombre;
+                SqlCmd.Parameters.Add(Parnombre);
 
-                SqlParameter ParCodigo = new SqlParameter();
-                ParCodigo.ParameterName = "@codigo";
-                ParCodigo.SqlDbType = SqlDbType.VarChar;
-                ParCodigo.Size = 2;
-                ParCodigo.Value = codigo;
-                SqlCmd.Parameters.Add(ParCodigo);
+                SqlParameter Pardireccion = new SqlParameter();
+                Pardireccion.ParameterName = "@direccion";
+                Pardireccion.SqlDbType = SqlDbType.NVarChar;
+                Pardireccion.Size = 100;
+                Pardireccion.Value = direccion;
+                SqlCmd.Parameters.Add(Pardireccion);
 
-                SqlParameter ParNombre = new SqlParameter();
-                ParNombre.ParameterName = "@nombre";
-                ParNombre.SqlDbType = SqlDbType.VarChar;
-                ParNombre.Size = 50;
-                ParNombre.Value = nombre;
-                SqlCmd.Parameters.Add(ParNombre);
-
-                SqlParameter ParPrecioHora = new SqlParameter();
-                ParPrecioHora.ParameterName = "@preciohora";
-                ParPrecioHora.SqlDbType = SqlDbType.Float;
-                ParPrecioHora.Value = precioHora;
-                SqlCmd.Parameters.Add(ParPrecioHora);
-
-                SqlParameter ParCapacidadMax = new SqlParameter();
-                ParCapacidadMax.ParameterName = "@capacidadMax";
-                ParCapacidadMax.SqlDbType = SqlDbType.Int;
-                ParCapacidadMax.Value = capacidadMax;
-                SqlCmd.Parameters.Add(ParCapacidadMax);
+                SqlParameter ParTelefono = new SqlParameter();
+                ParTelefono.ParameterName = "@telefono";
+                ParTelefono.SqlDbType = SqlDbType.NVarChar;
+                Parnombre.Size = 8;
+                ParTelefono.Value = telefono;
+                SqlCmd.Parameters.Add(ParTelefono);
 
                 //Ejecutamos nuestro comando
 
-                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se actualizo el Registro";
-
-            }
-            catch (Exception ex)
-            {
-                rpta = ex.Message;
-            }
-            finally
-            {
-                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
-            }
-            return rpta;
-        }
-
-        public static string EstadoSalon(int idSalon) {
-            string rpta = "";
-            SqlConnection SqlCon = new SqlConnection();
-            try
-            {
-                //Código
-                SqlCon.ConnectionString = Conexión.Cn;
-                SqlCon.Open();
-                //Establecer el Comando
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "EstadoSalon";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                // Parámetros del Procedimiento Almacenado
-
-                SqlParameter ParIdSalon = new SqlParameter();
-                ParIdSalon.ParameterName = "@idSalon";
-                ParIdSalon.SqlDbType = SqlDbType.Int;
-                ParIdSalon.Value = idSalon;
-                SqlCmd.Parameters.Add(ParIdSalon);
-
-
-                //Ejecutamos nuestro comando
-
-                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se actualizo el estado";
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se Ingreso el Registro";
 
             }
             catch (Exception ex)

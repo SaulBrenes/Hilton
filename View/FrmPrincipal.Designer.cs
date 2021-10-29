@@ -93,6 +93,7 @@ namespace Hilton
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
             this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.serviciosToolStripMenuItem.Text = "Servicios";
+            this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -104,18 +105,21 @@ namespace Hilton
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
             this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.empleadosToolStripMenuItem.Text = "Empleados";
+            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // empresasDeMantenimientoToolStripMenuItem
             // 
             this.empresasDeMantenimientoToolStripMenuItem.Name = "empresasDeMantenimientoToolStripMenuItem";
             this.empresasDeMantenimientoToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.empresasDeMantenimientoToolStripMenuItem.Text = "Empresas de mantenimiento";
+            this.empresasDeMantenimientoToolStripMenuItem.Click += new System.EventHandler(this.empresasDeMantenimientoToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -138,30 +142,30 @@ namespace Hilton
             // eventosToolStripMenuItem
             // 
             this.eventosToolStripMenuItem.Name = "eventosToolStripMenuItem";
-            this.eventosToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
-            this.eventosToolStripMenuItem.Text = "Manejo de Eventos";
+            this.eventosToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.eventosToolStripMenuItem.Text = "Gestión de Eventos";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(208, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(209, 6);
             // 
             // PagosToolStripMenuItem
             // 
             this.PagosToolStripMenuItem.Name = "PagosToolStripMenuItem";
-            this.PagosToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.PagosToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.PagosToolStripMenuItem.Text = "Pagos";
             // 
             // cancelacionesToolStripMenuItem
             // 
             this.cancelacionesToolStripMenuItem.Name = "cancelacionesToolStripMenuItem";
-            this.cancelacionesToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.cancelacionesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.cancelacionesToolStripMenuItem.Text = "Cancelaciones";
             // 
             // manetenimientoToolStripMenuItem
             // 
             this.manetenimientoToolStripMenuItem.Name = "manetenimientoToolStripMenuItem";
-            this.manetenimientoToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.manetenimientoToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.manetenimientoToolStripMenuItem.Text = "Manetenimiento";
             // 
             // reportesToolStripMenuItem

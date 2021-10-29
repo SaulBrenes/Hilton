@@ -15,10 +15,7 @@ namespace Hilton.View
     public partial class frmInicioSesion : Form
     {
         //Atributos proximos a usar para validar el tipo de usuario que entro
-        public static string IdUsuario { get ; set; }
         public static string Nombre { get ; set; }
-
-        public static string CodigoUsuario { get; set; }
 
         public static string Rol;
 
@@ -34,28 +31,27 @@ namespace Hilton.View
 
             if (dato != null)
             {
-
                 if (dato.Rows.Count > 0)
                 {
-                    //DataRow dr;
-                    //dr = dato.Rows[0];
-
                     if (dato.Rows[0][0].ToString() == "Acceso Exitoso")
                     {
 
-                        MessageBox.Show("Bienvenido al Sistema", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Bienvenido al Sistema", "Sistema Centro de convenciones HILTON", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FrmPrincipal fp = new FrmPrincipal();
                         fp.Show();
                         this.Hide();
                     }
                     else
                     {
-                        MessageBox.Show("Acceso Denegado al Sistema de Reservaciones", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Acceso Denegado al Sistema de Centro de convenciones HILTON", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtUsuario.Text = string.Empty;
+                        txtContraseña.Text = string.Empty;
+                        txtUsuario.Focus();
                     }
                 }
             }
             else
-                MessageBox.Show("No hay conexión al servidor", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No hay conexión al servidor", "Sistema de Centro de convenciones HILTON", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
         }

@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,10 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CCliente.cs" />
+    <Compile Include="Controller\CEmpleado.cs" />
+    <Compile Include="Controller\CEmpresaMantenimiento.cs" />
     <Compile Include="Controller\CSalon.cs" />
+    <Compile Include="Controller\CServicio.cs" />
     <Compile Include="Controller\CUsuario.cs" />
     <Compile Include="Model\Conexión.cs" />
+    <Compile Include="Model\MClientes.cs" />
+    <Compile Include="Model\MEmpleado.cs" />
+    <Compile Include="Model\MEmpresaMantenimiento.cs" />
     <Compile Include="Model\MSalones.cs" />
+    <Compile Include="Model\MServicios.cs" />
     <Compile Include="Model\MUsuario.cs" />
     <Compile Include="View\FrmClientes.cs">
       <SubType>Form</SubType>

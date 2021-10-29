@@ -44,5 +44,35 @@ namespace Hilton
             frmSalon.MdiParent = this;
             frmSalon.Show();
         }
+
+        private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmServicios frmServicios = new FrmServicios();
+            MostrarFrame(frmServicios);
+        }
+
+        private void MostrarFrame(Form f)
+        {
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientes frmClientes = new FrmClientes();
+            MostrarFrame(frmClientes);
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEmpleados frmEmpleados = new FrmEmpleados();
+            MostrarFrame(frmEmpleados);
+        }
+
+        private void empresasDeMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEmpresaMantenimiento frmEmpresa = new FrmEmpresaMantenimiento();
+            MostrarFrame(frmEmpresa);
+        }
     }
 }
