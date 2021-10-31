@@ -257,6 +257,7 @@ namespace Hilton.View
             this.ClientSize = new System.Drawing.Size(793, 283);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmServicios";
             this.Text = "Catálogo de servicios";
             this.Load += new System.EventHandler(this.FrmServicios_Load);

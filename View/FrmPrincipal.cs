@@ -16,6 +16,11 @@ namespace Hilton
     {
         //Proximo atributo a utiizar agregar estado y rol  a las base de datos
         public string Rol { get; set; }
+        FrmClientes frmCliente;
+        FrmEmpleados frmEmpleado;
+        FrmEmpresaMantenimiento frmEmpresaMantenimiento;
+        FrmSalon frmSalon;
+        FrmServicios frmServicios;
 
         public FrmPrincipal()
         {
@@ -28,11 +33,6 @@ namespace Hilton
             this.Rol = rol;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-        }
-
         private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -40,39 +40,57 @@ namespace Hilton
 
         private void salonesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmSalon frmSalon = new FrmSalon();
-            frmSalon.MdiParent = this;
-            frmSalon.Show();
+            frmSalon = new FrmSalon();
+            frmSalon.FormClosed += CerrarForm;
+            agregarForm(frmSalon);
         }
 
         private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmServicios frmServicios = new FrmServicios();
-            MostrarFrame(frmServicios);
-        }
-
-        private void MostrarFrame(Form f)
-        {
-            f.MdiParent = this;
-            f.Show();
+            frmServicios = new FrmServicios();
+            frmServicios.FormClosed += CerrarForm;
+            agregarForm(frmServicios);
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmClientes frmClientes = new FrmClientes();
-            MostrarFrame(frmClientes);
+            frmCliente = new FrmClientes();
+            frmCliente.FormClosed += CerrarForm;
+            agregarForm(frmCliente);
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEmpleados frmEmpleados = new FrmEmpleados();
-            MostrarFrame(frmEmpleados);
+            frmEmpleado = new FrmEmpleados();
+            frmEmpleado.FormClosed += CerrarForm;
+            agregarForm(frmEmpleado);
         }
 
         private void empresasDeMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEmpresaMantenimiento frmEmpresa = new FrmEmpresaMantenimiento();
-            MostrarFrame(frmEmpresa);
+            frmEmpresaMantenimiento = new FrmEmpresaMantenimiento();
+            frmEmpresaMantenimiento.FormClosed += CerrarForm;
+            agregarForm(frmEmpresaMantenimiento);
         }
+
+        private void agregarForm(Form f)
+        {
+            if (panel1.Controls.Contains(f))
+            {
+                return;
+            }
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(f);
+            Tag = f;
+            f.Show();
+        }
+
+       public void CerrarForm(object sender, EventArgs e)
+        {
+            panel1.Controls.Add(pictureBox1);
+        }
+
     }
 }
