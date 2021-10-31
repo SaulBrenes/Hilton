@@ -149,7 +149,6 @@ namespace Hilton.Model
                 SqlParameter ParTelefono = new SqlParameter();
                 ParTelefono.ParameterName = "@telefono";
                 ParTelefono.SqlDbType = SqlDbType.NVarChar;
-                Parnombre.Size = 8;
                 ParTelefono.Value = telefono;
                 SqlCmd.Parameters.Add(ParTelefono);
 
@@ -208,7 +207,6 @@ namespace Hilton.Model
                 SqlParameter ParTelefono = new SqlParameter();
                 ParTelefono.ParameterName = "@telefono";
                 ParTelefono.SqlDbType = SqlDbType.NVarChar;
-                Parnombre.Size = 8;
                 ParTelefono.Value = telefono;
                 SqlCmd.Parameters.Add(ParTelefono);
 

@@ -29,7 +29,10 @@ namespace Hilton
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.catálogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,8 +50,9 @@ namespace Hilton
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -62,9 +66,31 @@ namespace Hilton
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(977, 29);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuStrip1.Size = new System.Drawing.Size(1013, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1013, 421);
+            this.panel1.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Hilton.Properties.Resources.LogoInicialHilton;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1013, 421);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // catálogosToolStripMenuItem
             // 
@@ -77,12 +103,14 @@ namespace Hilton
             this.empresasDeMantenimientoToolStripMenuItem,
             this.toolStripSeparator3});
             this.catálogosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.catálogosToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_hotel_64;
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
-            this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(95, 25);
+            this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(115, 25);
             this.catálogosToolStripMenuItem.Text = "Catálogos ";
             // 
             // salonesToolStripMenuItem
             // 
+            this.salonesToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_edificio_del_hotel_64;
             this.salonesToolStripMenuItem.Name = "salonesToolStripMenuItem";
             this.salonesToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.salonesToolStripMenuItem.Text = "Salones";
@@ -90,6 +118,7 @@ namespace Hilton
             // 
             // serviciosToolStripMenuItem
             // 
+            this.serviciosToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_camarero_30;
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
             this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.serviciosToolStripMenuItem.Text = "Servicios";
@@ -102,6 +131,7 @@ namespace Hilton
             // 
             // clientesToolStripMenuItem
             // 
+            this.clientesToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_customers_64__2_;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -109,6 +139,7 @@ namespace Hilton
             // 
             // empleadosToolStripMenuItem
             // 
+            this.empleadosToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_customers_64__1_;
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
             this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.empleadosToolStripMenuItem.Text = "Empleados";
@@ -116,6 +147,7 @@ namespace Hilton
             // 
             // empresasDeMantenimientoToolStripMenuItem
             // 
+            this.empresasDeMantenimientoToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_proveedor_30;
             this.empresasDeMantenimientoToolStripMenuItem.Name = "empresasDeMantenimientoToolStripMenuItem";
             this.empresasDeMantenimientoToolStripMenuItem.Size = new System.Drawing.Size(278, 26);
             this.empresasDeMantenimientoToolStripMenuItem.Text = "Empresas de mantenimiento";
@@ -135,12 +167,14 @@ namespace Hilton
             this.cancelacionesToolStripMenuItem,
             this.manetenimientoToolStripMenuItem});
             this.operacionesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operacionesToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_gestión_de_eventos_48;
             this.operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
-            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(109, 25);
+            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(129, 25);
             this.operacionesToolStripMenuItem.Text = "Operaciones";
             // 
             // eventosToolStripMenuItem
             // 
+            this.eventosToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_calendario_de_rasgar_las_hojas_96;
             this.eventosToolStripMenuItem.Name = "eventosToolStripMenuItem";
             this.eventosToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.eventosToolStripMenuItem.Text = "Gestión de Eventos";
@@ -152,18 +186,21 @@ namespace Hilton
             // 
             // PagosToolStripMenuItem
             // 
+            this.PagosToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_compartir_acciones_96;
             this.PagosToolStripMenuItem.Name = "PagosToolStripMenuItem";
             this.PagosToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.PagosToolStripMenuItem.Text = "Pagos";
             // 
             // cancelacionesToolStripMenuItem
             // 
+            this.cancelacionesToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_important_event_50;
             this.cancelacionesToolStripMenuItem.Name = "cancelacionesToolStripMenuItem";
             this.cancelacionesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.cancelacionesToolStripMenuItem.Text = "Cancelaciones";
             // 
             // manetenimientoToolStripMenuItem
             // 
+            this.manetenimientoToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_edificio_del_hotel_64__1_;
             this.manetenimientoToolStripMenuItem.Name = "manetenimientoToolStripMenuItem";
             this.manetenimientoToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.manetenimientoToolStripMenuItem.Text = "Manetenimiento";
@@ -171,48 +208,51 @@ namespace Hilton
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportesToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_analytics_64;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(84, 25);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // seguridadToolStripMenuItem
             // 
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuarioToolStripMenuItem,
-            this.rolToolStripMenuItem});
+            this.usuarioToolStripMenuItem});
             this.seguridadToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seguridadToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_credenciales_de_usuario_30;
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(93, 25);
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(113, 25);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
             // 
             // usuarioToolStripMenuItem
             // 
+            this.usuarioToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_grupo_de_usuario_48;
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
-            this.usuarioToolStripMenuItem.Text = "Usuario";
-            // 
-            // rolToolStripMenuItem
-            // 
-            this.rolToolStripMenuItem.Name = "rolToolStripMenuItem";
-            this.rolToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
-            this.rolToolStripMenuItem.Text = "Rol";
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.usuarioToolStripMenuItem.Text = "Usuarios";
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 434);
+            this.ClientSize = new System.Drawing.Size(1013, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Centro de convenciones HILTON";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +271,6 @@ namespace Hilton
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem empresasDeMantenimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manetenimientoToolStripMenuItem;
@@ -239,6 +278,8 @@ namespace Hilton
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem eventosToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
