@@ -43,7 +43,7 @@ namespace Hilton.View
                     }
                     else
                     {
-                        MessageBox.Show("Acceso Denegado al Sistema de Centro de convenciones HILTON", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Acceso Denegado al Sistema de Centro de convenciones HILTON", "Sistema Hilton", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtUsuario.Text = string.Empty;
                         txtContraseña.Text = string.Empty;
                         txtUsuario.Focus();

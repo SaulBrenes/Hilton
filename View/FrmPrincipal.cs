@@ -40,46 +40,79 @@ namespace Hilton
 
         private void salonesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (formAbierto(frmSalon))
+            {
+                return;
+            }
             frmSalon = new FrmSalon();
-            frmSalon.FormClosed += CerrarForm;
+            //frmSalon.FormClosed += CerrarForm;
             agregarForm(frmSalon);
         }
 
         private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (formAbierto(frmServicios))
+            {
+                return;
+            }
             frmServicios = new FrmServicios();
-            frmServicios.FormClosed += CerrarForm;
+            //frmServicios.FormClosed += CerrarForm;
             agregarForm(frmServicios);
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (formAbierto(frmCliente))
+            {
+                return;
+            }
             frmCliente = new FrmClientes();
-            frmCliente.FormClosed += CerrarForm;
+            //frmCliente.FormClosed += CerrarForm;
             agregarForm(frmCliente);
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (formAbierto(frmEmpleado))
+            {
+                return;
+            }
             frmEmpleado = new FrmEmpleados();
-            frmEmpleado.FormClosed += CerrarForm;
+            //frmEmpleado.FormClosed += CerrarForm;
             agregarForm(frmEmpleado);
         }
 
         private void empresasDeMantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEmpresaMantenimiento = new FrmEmpresaMantenimiento();
-            frmEmpresaMantenimiento.FormClosed += CerrarForm;
-            agregarForm(frmEmpresaMantenimiento);
-        }
-
-        private void agregarForm(Form f)
-        {
-            if (panel1.Controls.Contains(f))
+            if (formAbierto(frmEmpresaMantenimiento))
             {
                 return;
             }
+            frmEmpresaMantenimiento = new FrmEmpresaMantenimiento();
+            //frmEmpresaMantenimiento.FormClosed += CerrarForm;
+            agregarForm(frmEmpresaMantenimiento);
+        }
+
+        private bool formAbierto(Form f)
+        {
+            if(f == null)
+            {
+                return false;
+            }
+
+            if (panel1.Controls[0].ToString() == f.ToString())
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
+        private void agregarForm(Form f)
+        {
             f.TopLevel = false;
+            f.FormClosed += CerrarForm; 
             f.Dock = DockStyle.Fill;
             panel1.Controls.Clear();
             panel1.Controls.Add(f);
@@ -91,6 +124,5 @@ namespace Hilton
         {
             panel1.Controls.Add(pictureBox1);
         }
-
     }
 }

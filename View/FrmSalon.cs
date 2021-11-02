@@ -80,9 +80,9 @@ namespace Hilton.View
 
                     rpta = CSalon.EstadoSalon(Convert.ToInt32(this.dgvSalones.CurrentRow.Cells[0].Value));
                     if (rpta == "OK")
-                        MessageBox.Show("El estado ha sido actualizado", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("El estado ha sido actualizado", "Sistema Hilton", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
-                        MessageBox.Show("El estado no pudo ser actualizado", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("El estado no pudo ser actualizado", "Sistema Hilton", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch (Exception ex)
@@ -190,6 +190,5 @@ namespace Hilton.View
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
     }
 }

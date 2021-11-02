@@ -30,11 +30,6 @@ namespace Hilton.View
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEstado = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.nudcapacidadmax = new System.Windows.Forms.NumericUpDown();
             this.nudPrecioHora = new System.Windows.Forms.NumericUpDown();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -46,9 +41,14 @@ namespace Hilton.View
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvSalones = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEstado = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudcapacidadmax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioHora)).BeginInit();
@@ -74,67 +74,12 @@ namespace Hilton.View
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox1.Location = new System.Drawing.Point(604, 10);
+            this.groupBox1.Location = new System.Drawing.Point(611, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(322, 265);
+            this.groupBox1.Size = new System.Drawing.Size(322, 344);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Campos";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(61, 232);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(99, 23);
-            this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(166, 232);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(99, 23);
-            this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnEstado
-            // 
-            this.btnEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstado.Location = new System.Drawing.Point(207, 203);
-            this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(82, 23);
-            this.btnEstado.TabIndex = 6;
-            this.btnEstado.Text = "Estado";
-            this.btnEstado.UseVisualStyleBackColor = true;
-            this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(116, 203);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(82, 23);
-            this.btnEditar.TabIndex = 5;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(28, 203);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(82, 23);
-            this.btnNuevo.TabIndex = 4;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // nudcapacidadmax
             // 
@@ -228,21 +173,23 @@ namespace Hilton.View
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(594, 265);
+            this.panel1.Padding = new System.Windows.Forms.Padding(5);
+            this.panel1.Size = new System.Drawing.Size(601, 344);
             this.panel1.TabIndex = 3;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dgvSalones);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 41);
+            this.panel3.Location = new System.Drawing.Point(5, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(594, 224);
+            this.panel3.Size = new System.Drawing.Size(589, 291);
             this.panel3.TabIndex = 5;
             // 
             // dgvSalones
@@ -255,19 +202,72 @@ namespace Hilton.View
             this.dgvSalones.Name = "dgvSalones";
             this.dgvSalones.ReadOnly = true;
             this.dgvSalones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSalones.Size = new System.Drawing.Size(594, 224);
+            this.dgvSalones.Size = new System.Drawing.Size(589, 291);
             this.dgvSalones.TabIndex = 1;
             // 
-            // panel2
+            // btnNuevo
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.txtBuscar);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(594, 41);
-            this.panel2.TabIndex = 0;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Location = new System.Drawing.Point(28, 203);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(82, 23);
+            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(116, 203);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(82, 23);
+            this.btnEditar.TabIndex = 5;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEstado
+            // 
+            this.btnEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstado.Location = new System.Drawing.Point(207, 203);
+            this.btnEstado.Name = "btnEstado";
+            this.btnEstado.Size = new System.Drawing.Size(82, 23);
+            this.btnEstado.TabIndex = 6;
+            this.btnEstado.Text = "Estado";
+            this.btnEstado.UseVisualStyleBackColor = true;
+            this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(166, 232);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(99, 23);
+            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(61, 232);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(99, 23);
+            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Buscar:";
             // 
             // txtBuscar
             // 
@@ -278,21 +278,24 @@ namespace Hilton.View
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
-            // label5
+            // panel2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Buscar:";
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.txtBuscar);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(5, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(4);
+            this.panel2.Size = new System.Drawing.Size(589, 41);
+            this.panel2.TabIndex = 0;
             // 
             // FrmSalon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(936, 285);
+            this.ClientSize = new System.Drawing.Size(943, 364);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -327,13 +330,13 @@ namespace Hilton.View
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgvSalones;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEstado;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label label5;
     }
 }
