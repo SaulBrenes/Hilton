@@ -31,6 +31,9 @@ namespace Hilton
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.uSUARIOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnCerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.catálogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +53,7 @@ namespace Hilton
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtRol = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,10 +61,12 @@ namespace Hilton
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.DodgerBlue;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uSUARIOToolStripMenuItem1,
             this.catálogosToolStripMenuItem,
             this.operacionesToolStripMenuItem,
             this.reportesToolStripMenuItem,
@@ -69,8 +75,36 @@ namespace Hilton
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(146, 450);
+            this.menuStrip1.Size = new System.Drawing.Size(174, 450);
             this.menuStrip1.TabIndex = 0;
+            // 
+            // uSUARIOToolStripMenuItem1
+            // 
+            this.uSUARIOToolStripMenuItem1.AutoSize = false;
+            this.uSUARIOToolStripMenuItem1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.uSUARIOToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtRol,
+            this.toolStripSeparator4,
+            this.btnCerrarSesion});
+            this.uSUARIOToolStripMenuItem1.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uSUARIOToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.uSUARIOToolStripMenuItem1.Name = "uSUARIOToolStripMenuItem1";
+            this.uSUARIOToolStripMenuItem1.Size = new System.Drawing.Size(170, 70);
+            this.uSUARIOToolStripMenuItem1.Text = "USUARIO";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(329, 6);
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.S)));
+            this.btnCerrarSesion.Size = new System.Drawing.Size(332, 28);
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // catálogosToolStripMenuItem
             // 
@@ -83,10 +117,11 @@ namespace Hilton
             this.empleadosToolStripMenuItem,
             this.empresasDeMantenimientoToolStripMenuItem,
             this.toolStripSeparator3});
-            this.catálogosToolStripMenuItem.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.catálogosToolStripMenuItem.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.catálogosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.catálogosToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_hotel_64;
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
-            this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(142, 60);
+            this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(170, 70);
             this.catálogosToolStripMenuItem.Text = "Catálogos ";
             // 
             // salonesToolStripMenuItem
@@ -94,6 +129,7 @@ namespace Hilton
             this.salonesToolStripMenuItem.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salonesToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_edificio_del_hotel_64;
             this.salonesToolStripMenuItem.Name = "salonesToolStripMenuItem";
+            this.salonesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Space)));
             this.salonesToolStripMenuItem.Size = new System.Drawing.Size(328, 28);
             this.salonesToolStripMenuItem.Text = "Salones";
             this.salonesToolStripMenuItem.Click += new System.EventHandler(this.salonesToolStripMenuItem_Click);
@@ -103,6 +139,7 @@ namespace Hilton
             this.serviciosToolStripMenuItem.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviciosToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_camarero_30;
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
+            this.serviciosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
             this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(328, 28);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
@@ -153,52 +190,54 @@ namespace Hilton
             this.PagosToolStripMenuItem,
             this.cancelacionesToolStripMenuItem,
             this.manetenimientoToolStripMenuItem});
-            this.operacionesToolStripMenuItem.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operacionesToolStripMenuItem.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.operacionesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.operacionesToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_gestión_de_eventos_48;
             this.operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
-            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(142, 60);
+            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(170, 70);
             this.operacionesToolStripMenuItem.Text = "Operaciones";
             // 
             // eventosToolStripMenuItem
             // 
             this.eventosToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_calendario_de_rasgar_las_hojas_96;
             this.eventosToolStripMenuItem.Name = "eventosToolStripMenuItem";
-            this.eventosToolStripMenuItem.Size = new System.Drawing.Size(245, 28);
+            this.eventosToolStripMenuItem.Size = new System.Drawing.Size(273, 28);
             this.eventosToolStripMenuItem.Text = "Gestión de Eventos";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(242, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(270, 6);
             // 
             // PagosToolStripMenuItem
             // 
             this.PagosToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_compartir_acciones_96;
             this.PagosToolStripMenuItem.Name = "PagosToolStripMenuItem";
-            this.PagosToolStripMenuItem.Size = new System.Drawing.Size(245, 28);
+            this.PagosToolStripMenuItem.Size = new System.Drawing.Size(273, 28);
             this.PagosToolStripMenuItem.Text = "Pagos";
             // 
             // cancelacionesToolStripMenuItem
             // 
             this.cancelacionesToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_important_event_50;
             this.cancelacionesToolStripMenuItem.Name = "cancelacionesToolStripMenuItem";
-            this.cancelacionesToolStripMenuItem.Size = new System.Drawing.Size(245, 28);
+            this.cancelacionesToolStripMenuItem.Size = new System.Drawing.Size(273, 28);
             this.cancelacionesToolStripMenuItem.Text = "Cancelaciones";
             // 
             // manetenimientoToolStripMenuItem
             // 
             this.manetenimientoToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_edificio_del_hotel_64__1_;
             this.manetenimientoToolStripMenuItem.Name = "manetenimientoToolStripMenuItem";
-            this.manetenimientoToolStripMenuItem.Size = new System.Drawing.Size(245, 28);
+            this.manetenimientoToolStripMenuItem.Size = new System.Drawing.Size(273, 28);
             this.manetenimientoToolStripMenuItem.Text = "Manetenimiento";
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.AutoSize = false;
-            this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reportesToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_analytics_64;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(137, 60);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(170, 70);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // seguridadToolStripMenuItem
@@ -206,10 +245,11 @@ namespace Hilton
             this.seguridadToolStripMenuItem.AutoSize = false;
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuarioToolStripMenuItem});
-            this.seguridadToolStripMenuItem.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seguridadToolStripMenuItem.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seguridadToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.seguridadToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_credenciales_de_usuario_30;
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(137, 60);
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(170, 70);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
             // 
             // usuarioToolStripMenuItem
@@ -223,9 +263,9 @@ namespace Hilton
             // 
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(146, 0);
+            this.panel1.Location = new System.Drawing.Point(174, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(867, 450);
+            this.panel1.Size = new System.Drawing.Size(839, 450);
             this.panel1.TabIndex = 2;
             // 
             // pictureBox1
@@ -235,10 +275,20 @@ namespace Hilton
             this.pictureBox1.Image = global::Hilton.Properties.Resources.LogoInicialHilton;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(867, 450);
+            this.pictureBox1.Size = new System.Drawing.Size(839, 450);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtRol
+            // 
+            this.txtRol.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRol.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtRol.Name = "txtRol";
+            this.txtRol.Size = new System.Drawing.Size(332, 28);
+            this.txtRol.Text = "ROL";
+            this.txtRol.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.txtRol.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             // 
             // FrmPrincipal
             // 
@@ -289,6 +339,10 @@ namespace Hilton
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem uSUARIOToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem btnCerrarSesion;
+        private System.Windows.Forms.ToolStripMenuItem txtRol;
     }
 }
 

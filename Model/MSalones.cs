@@ -26,7 +26,7 @@ namespace Hilton.Model
                 SqlDataAdapter sqlData = new SqlDataAdapter(sqlCom);
                 sqlData.Fill(dtResultado);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 dtResultado = null;
             }
@@ -61,7 +61,7 @@ namespace Hilton.Model
                 SqlDataAdapter sqlData = new SqlDataAdapter(sqlCom);
                 sqlData.Fill(dtResultado);
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 dtResultado = null;
             }

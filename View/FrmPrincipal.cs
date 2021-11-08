@@ -14,23 +14,47 @@ namespace Hilton
    
     public partial class FrmPrincipal : Form
     {
-        //Proximo atributo a utiizar agregar estado y rol  a las base de datos
-        public string Rol { get; set; }
         FrmClientes frmCliente;
         FrmEmpleados frmEmpleado;
         FrmEmpresaMantenimiento frmEmpresaMantenimiento;
         FrmSalon frmSalon;
         FrmServicios frmServicios;
 
-        public FrmPrincipal()
-        {
-            InitializeComponent(); 
-        }
-
-        public FrmPrincipal(string rol)
+        public FrmPrincipal(string nombre, string rol)
         {
             InitializeComponent();
-            this.Rol = rol;
+            uSUARIOToolStripMenuItem1.Text = nombre;
+            txtRol.Text = rol;
+            validarRol(rol);
+
+        }
+
+        private void validarRol(string rol)
+        {
+            if(rol.CompareTo("Administrador") == 0)
+            {
+                catálogosToolStripMenuItem.Visible= false;
+                operacionesToolStripMenuItem.Visible = false;
+                reportesToolStripMenuItem.Visible = false;
+                return;
+            }
+
+            if(rol.CompareTo("Gerente") == 0)
+            {
+                operacionesToolStripMenuItem.Visible = false;
+                seguridadToolStripMenuItem.Visible = false;
+                return;
+            }
+
+            if (rol.CompareTo("Cajero") == 0)
+            {
+                operacionesToolStripMenuItem.Visible = false;
+                seguridadToolStripMenuItem.Visible = false;
+                reportesToolStripMenuItem.Visible = false;
+                return;
+            }
+
+
         }
 
         private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
@@ -123,6 +147,11 @@ namespace Hilton
        public void CerrarForm(object sender, EventArgs e)
         {
             panel1.Controls.Add(pictureBox1);
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -36,8 +36,8 @@ namespace Hilton.View
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -115,17 +115,6 @@ namespace Hilton.View
             this.panel1.Size = new System.Drawing.Size(383, 283);
             this.panel1.TabIndex = 5;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Hilton.Properties.Resources.Hilton_hOTELS;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 283);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.Crimson;
@@ -139,6 +128,17 @@ namespace Hilton.View
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Hilton.Properties.Resources.Hilton_hOTELS;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(337, 283);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // frmInicioSesion
             // 

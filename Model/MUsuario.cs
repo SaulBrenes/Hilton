@@ -43,7 +43,7 @@ namespace Hilton.Model
                 SqlDat.Fill(DtResultado);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 DtResultado = null;
             }

@@ -15,9 +15,6 @@ namespace Hilton.View
     public partial class frmInicioSesion : Form
     {
         //Atributos proximos a usar para validar el tipo de usuario que entro
-        public static string Nombre { get ; set; }
-
-        public static string Rol;
 
         public frmInicioSesion()
         {
@@ -37,7 +34,10 @@ namespace Hilton.View
                     {
 
                         MessageBox.Show("Bienvenido al Sistema", "Sistema Centro de convenciones HILTON", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmPrincipal fp = new FrmPrincipal();
+                        string Nombre = dato.Rows[0][1].ToString();
+                        string rol = dato.Rows[0][2].ToString();
+                        
+                        FrmPrincipal fp = new FrmPrincipal(Nombre, rol);
                         fp.Show();
                         this.Hide();
                     }

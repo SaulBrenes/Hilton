@@ -28,7 +28,7 @@ namespace Hilton.Model
                 SqlDat.Fill(DtResultado);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 DtResultado = null;
             }
@@ -60,7 +60,7 @@ namespace Hilton.Model
                 SqlDat.Fill(DtResultado);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 DtResultado = null;
             }
