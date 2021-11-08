@@ -48,7 +48,7 @@ namespace Hilton
 
             if (rol.CompareTo("Cajero") == 0)
             {
-                operacionesToolStripMenuItem.Visible = false;
+                catálogosToolStripMenuItem.Visible = false;
                 seguridadToolStripMenuItem.Visible = false;
                 reportesToolStripMenuItem.Visible = false;
                 return;
