@@ -38,8 +38,11 @@ namespace Hilton.View
                         string rol = dato.Rows[0][2].ToString();
                         
                         FrmPrincipal fp = new FrmPrincipal(Nombre, rol);
+                        fp.FormClosed += FrmPrincipal_FormClosed;
                         fp.Show();
                         this.Hide();
+                        txtUsuario.Text = String.Empty;
+                        txtContraseña.Text = String.Empty;
                     }
                     else
                     {
@@ -52,7 +55,14 @@ namespace Hilton.View
             }
             else
                 MessageBox.Show("No hay conexión al servidor", "Sistema de Centro de convenciones HILTON", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
 
+        }
+
+        private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Visible = true;
+            txtUsuario.Focus();
 
         }
 

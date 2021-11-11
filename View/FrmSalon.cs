@@ -1,4 +1,5 @@
 ﻿using Hilton.Controller;
+using Hilton.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -209,8 +210,8 @@ namespace Hilton.View
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            //Form1 frmDialogReporte = new Form1();
-            //frmDialogReporte.ShowDialog();
+            FrmReporteSalon frmDialogReporte = new FrmReporteSalon();
+            frmDialogReporte.ShowDialog();
         }
     }
 }

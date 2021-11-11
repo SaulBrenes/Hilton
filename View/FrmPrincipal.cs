@@ -57,10 +57,6 @@ namespace Hilton
 
         }
 
-        private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void salonesToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -81,6 +81,17 @@
     <Compile Include="Model\MSalones.cs" />
     <Compile Include="Model\MServicios.cs" />
     <Compile Include="Model\MUsuario.cs" />
+    <Compile Include="Reports\DataSetSalones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetSalones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmReporteSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReporteSalon.Designer.cs">
+      <DependentUpon>FrmReporteSalon.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="View\FrmClientes.cs">
       <SubType>Form</SubType>
@@ -126,6 +137,12 @@
     <Compile Include="View\FrmServicios.Designer.cs">
       <DependentUpon>FrmServicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -136,6 +153,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\FrmReporteSalon.resx">
+      <DependentUpon>FrmReporteSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportSalon.rdlc" />
     <EmbeddedResource Include="View\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +178,9 @@
     <EmbeddedResource Include="View\FrmServicios.resx">
       <DependentUpon>FrmServicios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -172,6 +196,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reports\DataSetSalones.xsc">
+      <DependentUpon>DataSetSalones.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSetSalones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetSalones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSetSalones.xss">
+      <DependentUpon>DataSetSalones.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Hilton.png" />
   </ItemGroup>
   <ItemGroup>
@@ -209,7 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataSet\" />
-    <Folder Include="Reports\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
