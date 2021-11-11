@@ -266,8 +266,9 @@ namespace Hilton
             // 
             this.usuarioToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_grupo_de_usuario_48;
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(169, 28);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(184, 28);
             this.usuarioToolStripMenuItem.Text = "Usuarios";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // panel1
             // 

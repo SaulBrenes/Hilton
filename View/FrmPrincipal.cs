@@ -19,6 +19,7 @@ namespace Hilton
         FrmEmpresaMantenimiento frmEmpresaMantenimiento;
         FrmSalon frmSalon;
         FrmServicios frmServicios;
+        FrmUsuarios frmUsuarios;
 
         public FrmPrincipal(string nombre, string rol)
         {
@@ -113,6 +114,16 @@ namespace Hilton
             agregarForm(frmEmpresaMantenimiento);
         }
 
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (formAbierto(frmUsuarios))
+            {
+                return;
+            }
+            frmUsuarios = new FrmUsuarios();
+            agregarForm(frmUsuarios);
+        }
+
         private bool formAbierto(Form f)
         {
             if(f == null)
@@ -149,5 +160,7 @@ namespace Hilton
         {
             this.Close();
         }
+
+        
     }
 }

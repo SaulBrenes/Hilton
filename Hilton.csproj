@@ -81,6 +81,7 @@
     <Compile Include="Model\MSalones.cs" />
     <Compile Include="Model\MServicios.cs" />
     <Compile Include="Model\MUsuario.cs" />
+    <Compile Include="Model\Roles.cs" />
     <Compile Include="Reports\DataSetSalones.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,6 +179,9 @@
     <EmbeddedResource Include="View\FrmServicios.resx">
       <DependentUpon>FrmServicios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmUsuarios.aa.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,8 +246,6 @@
     <None Include="Resources\icons8-grupo-de-usuario-48.png" />
     <None Include="Resources\LogoInicialHilton.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataSet\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

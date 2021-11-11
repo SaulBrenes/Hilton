@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hilton.Model;
 
 namespace Hilton.View
 {
@@ -15,6 +16,8 @@ namespace Hilton.View
         public FrmUsuarios()
         {
             InitializeComponent();
+            //Inilizando combobox
+            cmbRol.Items.AddRange(Roles.rolesDisponibles);
         }
     }
 }
