@@ -19,5 +19,10 @@ namespace Hilton.View
             //Inilizando combobox
             cmbRol.Items.AddRange(Roles.rolesDisponibles);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -70,5 +70,13 @@ namespace Hilton.View
         {
             Close();
         }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnAceptar_Click(sender, e);
+            }
+        }
     }
 }

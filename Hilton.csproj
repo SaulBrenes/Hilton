@@ -216,6 +216,7 @@
   <ItemGroup>
     <Content Include="HIcon.ico" />
     <Content Include="IconoApp.ico" />
+    <None Include="Resources\building-icon_34475.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

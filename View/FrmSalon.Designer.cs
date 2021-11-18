@@ -29,9 +29,9 @@ namespace Hilton.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbCampos = new System.Windows.Forms.GroupBox();
             this.nudcapacidadmax = new System.Windows.Forms.NumericUpDown();
             this.nudPrecioHora = new System.Windows.Forms.NumericUpDown();
@@ -46,7 +46,6 @@ namespace Hilton.View
             this.label5 = new System.Windows.Forms.Label();
             this.dgvSalones = new System.Windows.Forms.DataGridView();
             this.gbOpciones = new System.Windows.Forms.GroupBox();
-            this.btnReporte = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnEstado = new System.Windows.Forms.Button();
@@ -74,9 +73,9 @@ namespace Hilton.View
             this.gbCampos.Controls.Add(this.label1);
             this.gbCampos.Dock = System.Windows.Forms.DockStyle.Right;
             this.gbCampos.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbCampos.Location = new System.Drawing.Point(554, 16);
+            this.gbCampos.Location = new System.Drawing.Point(555, 16);
             this.gbCampos.Name = "gbCampos";
-            this.gbCampos.Size = new System.Drawing.Size(189, 377);
+            this.gbCampos.Size = new System.Drawing.Size(292, 255);
             this.gbCampos.TabIndex = 2;
             this.gbCampos.TabStop = false;
             this.gbCampos.Text = "Campos";
@@ -85,7 +84,7 @@ namespace Hilton.View
             // nudcapacidadmax
             // 
             this.nudcapacidadmax.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudcapacidadmax.Location = new System.Drawing.Point(16, 244);
+            this.nudcapacidadmax.Location = new System.Drawing.Point(109, 210);
             this.nudcapacidadmax.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -93,7 +92,7 @@ namespace Hilton.View
             0});
             this.nudcapacidadmax.Name = "nudcapacidadmax";
             this.nudcapacidadmax.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.nudcapacidadmax.Size = new System.Drawing.Size(163, 26);
+            this.nudcapacidadmax.Size = new System.Drawing.Size(164, 26);
             this.nudcapacidadmax.TabIndex = 7;
             this.nudcapacidadmax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudcapacidadmax.ThousandsSeparator = true;
@@ -103,7 +102,7 @@ namespace Hilton.View
             // 
             this.nudPrecioHora.DecimalPlaces = 2;
             this.nudPrecioHora.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudPrecioHora.Location = new System.Drawing.Point(15, 182);
+            this.nudPrecioHora.Location = new System.Drawing.Point(108, 158);
             this.nudPrecioHora.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -119,16 +118,16 @@ namespace Hilton.View
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(14, 120);
+            this.txtNombre.Location = new System.Drawing.Point(105, 106);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(167, 26);
+            this.txtNombre.Size = new System.Drawing.Size(164, 26);
             this.txtNombre.TabIndex = 5;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mtxtCodigo
             // 
             this.mtxtCodigo.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCodigo.Location = new System.Drawing.Point(15, 58);
+            this.mtxtCodigo.Location = new System.Drawing.Point(105, 54);
             this.mtxtCodigo.Name = "mtxtCodigo";
             this.mtxtCodigo.Size = new System.Drawing.Size(164, 26);
             this.mtxtCodigo.TabIndex = 4;
@@ -136,29 +135,29 @@ namespace Hilton.View
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 218);
+            this.label4.Location = new System.Drawing.Point(17, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 16);
+            this.label4.Size = new System.Drawing.Size(85, 40);
             this.label4.TabIndex = 3;
             this.label4.Text = "Capacidad máxima:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(50, 156);
+            this.label3.Location = new System.Drawing.Point(18, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 16);
+            this.label3.Size = new System.Drawing.Size(84, 33);
             this.label3.TabIndex = 2;
             this.label3.Text = "Precio por hora:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(70, 94);
+            this.label2.Location = new System.Drawing.Point(27, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 16);
             this.label2.TabIndex = 1;
@@ -168,7 +167,7 @@ namespace Hilton.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 32);
+            this.label1.Location = new System.Drawing.Point(39, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 0;
@@ -176,7 +175,8 @@ namespace Hilton.View
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.Controls.Add(this.txtBuscar);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -209,29 +209,29 @@ namespace Hilton.View
             // 
             this.dgvSalones.AllowUserToAddRows = false;
             this.dgvSalones.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            this.dgvSalones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
+            this.dgvSalones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSalones.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvSalones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSalones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSalones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSalones.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSalones.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSalones.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvSalones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSalones.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvSalones.Location = new System.Drawing.Point(3, 16);
@@ -240,43 +240,31 @@ namespace Hilton.View
             this.dgvSalones.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.dgvSalones.RowTemplate.Height = 30;
             this.dgvSalones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSalones.Size = new System.Drawing.Size(551, 377);
+            this.dgvSalones.Size = new System.Drawing.Size(552, 255);
             this.dgvSalones.TabIndex = 5;
             // 
             // gbOpciones
             // 
-            this.gbOpciones.Controls.Add(this.btnReporte);
             this.gbOpciones.Controls.Add(this.btnGuardar);
             this.gbOpciones.Controls.Add(this.btnCancelar);
             this.gbOpciones.Controls.Add(this.btnEstado);
             this.gbOpciones.Controls.Add(this.btnEditar);
             this.gbOpciones.Controls.Add(this.btnNuevo);
-            this.gbOpciones.Dock = System.Windows.Forms.DockStyle.Right;
+            this.gbOpciones.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gbOpciones.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbOpciones.Location = new System.Drawing.Point(756, 54);
+            this.gbOpciones.Location = new System.Drawing.Point(10, 328);
             this.gbOpciones.Name = "gbOpciones";
-            this.gbOpciones.Size = new System.Drawing.Size(104, 396);
+            this.gbOpciones.Size = new System.Drawing.Size(850, 72);
             this.gbOpciones.TabIndex = 6;
             this.gbOpciones.TabStop = false;
             this.gbOpciones.Text = "Opciones";
             // 
-            // btnReporte
-            // 
-            this.btnReporte.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.Location = new System.Drawing.Point(6, 336);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(92, 45);
-            this.btnReporte.TabIndex = 16;
-            this.btnReporte.Text = "Crear reporte";
-            this.btnReporte.UseVisualStyleBackColor = true;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
-            // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(6, 153);
+            this.btnGuardar.Location = new System.Drawing.Point(530, 21);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(82, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(115, 33);
             this.btnGuardar.TabIndex = 15;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -285,9 +273,9 @@ namespace Hilton.View
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(6, 194);
+            this.btnCancelar.Location = new System.Drawing.Point(699, 21);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(82, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(115, 33);
             this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -296,9 +284,9 @@ namespace Hilton.View
             // btnEstado
             // 
             this.btnEstado.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstado.Location = new System.Drawing.Point(6, 112);
+            this.btnEstado.Location = new System.Drawing.Point(361, 21);
             this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(82, 23);
+            this.btnEstado.Size = new System.Drawing.Size(115, 33);
             this.btnEstado.TabIndex = 13;
             this.btnEstado.Text = "Estado";
             this.btnEstado.UseVisualStyleBackColor = true;
@@ -307,9 +295,9 @@ namespace Hilton.View
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(6, 71);
+            this.btnEditar.Location = new System.Drawing.Point(192, 21);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(82, 23);
+            this.btnEditar.Size = new System.Drawing.Size(115, 33);
             this.btnEditar.TabIndex = 12;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -318,9 +306,9 @@ namespace Hilton.View
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(6, 30);
+            this.btnNuevo.Location = new System.Drawing.Point(23, 21);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(82, 23);
+            this.btnNuevo.Size = new System.Drawing.Size(115, 33);
             this.btnNuevo.TabIndex = 11;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -333,7 +321,7 @@ namespace Hilton.View
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(10, 54);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(746, 396);
+            this.groupBox3.Size = new System.Drawing.Size(850, 274);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             // 
@@ -342,15 +330,16 @@ namespace Hilton.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(870, 460);
+            this.BackColor = System.Drawing.SystemColors.Desktop;
+            this.ClientSize = new System.Drawing.Size(870, 410);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.gbOpciones);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmSalon";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Salones registrados";
+            this.Text = "SALONES REGISTRADOS";
             this.Load += new System.EventHandler(this.FrmSalon_Load);
             this.gbCampos.ResumeLayout(false);
             this.gbCampos.PerformLayout();
@@ -386,6 +375,5 @@ namespace Hilton.View
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnReporte;
     }
 }

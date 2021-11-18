@@ -111,6 +111,7 @@ namespace Hilton.View
             this.Botones();
             this.Limpiar();
             this.dgvEmpleados.CurrentCell = null;
+            gboxCampos.Visible = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -120,6 +121,7 @@ namespace Hilton.View
             this.Botones();
             this.Limpiar();
             this.txtPNombre.Focus();
+            gboxCampos.Visible = true;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -136,6 +138,7 @@ namespace Hilton.View
                 this.IsNuevo = false;
                 this.IsEditar = true;
                 this.Botones();
+                gboxCampos.Visible = true;
                 this.txtPNombre.Focus();
 
             }

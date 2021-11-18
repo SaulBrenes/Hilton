@@ -63,6 +63,16 @@ namespace Hilton.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap building_icon_34475 {
+            get {
+                object obj = ResourceManager.GetObject("building-icon_34475", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hilton {
             get {
                 object obj = ResourceManager.GetObject("Hilton", resourceCulture);

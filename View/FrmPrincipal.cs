@@ -24,6 +24,7 @@ namespace Hilton
         public FrmPrincipal(string nombre, string rol)
         {
             InitializeComponent();
+            MinimumSize = Size;
             uSUARIOToolStripMenuItem1.Text = nombre;
             txtRol.Text = rol;
             validarRol(rol);
@@ -143,17 +144,19 @@ namespace Hilton
         private void agregarForm(Form f)
         {
             f.TopLevel = false;
-            f.FormClosed += CerrarForm; 
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(f);
+            f.FormClosed += CerrarForm;
+            pnlVentanas.Controls.Clear();
+            pnlVentanas.Controls.Add(f);
             Tag = f;
+            lblForm.Text = f.Text;
             f.Show();
         }
 
        public void CerrarForm(object sender, EventArgs e)
         {
-            panel1.Controls.Add(pictureBox1);
+            pnlVentanas.Controls.Add(pictureBox1);
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -161,6 +164,11 @@ namespace Hilton
             this.Close();
         }
 
-        
+        private void IniciotoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            pnlVentanas.Controls.Clear();
+            pnlVentanas.Controls.Add(pictureBox1);
+            lblForm.Text = "INICIO";
+        }
     }
 }
