@@ -74,6 +74,12 @@
     <Compile Include="Controller\CSalon.cs" />
     <Compile Include="Controller\CServicio.cs" />
     <Compile Include="Controller\CUsuario.cs" />
+    <Compile Include="FrmPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrueba.Designer.cs">
+      <DependentUpon>FrmPrueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Conexión.cs" />
     <Compile Include="Model\MClientes.cs" />
     <Compile Include="Model\MEmpleado.cs" />
@@ -94,6 +100,24 @@
       <DependentUpon>FrmReporteSalon.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="View\AgregarSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AgregarSalon.Designer.cs">
+      <DependentUpon>AgregarSalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CANCELACIONES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CANCELACIONES.Designer.cs">
+      <DependentUpon>CANCELACIONES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPrueba2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPrueba2.Designer.cs">
+      <DependentUpon>FormPrueba2.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +168,9 @@
     <Compile Include="View\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmPrueba.resx">
+      <DependentUpon>FrmPrueba.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -158,6 +185,15 @@
       <DependentUpon>FrmReporteSalon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportSalon.rdlc" />
+    <EmbeddedResource Include="View\AgregarSalon.resx">
+      <DependentUpon>AgregarSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CANCELACIONES.resx">
+      <DependentUpon>CANCELACIONES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPrueba2.resx">
+      <DependentUpon>FormPrueba2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>

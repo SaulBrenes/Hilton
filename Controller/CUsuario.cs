@@ -15,7 +15,37 @@ namespace Hilton.Controller
     {
         public static DataTable Validar_acceso(string usuario, string contraseña)
         {
-            return new MUsuario().Validar_Acceso(usuario, contraseña);
+            return MUsuario.Validar_Acceso(usuario, contraseña);
+        }
+
+        public static string ActualizarContraseñaUsuario(int idUsuario, string nuevaContraseña, string rol)
+        {
+            return MUsuario.ActualizarContrasenaUsuario(idUsuario,nuevaContraseña, rol);
+        }
+
+        public static string ActualizarDatosUsuario(int idUsuario, string usuario, string rol, int idEmpleado)
+        {
+            return MUsuario.ActualizarDatosUsuarios(idUsuario, usuario, idEmpleado, rol);
+        }
+
+        public static  DataTable BuscarUsuario(string dato)
+        {
+            return MUsuario.BuscarUsuario(dato);
+        }
+
+        public static string EstadoUsuario(int idUsuario)
+        {
+            return MUsuario.EstadoUsuario(idUsuario);
+        }
+
+        public static string InsertarUsuario(string usuario, string contraseña, string rol, int idEmpleado) 
+            {
+            return MUsuario.InsertarUsuario(usuario, contraseña, rol, idEmpleado);
+            } 
+
+        public static DataTable MostrarUsuario()
+        {
+            return MUsuario.MostrarUsuarios();
         }
 
     }

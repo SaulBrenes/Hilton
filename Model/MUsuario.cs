@@ -5,14 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using Hilton.Model;
 
 namespace Hilton.Model
 {
     class MUsuario
     {
 
-        public DataTable Validar_Acceso(string usuario, string contraseña)
+        public static DataTable Validar_Acceso(string usuario, string contraseña)
         {
             DataTable DtResultado = new DataTable("Inicio_Sesión");
             SqlConnection SqlCon = new SqlConnection();
@@ -55,7 +54,238 @@ namespace Hilton.Model
 
         }
 
+        public  static DataTable BuscarUsuario(string dato)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection sqlConnection = new SqlConnection();
+            try
+            {
+                sqlConnection.ConnectionString = Conexión.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = sqlConnection;
+                SqlCmd.CommandText = "BuscarUsuario";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
+                SqlParameter ParDato = new SqlParameter();
+                ParDato.ParameterName = "@dato";
+                ParDato.SqlDbType = SqlDbType.NVarChar;
+                ParDato.Size= 100;
+                SqlCmd.Parameters.Add(ParDato);
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(SqlCmd);
+                sqlDataAdapter.Fill(dt);
+
+            }
+            catch (Exception)
+            {
+                dt = null;
+            }
+            finally
+            {
+                if (sqlConnection.State == ConnectionState.Open) sqlConnection.Close();
+            }
+            return dt;
+        }
+
+        public static DataTable MostrarUsuarios()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection sqlconection = new SqlConnection();
+
+            try
+            {
+                sqlconection.ConnectionString = Conexión.Cn;
+                SqlCommand sqlcommand = new SqlCommand();
+                sqlcommand.Connection = sqlconection;
+                sqlcommand.CommandType = CommandType.StoredProcedure;
+                sqlcommand.CommandText = "MostrarUsuarios";
+
+                SqlDataAdapter sqlData = new SqlDataAdapter(sqlcommand);
+                sqlData.Fill(dt);
+            }
+            catch (Exception)
+            {
+                dt = null;
+            }
+            finally
+            {
+                if(sqlconection.State == ConnectionState.Open)
+                {
+                    sqlconection.Close();
+                }
+            }
+
+            return dt;
+        }
+
+        public static string ActualizarContrasenaUsuario(int idUsuario, string contrasena, string rol)
+        {
+            string respuesta;
+            SqlConnection sqlCon = new SqlConnection();
+
+            try
+            {
+                sqlCon.ConnectionString = Conexión.Cn;
+                sqlCon.Open();
+                SqlCommand sqlCom = new SqlCommand();
+                sqlCom.Connection = sqlCon;
+                sqlCom.CommandText = "ActualizarContrasenaUsuario";
+                sqlCom.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdUsuario = new SqlParameter("@idUsuario", SqlDbType.Int);
+                ParIdUsuario.Value = idUsuario;
+
+                sqlCom.Parameters.Add(ParIdUsuario);
+
+                SqlParameter ParNContrasena = new SqlParameter("@nuevaContraseña", SqlDbType.NVarChar,100);
+                ParNContrasena.Value = contrasena;
+
+                sqlCom.Parameters.Add(ParNContrasena);
+
+                respuesta = sqlCom.ExecuteNonQuery() == 1 ? "OK" : "No se actualizó contraseña";
+
+            }
+            catch (Exception ex)
+            {
+                respuesta = ex.Message;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open) sqlCon.Close();
+            }
+
+            return respuesta;
+        }
+
+        public static string ActualizarDatosUsuarios(int idUsuario, string usuario, int idEmpleado ,string rol)
+        {
+            string respuesta;
+            SqlConnection sqlCon = new SqlConnection();
+
+            try
+            {
+                sqlCon.ConnectionString = Conexión.Cn;
+                sqlCon.Open();
+                SqlCommand sqlCom = new SqlCommand();
+                sqlCom.Connection = sqlCon;
+                sqlCom.CommandText = "ActualizarDatosUsuario";
+                sqlCom.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdUsuario = new SqlParameter("@idUsuario", SqlDbType.Int);
+                ParIdUsuario.Value = idUsuario;
+
+                sqlCom.Parameters.Add(ParIdUsuario);
+
+                SqlParameter ParUsuario= new SqlParameter("@usuario", SqlDbType.NVarChar, 50);
+                ParUsuario.Value = usuario;
+
+                sqlCom.Parameters.Add(ParUsuario);
+
+                SqlParameter ParIdEmpleado = new SqlParameter("@idEmpleado", SqlDbType.Int);
+                ParIdEmpleado.Value = idEmpleado;
+
+                SqlParameter ParRol = new SqlParameter("@rol", SqlDbType.NVarChar, 60);
+                ParRol.Value = rol;
+
+                respuesta = sqlCom.ExecuteNonQuery() == 1 ? "OK" : "No se actualizó contraseña";
+
+            }
+            catch (Exception ex)
+            {
+                respuesta = ex.Message;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open) sqlCon.Close();
+            }
+
+            return respuesta;
+        }
+
+        public static string EstadoUsuario(int idUsuario)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                //Código
+                SqlCon.ConnectionString = Conexión.Cn;
+                SqlCon.Open();
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "EstadoUsuario";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                // Parámetros del Procedimiento Almacenado
+
+                SqlParameter ParIdUsuario = new SqlParameter();
+                ParIdUsuario.ParameterName = "@IdUsuario";
+                ParIdUsuario.SqlDbType = SqlDbType.Int;
+                ParIdUsuario.Value = idUsuario;
+                SqlCmd.Parameters.Add(ParIdUsuario);
+
+                //Ejecutamos nuestro comando
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "No se actualizo el estado";
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+        }
+
+        public static string InsertarUsuario(string usuario, string contraseña, string rol, int idEmpleado)
+        {
+            string respuesta;
+            SqlConnection sqlCon = new SqlConnection();
+
+            try
+            {
+                sqlCon.ConnectionString = Conexión.Cn;
+                sqlCon.Open();
+                SqlCommand sqlCom = new SqlCommand();
+                sqlCom.Connection = sqlCon;
+                sqlCom.CommandText = "Insertar_Usuario";
+                sqlCom.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParUsuario = new SqlParameter("@usuario", SqlDbType.NVarChar, 50);
+                ParUsuario.Value = usuario;
+
+                sqlCom.Parameters.Add(ParUsuario);
+
+                SqlParameter ParIdEmpleado = new SqlParameter("@idEmpleado", SqlDbType.Int);
+                ParIdEmpleado.Value = idEmpleado;
+
+                SqlParameter ParRol = new SqlParameter("@rol", SqlDbType.NVarChar, 60);
+                ParRol.Value = rol;
+
+                SqlParameter ParNContrasena = new SqlParameter("@contraseña", SqlDbType.NVarChar, 50);
+                ParNContrasena.Value = contraseña;
+
+                sqlCom.Parameters.Add(ParNContrasena);
+
+                respuesta = sqlCom.ExecuteNonQuery() == 1 ? "OK" : "No se actualizó usuario";
+
+            }
+            catch (Exception ex)
+            {
+                respuesta = ex.Message;
+            }
+            finally
+            {
+                if (sqlCon.State == ConnectionState.Open) sqlCon.Close();
+            }
+
+            return respuesta;
+        }
+        
 
     }
 }

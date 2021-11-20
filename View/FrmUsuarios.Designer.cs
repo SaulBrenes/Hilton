@@ -34,7 +34,6 @@ namespace Hilton.View
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnNuevaContra = new System.Windows.Forms.Button();
             this.cmbRol = new System.Windows.Forms.ComboBox();
@@ -43,6 +42,7 @@ namespace Hilton.View
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.gbOpciones = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -51,8 +51,8 @@ namespace Hilton.View
             this.btnNuevo = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.gbOpciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,19 +83,11 @@ namespace Hilton.View
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
-            // dgvUsuarios
-            // 
-            this.dgvUsuarios.AllowUserToAddRows = false;
-            this.dgvUsuarios.AllowUserToDeleteRows = false;
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dgvUsuarios, "dgvUsuarios");
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.ReadOnly = true;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnNuevaContra);
             this.groupBox1.Controls.Add(this.cmbRol);
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.cmbEmpleado);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label3);
@@ -144,10 +136,18 @@ namespace Hilton.View
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // dgvUsuarios
+            // 
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            resources.ApplyResources(this.dgvUsuarios, "dgvUsuarios");
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.ReadOnly = true;
+            // 
             // gbOpciones
             // 
-            this.gbOpciones.Controls.Add(this.btnGuardar);
-            this.gbOpciones.Controls.Add(this.btnCancelar);
+            this.gbOpciones.Controls.Add(this.btnNuevaContra);
             this.gbOpciones.Controls.Add(this.btnEstado);
             this.gbOpciones.Controls.Add(this.btnEditar);
             this.gbOpciones.Controls.Add(this.btnNuevo);
@@ -199,9 +199,9 @@ namespace Hilton.View
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.gbOpciones.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -76,7 +76,7 @@ namespace Hilton.View
             this.btnAceptar.Location = new System.Drawing.Point(50, 221);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(108, 35);
+            this.btnAceptar.Size = new System.Drawing.Size(108, 42);
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -113,7 +113,7 @@ namespace Hilton.View
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(345, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(383, 283);
+            this.panel1.Size = new System.Drawing.Size(383, 294);
             this.panel1.TabIndex = 5;
             // 
             // btnCerrar
@@ -124,7 +124,7 @@ namespace Hilton.View
             this.btnCerrar.Location = new System.Drawing.Point(216, 221);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(108, 35);
+            this.btnCerrar.Size = new System.Drawing.Size(108, 42);
             this.btnCerrar.TabIndex = 5;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -136,7 +136,7 @@ namespace Hilton.View
             this.pictureBox1.Image = global::Hilton.Properties.Resources.Hilton_hOTELS;
             this.pictureBox1.Location = new System.Drawing.Point(8, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 283);
+            this.pictureBox1.Size = new System.Drawing.Size(337, 294);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -146,7 +146,7 @@ namespace Hilton.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(736, 299);
+            this.ClientSize = new System.Drawing.Size(736, 310);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
