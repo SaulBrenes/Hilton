@@ -69,6 +69,7 @@ namespace Hilton.Model
                 SqlParameter ParDato = new SqlParameter();
                 ParDato.ParameterName = "@dato";
                 ParDato.SqlDbType = SqlDbType.NVarChar;
+                ParDato.Value = dato;
                 ParDato.Size= 100;
                 SqlCmd.Parameters.Add(ParDato);
 
@@ -142,6 +143,10 @@ namespace Hilton.Model
 
                 sqlCom.Parameters.Add(ParNContrasena);
 
+                SqlParameter ParRol = new SqlParameter("@rol", SqlDbType.NVarChar, 60);
+                ParRol.Value = rol;
+                sqlCom.Parameters.Add(ParRol);
+
                 respuesta = sqlCom.ExecuteNonQuery() == 1 ? "OK" : "No se actualizó contraseña";
 
             }
@@ -159,6 +164,7 @@ namespace Hilton.Model
 
         public static string ActualizarDatosUsuarios(int idUsuario, string usuario, int idEmpleado ,string rol)
         {
+            DataTable dt = new DataTable();
             string respuesta;
             SqlConnection sqlCon = new SqlConnection();
 
@@ -184,10 +190,17 @@ namespace Hilton.Model
                 SqlParameter ParIdEmpleado = new SqlParameter("@idEmpleado", SqlDbType.Int);
                 ParIdEmpleado.Value = idEmpleado;
 
+                sqlCom.Parameters.Add(ParIdEmpleado);
+
                 SqlParameter ParRol = new SqlParameter("@rol", SqlDbType.NVarChar, 60);
                 ParRol.Value = rol;
+                sqlCom.Parameters.Add(ParRol);
 
-                respuesta = sqlCom.ExecuteNonQuery() == 1 ? "OK" : "No se actualizó contraseña";
+                SqlDataAdapter sqlData = new SqlDataAdapter(sqlCom);
+                sqlData.Fill(dt);
+                respuesta = dt.Rows[0].ItemArray[0].ToString();
+
+                //respuesta = sqlCom.ExecuteNonQuery() == 1 ? "OK" : "No se actualizó datos del usuario";
 
             }
             catch (Exception ex)
@@ -263,8 +276,12 @@ namespace Hilton.Model
                 SqlParameter ParIdEmpleado = new SqlParameter("@idEmpleado", SqlDbType.Int);
                 ParIdEmpleado.Value = idEmpleado;
 
+                sqlCom.Parameters.Add(ParIdEmpleado);
+
                 SqlParameter ParRol = new SqlParameter("@rol", SqlDbType.NVarChar, 60);
                 ParRol.Value = rol;
+
+                sqlCom.Parameters.Add(ParRol);
 
                 SqlParameter ParNContrasena = new SqlParameter("@contraseña", SqlDbType.NVarChar, 50);
                 ParNContrasena.Value = contraseña;

@@ -84,7 +84,7 @@ namespace Hilton.View
                 try
                 {
 
-                    rpta = CCliente.EstadoCliente(Convert.ToInt32(this.dgvClientes.CurrentRow.Cells[0].Value));
+                    rpta = CUsuario.EstadoUsuario(Convert.ToInt32(this.dgvClientes.CurrentRow.Cells[0].Value));
                     if (rpta == "OK")
                         MessageBox.Show("El estado ha sido actualizado", "Sistema Hilton", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else

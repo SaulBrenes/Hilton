@@ -136,6 +136,12 @@
     <Compile Include="View\FrmEmpresaMantenimiento.Designer.cs">
       <DependentUpon>FrmEmpresaMantenimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmMiCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmMiCuenta.Designer.cs">
+      <DependentUpon>FrmMiCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,12 @@
     </Compile>
     <Compile Include="View\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SeleccionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SeleccionEmpleado.Designer.cs">
+      <DependentUpon>SeleccionEmpleado.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmPrueba.resx">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
@@ -203,6 +215,9 @@
     <EmbeddedResource Include="View\FrmEmpresaMantenimiento.resx">
       <DependentUpon>FrmEmpresaMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmMiCuenta.resx">
+      <DependentUpon>FrmMiCuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SeleccionEmpleado.resx">
+      <DependentUpon>SeleccionEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

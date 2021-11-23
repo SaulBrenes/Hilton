@@ -20,6 +20,8 @@ namespace Hilton
         FrmSalon frmSalon;
         FrmServicios frmServicios;
         FrmUsuarios frmUsuarios;
+        public string usuario { get; set; }
+        public int Idusuario { get; set; }
 
         public FrmPrincipal(string nombre, string rol)
         {
@@ -38,20 +40,21 @@ namespace Hilton
                 catálogosToolStripMenuItem.Visible= false;
                 operacionesToolStripMenuItem.Visible = false;
                 reportesToolStripMenuItem.Visible = false;
+                miCuentaToolStripMenuItem.Visible = false;
                 return;
             }
 
             if(rol.CompareTo("Gerente") == 0)
             {
                 operacionesToolStripMenuItem.Visible = false;
-                seguridadToolStripMenuItem.Visible = false;
+                usuarioToolStripMenuItem.Visible = false;
                 return;
             }
 
             if (rol.CompareTo("Cajero") == 0)
             {
                 catálogosToolStripMenuItem.Visible = false;
-                seguridadToolStripMenuItem.Visible = false;
+                usuarioToolStripMenuItem.Visible = false;
                 reportesToolStripMenuItem.Visible = false;
                 return;
             }
@@ -132,7 +135,7 @@ namespace Hilton
                 return false;
             }
 
-            if (panel1.Controls[0].ToString() == f.ToString())
+            if (pnlVentanas.Controls[0].ToString() == f.ToString())
             {
                 return true;
             }
@@ -169,6 +172,12 @@ namespace Hilton
             pnlVentanas.Controls.Clear();
             pnlVentanas.Controls.Add(pictureBox1);
             lblForm.Text = "INICIO";
+        }
+
+        private void miCuentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMiCuenta miCuenta = new FrmMiCuenta(txtRol.Text,usuario, Idusuario ) ;
+            miCuenta.ShowDialog();
         }
     }
 }
