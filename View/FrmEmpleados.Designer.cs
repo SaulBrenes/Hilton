@@ -51,6 +51,10 @@ namespace Hilton.View
             this.gboxCampos = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.mtxtCedula = new System.Windows.Forms.MaskedTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtDirección = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gboxCampos.SuspendLayout();
@@ -65,7 +69,7 @@ namespace Hilton.View
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(934, 53);
             this.panel2.TabIndex = 8;
@@ -74,7 +78,7 @@ namespace Hilton.View
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(85, 15);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.MaximumSize = new System.Drawing.Size(748, 30);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(748, 25);
@@ -100,9 +104,9 @@ namespace Hilton.View
             this.groupBox2.Controls.Add(this.btnEstado);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Location = new System.Drawing.Point(0, 423);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(934, 82);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
@@ -112,7 +116,7 @@ namespace Hilton.View
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(510, 35);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(108, 34);
             this.btnGuardar.TabIndex = 23;
@@ -124,7 +128,7 @@ namespace Hilton.View
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Location = new System.Drawing.Point(21, 35);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(108, 34);
             this.btnNuevo.TabIndex = 19;
@@ -136,7 +140,7 @@ namespace Hilton.View
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(673, 37);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(108, 34);
             this.btnCancelar.TabIndex = 22;
@@ -148,7 +152,7 @@ namespace Hilton.View
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(184, 35);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(108, 34);
             this.btnEditar.TabIndex = 20;
@@ -160,7 +164,7 @@ namespace Hilton.View
             // 
             this.btnEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstado.Location = new System.Drawing.Point(347, 35);
-            this.btnEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEstado.Margin = new System.Windows.Forms.Padding(4);
             this.btnEstado.Name = "btnEstado";
             this.btnEstado.Size = new System.Drawing.Size(108, 34);
             this.btnEstado.TabIndex = 21;
@@ -171,7 +175,7 @@ namespace Hilton.View
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 49);
+            this.label1.Location = new System.Drawing.Point(26, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 25);
@@ -182,7 +186,7 @@ namespace Hilton.View
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 109);
+            this.label2.Location = new System.Drawing.Point(14, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 25);
@@ -193,17 +197,17 @@ namespace Hilton.View
             // txtSNombre
             // 
             this.txtSNombre.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSNombre.Location = new System.Drawing.Point(156, 111);
+            this.txtSNombre.Location = new System.Drawing.Point(156, 78);
             this.txtSNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtSNombre.Name = "txtSNombre";
-            this.txtSNombre.Size = new System.Drawing.Size(148, 25);
+            this.txtSNombre.Size = new System.Drawing.Size(160, 25);
             this.txtSNombre.TabIndex = 2;
             this.txtSNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 169);
+            this.label6.Location = new System.Drawing.Point(21, 121);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 26);
@@ -214,7 +218,7 @@ namespace Hilton.View
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 230);
+            this.label5.Location = new System.Drawing.Point(18, 163);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 23);
@@ -225,46 +229,46 @@ namespace Hilton.View
             // txtSApellido
             // 
             this.txtSApellido.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSApellido.Location = new System.Drawing.Point(156, 230);
+            this.txtSApellido.Location = new System.Drawing.Point(156, 156);
             this.txtSApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtSApellido.Name = "txtSApellido";
-            this.txtSApellido.Size = new System.Drawing.Size(148, 25);
+            this.txtSApellido.Size = new System.Drawing.Size(160, 25);
             this.txtSApellido.TabIndex = 4;
             this.txtSApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPNombre
             // 
             this.txtPNombre.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPNombre.Location = new System.Drawing.Point(156, 49);
+            this.txtPNombre.Location = new System.Drawing.Point(156, 39);
             this.txtPNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtPNombre.Name = "txtPNombre";
-            this.txtPNombre.Size = new System.Drawing.Size(148, 25);
+            this.txtPNombre.Size = new System.Drawing.Size(160, 25);
             this.txtPNombre.TabIndex = 1;
             this.txtPNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPApellido
             // 
             this.txtPApellido.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPApellido.Location = new System.Drawing.Point(156, 169);
+            this.txtPApellido.Location = new System.Drawing.Point(156, 117);
             this.txtPApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtPApellido.Name = "txtPApellido";
-            this.txtPApellido.Size = new System.Drawing.Size(148, 25);
+            this.txtPApellido.Size = new System.Drawing.Size(160, 25);
             this.txtPApellido.TabIndex = 3;
             this.txtPApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mtxtTelefono
             // 
             this.mtxtTelefono.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTelefono.Location = new System.Drawing.Point(156, 287);
+            this.mtxtTelefono.Location = new System.Drawing.Point(156, 195);
             this.mtxtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.mtxtTelefono.Name = "mtxtTelefono";
-            this.mtxtTelefono.Size = new System.Drawing.Size(148, 25);
+            this.mtxtTelefono.Size = new System.Drawing.Size(160, 25);
             this.mtxtTelefono.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(65, 288);
+            this.label3.Location = new System.Drawing.Point(65, 202);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 21);
@@ -274,6 +278,10 @@ namespace Hilton.View
             // 
             // gboxCampos
             // 
+            this.gboxCampos.Controls.Add(this.txtDirección);
+            this.gboxCampos.Controls.Add(this.label8);
+            this.gboxCampos.Controls.Add(this.label7);
+            this.gboxCampos.Controls.Add(this.mtxtCedula);
             this.gboxCampos.Controls.Add(this.label3);
             this.gboxCampos.Controls.Add(this.mtxtTelefono);
             this.gboxCampos.Controls.Add(this.txtPApellido);
@@ -320,6 +328,45 @@ namespace Hilton.View
             this.dgvEmpleados.Size = new System.Drawing.Size(586, 334);
             this.dgvEmpleados.TabIndex = 11;
             // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(65, 239);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 21);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Cédula:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // mtxtCedula
+            // 
+            this.mtxtCedula.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCedula.Location = new System.Drawing.Point(156, 234);
+            this.mtxtCedula.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxtCedula.Name = "mtxtCedula";
+            this.mtxtCedula.Size = new System.Drawing.Size(160, 25);
+            this.mtxtCedula.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(65, 276);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 21);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Dirección:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtDirección
+            // 
+            this.txtDirección.Location = new System.Drawing.Point(156, 273);
+            this.txtDirección.Multiline = true;
+            this.txtDirección.Name = "txtDirección";
+            this.txtDirección.Size = new System.Drawing.Size(160, 41);
+            this.txtDirección.TabIndex = 16;
+            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -330,7 +377,7 @@ namespace Hilton.View
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PLANILLA DE EMPLEADOS";
@@ -369,5 +416,9 @@ namespace Hilton.View
         private System.Windows.Forms.GroupBox gboxCampos;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvEmpleados;
+        private System.Windows.Forms.TextBox txtDirección;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox mtxtCedula;
     }
 }

@@ -109,7 +109,7 @@ namespace Hilton.Model
         }
 
         public static string InsertarEmpleado(string primernombre, string segundonombre, string primerapellido,
-                                         string segundoapellido,  string telefono)
+                                         string segundoapellido,  string telefono, string cedula, string direccion)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -161,6 +161,15 @@ namespace Hilton.Model
                 ParTelefono.Value = telefono;
                 SqlCmd.Parameters.Add(ParTelefono);
 
+                SqlParameter ParCedula = new SqlParameter("@cedula", SqlDbType.NVarChar, 16);
+                ParCedula.Value = cedula;
+
+                SqlParameter ParDireccion = new SqlParameter("@direccion", SqlDbType.NVarChar, 100);
+                ParDireccion.Value = direccion;
+
+                SqlCmd.Parameters.Add(ParCedula);
+                SqlCmd.Parameters.Add(ParDireccion);
+
                 //Ejecutamos nuestro comando
 
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
@@ -179,7 +188,7 @@ namespace Hilton.Model
         }
 
         public static string ActualizarEmpleado(int idEmpleado,string primernombre, string segundonombre, string primerapellido,
-                                        string segundoapellido, string telefono)
+                                        string segundoapellido, string telefono, string cedula, string direccion)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -236,6 +245,15 @@ namespace Hilton.Model
                 ParSegundoApellido.Size = 8;
                 ParTelefono.Value = telefono;
                 SqlCmd.Parameters.Add(ParTelefono);
+
+                SqlParameter ParCedula = new SqlParameter("@cedula", SqlDbType.NVarChar, 16);
+                ParCedula.Value = cedula;
+
+                SqlParameter ParDireccion = new SqlParameter("@direccion", SqlDbType.NVarChar, 100);
+                ParDireccion.Value = direccion;
+
+                SqlCmd.Parameters.Add(ParCedula);
+                SqlCmd.Parameters.Add(ParDireccion);
 
                 //Ejecutamos nuestro comando
 

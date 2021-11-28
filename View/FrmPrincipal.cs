@@ -20,17 +20,22 @@ namespace Hilton
         FrmSalon frmSalon;
         FrmServicios frmServicios;
         FrmUsuarios frmUsuarios;
+        FormMantenimiento formMantenimiento;
         public string usuario { get; set; }
         public int Idusuario { get; set; }
 
-        public FrmPrincipal(string nombre, string rol)
+        string Estado;
+
+        public FrmPrincipal(string nombre, string rol, string ESTADO)
         {
             InitializeComponent();
             MinimumSize = Size;
             uSUARIOToolStripMenuItem1.Text = nombre;
+            
             txtRol.Text = rol;
             validarRol(rol);
 
+            Estado = ESTADO;
         }
 
         private void validarRol(string rol)
@@ -118,6 +123,16 @@ namespace Hilton
             agregarForm(frmEmpresaMantenimiento);
         }
 
+        private void manetenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (formAbierto(formMantenimiento))
+            {
+                return;
+            }
+            formMantenimiento = new FormMantenimiento();
+            agregarForm(formMantenimiento);
+        }
+
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (formAbierto(frmUsuarios))
@@ -179,5 +194,27 @@ namespace Hilton
             FrmMiCuenta miCuenta = new FrmMiCuenta(txtRol.Text,usuario, Idusuario ) ;
             miCuenta.ShowDialog();
         }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmPrincipal_Shown(object sender, EventArgs e)
+        {
+            if (Estado.Equals("Actualizado"))
+            {
+                DialogResult dialogResult = MessageBox.Show("Su contraseña ha sido actulizada por el Administrador/n¿Desea cambiar su contraseña?",
+                    "Informe de actualización", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    miCuentaToolStripMenuItem_Click(sender, e);
+                }
+
+            }
+        }
+
+        
     }
 }

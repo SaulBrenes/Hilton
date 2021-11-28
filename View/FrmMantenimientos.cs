@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hilton.View
 {
-    public partial class CANCELACIONES : Form
+    public partial class FrmMantenimientos : Form
     {
-        public CANCELACIONES()
+        public FrmMantenimientos()
         {
             InitializeComponent();
         }

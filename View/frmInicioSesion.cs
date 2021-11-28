@@ -36,10 +36,11 @@ namespace Hilton.View
                         MessageBox.Show("Bienvenido al Sistema", "Sistema Centro de convenciones HILTON", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         string Nombre = dato.Rows[0][1].ToString();
                         string rol = dato.Rows[0][2].ToString();
-
-                        FrmPrincipal fp = new FrmPrincipal(Nombre, rol);
+                                                                         //Estado del usuario   
+                        FrmPrincipal fp = new FrmPrincipal(Nombre, rol, dato.Rows[0][4].ToString());
                         fp.usuario = txtUsuario.Text;
                         fp.Idusuario = Convert.ToInt32(dato.Rows[0][3].ToString());
+               
                         fp.FormClosed += FrmPrincipal_FormClosed;
                         fp.Show();
                         this.Hide();

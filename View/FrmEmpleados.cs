@@ -49,6 +49,8 @@ namespace Hilton.View
             txtPApellido.Enabled = valor;
             txtSApellido.Enabled = valor;
             mtxtTelefono.Enabled = valor;
+            mtxtCedula.Enabled = valor;
+            txtDirección.Enabled = valor;
         }
         private void Limpiar()
         {
@@ -57,6 +59,8 @@ namespace Hilton.View
             txtPApellido.Text = string.Empty;
             txtSApellido.Text = string.Empty;
             mtxtTelefono.Text = string.Empty;
+            mtxtCedula.Text = string.Empty;
+            txtDirección.Text = string.Empty;
 
         }
 
@@ -133,6 +137,8 @@ namespace Hilton.View
                 this.txtPApellido.Text = dgvEmpleados.CurrentRow.Cells[3].Value.ToString();
                 this.txtSApellido.Text = dgvEmpleados.CurrentRow.Cells[4].Value.ToString();
                 this.mtxtTelefono.Text = dgvEmpleados.CurrentRow.Cells[5].Value.ToString();
+                this.mtxtCedula.Text = dgvEmpleados.CurrentRow.Cells[6].Value.ToString();
+                this.txtDirección.Text = dgvEmpleados.CurrentRow.Cells[7].Value.ToString();
 
 
                 this.IsNuevo = false;
@@ -156,12 +162,15 @@ namespace Hilton.View
 
                 if (this.IsNuevo)
                 {
-                    rpta = CEmpleado.AgregarEmpleado(txtPNombre.Text, txtSNombre.Text, txtPApellido.Text, txtSApellido.Text, mtxtTelefono.Text);
+                    rpta = CEmpleado.AgregarEmpleado(txtPNombre.Text, txtSNombre.Text, txtPApellido.Text, txtSApellido.Text, mtxtTelefono.Text, mtxtCedula.Text, txtDirección.Text );
 
                 }
                 else
                 {
-                    rpta = CEmpleado.ActualizarEmpleado(Convert.ToInt32(dgvEmpleados.CurrentRow.Cells[0].Value.ToString()),txtPNombre.Text, txtSNombre.Text, txtPApellido.Text, txtSApellido.Text, mtxtTelefono.Text);
+                    rpta = CEmpleado.ActualizarEmpleado(Convert.ToInt32(dgvEmpleados.CurrentRow.Cells[0].Value.ToString()),
+                                                        txtPNombre.Text, txtSNombre.Text, 
+                                                        txtPApellido.Text, txtSApellido.Text, 
+                                                        mtxtTelefono.Text, mtxtCedula.Text, txtDirección.Text);
 
                 }
 

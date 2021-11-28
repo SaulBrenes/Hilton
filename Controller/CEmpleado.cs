@@ -25,14 +25,14 @@ namespace Hilton.Controller
             return MEmpleado.EstadoEmpleado(idEmpleado);
         } 
 
-        public static string AgregarEmpleado(string pNombre, string sNombre, string pApellido, string sApellido, string telefono)
+        public static string AgregarEmpleado(string pNombre, string sNombre, string pApellido, string sApellido, string telefono, string cedula, string direccion)
         {
-            return MEmpleado.InsertarEmpleado(pNombre, sNombre, pApellido, sApellido, telefono);
+            return MEmpleado.InsertarEmpleado(pNombre, sNombre, pApellido, sApellido, telefono,  cedula, direccion);
         }
 
-        public static string ActualizarEmpleado(int idEmpleado, string pNombre, string sNombre, string pApellido, string sApellido, string telefono)
+        public static string ActualizarEmpleado(int idEmpleado, string pNombre, string sNombre, string pApellido, string sApellido, string telefono, string cedula, string direccion)
         {
-            return MEmpleado.ActualizarEmpleado(idEmpleado, pNombre, sNombre, pApellido, sApellido, telefono);
+            return MEmpleado.ActualizarEmpleado(idEmpleado, pNombre, sNombre, pApellido, sApellido, telefono, cedula,  direccion);
         }
     }
 }

@@ -51,6 +51,8 @@ namespace Hilton.View
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.mtxtCedula = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -60,6 +62,8 @@ namespace Hilton.View
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.mtxtCedula);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Controls.Add(this.btnEditar);
@@ -78,7 +82,7 @@ namespace Hilton.View
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox1.Location = new System.Drawing.Point(578, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(302, 312);
+            this.groupBox1.Size = new System.Drawing.Size(302, 360);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Campos";
@@ -86,7 +90,7 @@ namespace Hilton.View
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(85, 281);
+            this.btnGuardar.Location = new System.Drawing.Point(85, 316);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 18;
@@ -97,7 +101,7 @@ namespace Hilton.View
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(27, 251);
+            this.btnNuevo.Location = new System.Drawing.Point(27, 286);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 14;
@@ -108,7 +112,7 @@ namespace Hilton.View
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(108, 251);
+            this.btnEditar.Location = new System.Drawing.Point(108, 286);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 15;
@@ -119,7 +123,7 @@ namespace Hilton.View
             // btnEstado
             // 
             this.btnEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstado.Location = new System.Drawing.Point(189, 251);
+            this.btnEstado.Location = new System.Drawing.Point(189, 286);
             this.btnEstado.Name = "btnEstado";
             this.btnEstado.Size = new System.Drawing.Size(75, 23);
             this.btnEstado.TabIndex = 16;
@@ -130,7 +134,7 @@ namespace Hilton.View
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(170, 281);
+            this.btnCancelar.Location = new System.Drawing.Point(170, 316);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 17;
@@ -239,7 +243,7 @@ namespace Hilton.View
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(578, 312);
+            this.panel1.Size = new System.Drawing.Size(578, 360);
             this.panel1.TabIndex = 5;
             // 
             // panel3
@@ -248,7 +252,7 @@ namespace Hilton.View
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 41);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(578, 271);
+            this.panel3.Size = new System.Drawing.Size(578, 319);
             this.panel3.TabIndex = 5;
             // 
             // dgvClientes
@@ -260,7 +264,7 @@ namespace Hilton.View
             this.dgvClientes.Location = new System.Drawing.Point(0, 0);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(578, 271);
+            this.dgvClientes.Size = new System.Drawing.Size(578, 319);
             this.dgvClientes.TabIndex = 1;
             // 
             // panel2
@@ -293,11 +297,29 @@ namespace Hilton.View
             this.label4.TabIndex = 0;
             this.label4.Text = "Buscar:";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label7.Location = new System.Drawing.Point(68, 249);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 15);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Cédula:";
+            // 
+            // mtxtCedula
+            // 
+            this.mtxtCedula.Font = new System.Drawing.Font("Consolas", 11.25F);
+            this.mtxtCedula.Location = new System.Drawing.Point(125, 245);
+            this.mtxtCedula.Name = "mtxtCedula";
+            this.mtxtCedula.Size = new System.Drawing.Size(158, 25);
+            this.mtxtCedula.TabIndex = 19;
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 312);
+            this.ClientSize = new System.Drawing.Size(880, 360);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -340,5 +362,7 @@ namespace Hilton.View
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEstado;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox mtxtCedula;
     }
 }

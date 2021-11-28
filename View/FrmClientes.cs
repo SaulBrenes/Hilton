@@ -49,6 +49,7 @@ namespace Hilton.View
             txtPApellido.Enabled = valor;
             txtSApellido.Enabled = valor;
             mtxtTelefono.Enabled = valor;
+            mtxtCedula.Enabled = valor;
         }
         private void Limpiar()
         {
@@ -57,6 +58,7 @@ namespace Hilton.View
             txtPApellido.Text = string.Empty;
             txtSApellido.Text = string.Empty;
             mtxtTelefono.Text = string.Empty;
+            mtxtCedula.Text = string.Empty;
         }
 
         private void MostrarDatos()
@@ -130,6 +132,8 @@ namespace Hilton.View
                 this.txtPApellido.Text = dgvClientes.CurrentRow.Cells[3].Value.ToString();
                 this.txtSApellido.Text = dgvClientes.CurrentRow.Cells[4].Value.ToString();
                 this.mtxtTelefono.Text = dgvClientes.CurrentRow.Cells[5].Value.ToString();
+                this.mtxtCedula.Text = dgvClientes.CurrentRow.Cells[6].Value.ToString();
+
 
 
                 this.IsNuevo = false;
@@ -152,12 +156,12 @@ namespace Hilton.View
 
                 if (this.IsNuevo)
                 {
-                    rpta = CCliente.AgregarCliente(txtPNombre.Text, txtSNombre.Text, txtPApellido.Text, txtSApellido.Text, mtxtTelefono.Text);
+                    rpta = CCliente.AgregarCliente(txtPNombre.Text, txtSNombre.Text, txtPApellido.Text, txtSApellido.Text, mtxtTelefono.Text, mtxtCedula.Text);
 
                 }
                 else
                 {
-                    rpta = CCliente.ActualizarCliente(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value.ToString()), txtPNombre.Text, txtSNombre.Text, txtPApellido.Text, txtSApellido.Text, mtxtTelefono.Text);
+                    rpta = CCliente.ActualizarCliente(Convert.ToInt32(dgvClientes.CurrentRow.Cells[0].Value.ToString()), txtPNombre.Text, txtSNombre.Text, txtPApellido.Text, txtSApellido.Text, mtxtTelefono.Text, mtxtCedula.Text);
 
                 }
 
