@@ -150,7 +150,7 @@ namespace Hilton.View
             }
             else
             {
-                MessageBox.Show("Debe seleccionar una Fila antes de Eitar", "Sistema HILTON", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una fila antes de editar", "Sistema HILTON", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

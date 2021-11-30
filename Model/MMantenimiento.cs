@@ -162,7 +162,7 @@ namespace Hilton.Model
                 SqlParameter ParCosto = new SqlParameter("@costo", SqlDbType.Float);
                 ParCosto.Value = costo;
 
-                SqlParameter ParDescripcion = new SqlParameter("@descripcion", SqlDbType.NVarChar, 150);
+                SqlParameter ParDescripcion = new SqlParameter("@decripcion", SqlDbType.NVarChar, 200);
                 ParDescripcion.Value = descripcion;
 
                 SqlParameter ParFecha = new SqlParameter("@fecha", SqlDbType.Date);
