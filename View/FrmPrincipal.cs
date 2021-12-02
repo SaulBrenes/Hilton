@@ -21,8 +21,11 @@ namespace Hilton
         FrmServicios frmServicios;
         FrmUsuarios frmUsuarios;
         FormMantenimiento formMantenimiento;
+        FormEventos formEventos;
+
         public string usuario { get; set; }
         public int Idusuario { get; set; }
+        public int IdEmpleado { get; set; }
 
         string Estado;
 
@@ -133,6 +136,18 @@ namespace Hilton
             agregarForm(formMantenimiento);
         }
 
+        private void eventosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (formAbierto(formEventos))
+            {
+                return;
+            }
+            formEventos = new FormEventos();
+            formEventos.idEmpleado = IdEmpleado;
+            formEventos.nombreEmpleado = uSUARIOToolStripMenuItem1.Text;
+            agregarForm(formEventos);
+        }
+
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (formAbierto(frmUsuarios))
@@ -215,6 +230,6 @@ namespace Hilton
             }
         }
 
-        
+       
     }
 }

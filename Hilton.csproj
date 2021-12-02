@@ -72,21 +72,23 @@
     <Compile Include="Controller\CCliente.cs" />
     <Compile Include="Controller\CEmpleado.cs" />
     <Compile Include="Controller\CEmpresaMantenimiento.cs" />
+    <Compile Include="Controller\CEvento.cs" />
     <Compile Include="Controller\CMantenimiento.cs" />
     <Compile Include="Controller\CSalon.cs" />
     <Compile Include="Controller\CServicio.cs" />
     <Compile Include="Controller\CUsuario.cs" />
-    <Compile Include="FrmPrueba.cs">
+    <Compile Include="View\FormEventos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPrueba.Designer.cs">
-      <DependentUpon>FrmPrueba.cs</DependentUpon>
+    <Compile Include="View\FormEventos.Designer.cs">
+      <DependentUpon>FormEventos.cs</DependentUpon>
     </Compile>
     <Compile Include="iTalk.cs" />
     <Compile Include="Model\Conexión.cs" />
     <Compile Include="Model\MClientes.cs" />
     <Compile Include="Model\MEmpleado.cs" />
     <Compile Include="Model\MEmpresaMantenimiento.cs" />
+    <Compile Include="Model\MEventos.cs" />
     <Compile Include="Model\MMantenimiento.cs" />
     <Compile Include="Model\MSalones.cs" />
     <Compile Include="Model\MServicios.cs" />
@@ -116,11 +118,11 @@
     <Compile Include="View\FormMantenimiento.Designer.cs">
       <DependentUpon>FormMantenimiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormPrueba2.cs">
+    <Compile Include="View\FormNuevoEvento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormPrueba2.Designer.cs">
-      <DependentUpon>FormPrueba2.cs</DependentUpon>
+    <Compile Include="View\FormNuevoEvento.Designer.cs">
+      <DependentUpon>FormNuevoEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormSeleccionarEmpresaM.cs">
       <SubType>Form</SubType>
@@ -196,8 +198,8 @@
     <Compile Include="View\SeleccionEmpleado.Designer.cs">
       <DependentUpon>SeleccionEmpleado.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmPrueba.resx">
-      <DependentUpon>FrmPrueba.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormEventos.resx">
+      <DependentUpon>FormEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -219,8 +221,8 @@
     <EmbeddedResource Include="View\FormMantenimiento.resx">
       <DependentUpon>FormMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormPrueba2.resx">
-      <DependentUpon>FormPrueba2.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormNuevoEvento.resx">
+      <DependentUpon>FormNuevoEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormSeleccionarEmpresaM.resx">
       <DependentUpon>FormSeleccionarEmpresaM.cs</DependentUpon>

@@ -40,7 +40,8 @@ namespace Hilton.View
                         FrmPrincipal fp = new FrmPrincipal(Nombre, rol, dato.Rows[0][4].ToString());
                         fp.usuario = txtUsuario.Text;
                         fp.Idusuario = Convert.ToInt32(dato.Rows[0][3].ToString());
-               
+                        fp.IdEmpleado = Convert.ToInt32(dato.Rows[0][5].ToString());
+
                         fp.FormClosed += FrmPrincipal_FormClosed;
                         fp.Show();
                         this.Hide();
