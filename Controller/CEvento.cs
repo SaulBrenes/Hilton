@@ -39,5 +39,15 @@ namespace Hilton.Controller
         {
             return MEventos.CambioEstadoEvento(idEvento);
         }
+
+        public static DataTable HorarioSalonesOcupados(DateTime date)
+        {
+            return MEventos.SalonesOcupados(date);
+        }
+
+        public static DataTable SalonesDisponibles(DateTime fecha, DateTime HoraInicio, DateTime HoraFinal)
+        {
+            return MEventos.SalonesDisponibles(fecha, HoraInicio, HoraFinal);
+        }
     }
 }

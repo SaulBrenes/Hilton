@@ -10,6 +10,12 @@ namespace Hilton.Controller
 {
     class CCliente
     {
+
+        public static int IdultimoClienteRegistrado()
+        {
+            return MClientes.IdultimoClienteRegistrado();
+        }
+
         public static DataTable MostrarClientes()
         {
             return MClientes.MostrarClientes();

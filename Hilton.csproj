@@ -186,11 +186,29 @@
     <Compile Include="View\FrmUsuarios.Designer.cs">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\NuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NuevoCliente.Designer.cs">
+      <DependentUpon>NuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SeleccionarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SeleccionarCliente.Designer.cs">
+      <DependentUpon>SeleccionarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\SeleccionarSalon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\SeleccionarSalon.Designer.cs">
       <DependentUpon>SeleccionarSalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SeleccionarServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SeleccionarServicios.Designer.cs">
+      <DependentUpon>SeleccionarServicios.cs</DependentUpon>
     </Compile>
     <Compile Include="View\SeleccionEmpleado.cs">
       <SubType>Form</SubType>
@@ -257,8 +275,17 @@
     <EmbeddedResource Include="View\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\NuevoCliente.resx">
+      <DependentUpon>NuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SeleccionarCliente.resx">
+      <DependentUpon>SeleccionarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\SeleccionarSalon.resx">
       <DependentUpon>SeleccionarSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SeleccionarServicios.resx">
+      <DependentUpon>SeleccionarServicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SeleccionEmpleado.resx">
       <DependentUpon>SeleccionEmpleado.cs</DependentUpon>

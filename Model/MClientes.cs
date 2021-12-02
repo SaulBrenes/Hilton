@@ -10,6 +10,34 @@ namespace Hilton.Model
 {
     class MClientes
     {
+
+        public static int IdultimoClienteRegistrado()
+        {
+            DataTable DtResultado = new DataTable("MostrarClientes");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {    // Cargando el conexión al servidor
+                SqlCon.ConnectionString = Conexión.Cn;
+                // Creando un objeto SQLCommand que llamará al procedimiento almacenado
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "ObtenerUltimoIdCliente";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+
+            return Convert.ToInt32(DtResultado.Rows[0][0]);
+        }
+    
+
         public static DataTable MostrarClientes()
         {
             DataTable DtResultado = new DataTable("MostrarClientes");
