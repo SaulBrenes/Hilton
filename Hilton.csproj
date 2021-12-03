@@ -74,9 +74,21 @@
     <Compile Include="Controller\CEmpresaMantenimiento.cs" />
     <Compile Include="Controller\CEvento.cs" />
     <Compile Include="Controller\CMantenimiento.cs" />
+    <Compile Include="Controller\CPago.cs" />
     <Compile Include="Controller\CSalon.cs" />
     <Compile Include="Controller\CServicio.cs" />
     <Compile Include="Controller\CUsuario.cs" />
+    <Compile Include="Reports\DataSetFactura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormEventos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,17 +106,6 @@
     <Compile Include="Model\MServicios.cs" />
     <Compile Include="Model\MUsuario.cs" />
     <Compile Include="Model\Roles.cs" />
-    <Compile Include="Reports\DataSetSalones.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetSalones.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\FrmReporteSalon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\FrmReporteSalon.Designer.cs">
-      <DependentUpon>FrmReporteSalon.cs</DependentUpon>
-    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="View\AgregarSalon.cs">
       <SubType>Form</SubType>
@@ -222,6 +223,10 @@
     <Compile Include="View\SeleccionEmpleado.Designer.cs">
       <DependentUpon>SeleccionEmpleado.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportFactura.rdlc" />
     <EmbeddedResource Include="View\FormEventos.resx">
       <DependentUpon>FormEventos.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,10 +240,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reports\FrmReporteSalon.resx">
-      <DependentUpon>FrmReporteSalon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ReportSalon.rdlc" />
     <EmbeddedResource Include="View\AgregarSalon.resx">
       <DependentUpon>AgregarSalon.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,16 +315,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Reports\DataSetSalones.xsc">
-      <DependentUpon>DataSetSalones.xsd</DependentUpon>
+    <None Include="Reports\DataSetFactura.xsc">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSetSalones.xsd">
+    <None Include="Reports\DataSetFactura.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetSalones.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetFactura.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reports\DataSetSalones.xss">
-      <DependentUpon>DataSetSalones.xsd</DependentUpon>
+    <None Include="Reports\DataSetFactura.xss">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
     </None>
     <None Include="Resources\Hilton.png" />
   </ItemGroup>

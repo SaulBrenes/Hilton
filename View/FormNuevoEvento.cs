@@ -13,6 +13,7 @@ namespace Hilton.View
 {
     public partial class FormNuevoEvento : Form
     {
+        
         public int idEmpleado{get; set;}
 
         List<int> servicios = new List<int>();
@@ -390,6 +391,12 @@ namespace Hilton.View
             {
                 MessageBox.Show("Seleccione la fila de la contratacion a quitar");
             }
+        }
+
+        private void btnFacturar_Click(object sender, EventArgs e)
+        {
+            btnGuardar_Click(sender, e);
+
         }
     }
 

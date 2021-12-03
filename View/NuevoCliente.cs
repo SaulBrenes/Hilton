@@ -20,6 +20,8 @@ namespace Hilton.View
 
         public string Nombre { get; set; }
 
+      
+
         public NuevoCliente()
         {
             InitializeComponent();

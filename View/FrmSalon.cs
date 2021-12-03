@@ -1,5 +1,4 @@
 ﻿using Hilton.Controller;
-using Hilton.Reports;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -208,10 +207,6 @@ namespace Hilton.View
             nudcapacidadmax.ResetText();
         }
 
-        private void btnReporte_Click(object sender, EventArgs e)
-        {
-            FrmReporteSalon frmDialogReporte = new FrmReporteSalon();
-            frmDialogReporte.ShowDialog();
-        }
+        
     }
 }

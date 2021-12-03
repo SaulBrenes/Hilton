@@ -217,6 +217,7 @@ namespace Hilton
             this.btnFactura.TabIndex = 9;
             this.btnFactura.Text = "Facturar";
             this.btnFactura.UseVisualStyleBackColor = true;
+            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
             // 
             // cmbFiltro
             // 
@@ -264,6 +265,7 @@ namespace Hilton
             this.btnMostrarF.TabIndex = 16;
             this.btnMostrarF.Text = "Mostrar factura";
             this.btnMostrarF.UseVisualStyleBackColor = true;
+            this.btnMostrarF.Click += new System.EventHandler(this.btnMostrarF_Click);
             // 
             // FormEventos
             // 

@@ -1,4 +1,5 @@
 ﻿using Hilton.Controller;
+using Hilton.Reports;
 using Hilton.View;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,9 @@ namespace Hilton
 {
     public partial class FormEventos : Form
     {
+        
         int IdEvento;
+
         public int idEmpleado { get; set; }
         public string nombreEmpleado { get; set; }
         bool Pagado;
@@ -204,8 +207,49 @@ namespace Hilton
             formNuevoEvento.nombreEmpleado = nombreEmpleado;
             formNuevoEvento.ShowDialog();
             txtBuscar.Text = string.Empty;
+            cmbFiltro.SelectedIndex = 0;
             cmbFiltro_SelectedIndexChanged(sender, e);
+            if (dgvEventos.Rows.Count > 0)
+            {
+                dgvEventos.Rows[0].Selected = true;
+            }
+        }
 
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            if(dgvEventos.SelectedRows.Count > 0)
+            {
+                IdEvento = int.Parse(dgvEventos.SelectedRows[0].Cells[0].Value.ToString());
+                FrmPago frm = new FrmPago(nombreEmpleado, idEmpleado, IdEvento);
+                frm.ShowDialog();
+                cmbFiltro_SelectedIndexChanged(sender, e);
+                if (frm.imprimir)
+                {
+                    Factura f = new Factura();
+                    f.idEvento = IdEvento;
+                    f.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila");
+            }
+
+        }
+
+        private void btnMostrarF_Click(object sender, EventArgs e)
+        {
+            if(dgvEventos.SelectedRows.Count > 0)
+            {
+                IdEvento = int.Parse(dgvEventos.SelectedRows[0].Cells[0].Value.ToString());
+                Factura f = new Factura();
+                f.idEvento = IdEvento;
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila");
+            }
         }
     }
 }

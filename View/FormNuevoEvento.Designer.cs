@@ -63,7 +63,6 @@ namespace Hilton.View
             this.btnNuevo = new System.Windows.Forms.Button();
             this.iTalk_GroupBox6 = new ProjectCinematica.iTalk_GroupBox();
             this.dgvSalonesOcupados = new System.Windows.Forms.DataGridView();
-            this.btnFacturar = new System.Windows.Forms.Button();
             this.txtCantHoras = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
@@ -431,7 +430,6 @@ namespace Hilton.View
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_GroupBox1.Controls.Add(this.btnNuevo);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox6);
-            this.iTalk_GroupBox1.Controls.Add(this.btnFacturar);
             this.iTalk_GroupBox1.Controls.Add(this.txtCantHoras);
             this.iTalk_GroupBox1.Controls.Add(this.label8);
             this.iTalk_GroupBox1.Controls.Add(this.txtCliente);
@@ -494,16 +492,6 @@ namespace Hilton.View
             this.dgvSalonesOcupados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSalonesOcupados.Size = new System.Drawing.Size(448, 146);
             this.dgvSalonesOcupados.TabIndex = 0;
-            // 
-            // btnFacturar
-            // 
-            this.btnFacturar.Location = new System.Drawing.Point(194, 485);
-            this.btnFacturar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnFacturar.Name = "btnFacturar";
-            this.btnFacturar.Size = new System.Drawing.Size(125, 32);
-            this.btnFacturar.TabIndex = 32;
-            this.btnFacturar.Text = "FACTURAR";
-            this.btnFacturar.UseVisualStyleBackColor = true;
             // 
             // txtCantHoras
             // 
@@ -662,7 +650,7 @@ namespace Hilton.View
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(343, 485);
+            this.button2.Location = new System.Drawing.Point(188, 485);
             this.button2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 32);
@@ -743,7 +731,6 @@ namespace Hilton.View
         private System.Windows.Forms.TabPage tabSalones;
         private System.Windows.Forms.TabPage tabServicios;
         private System.Windows.Forms.TabPage tabContrataciones;
-        private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.TextBox txtCantHoras;
         private System.Windows.Forms.Label label8;
         private ProjectCinematica.iTalk_GroupBox iTalk_GroupBox3;

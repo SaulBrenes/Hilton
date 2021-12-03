@@ -37,14 +37,14 @@ namespace Hilton.View
             this.btnCerrar = new System.Windows.Forms.Button();
             this.lblRolCuenta = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnMostrar1 = new System.Windows.Forms.Button();
+            this.btnMostrar2 = new System.Windows.Forms.Button();
             this.txtRepeticionC = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnMostrar2 = new System.Windows.Forms.Button();
-            this.btnMostrar1 = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +80,7 @@ namespace Hilton.View
             this.txtUsuario.ReadOnly = true;
             this.txtUsuario.Size = new System.Drawing.Size(255, 27);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.TabStop = false;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnContrasena
@@ -135,6 +136,46 @@ namespace Hilton.View
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(183, 177);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(91, 29);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(63, 177);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(89, 29);
+            this.btnGuardar.TabIndex = 6;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnMostrar1
+            // 
+            this.btnMostrar1.Location = new System.Drawing.Point(296, 56);
+            this.btnMostrar1.Name = "btnMostrar1";
+            this.btnMostrar1.Size = new System.Drawing.Size(40, 23);
+            this.btnMostrar1.TabIndex = 5;
+            this.btnMostrar1.Text = "o";
+            this.btnMostrar1.UseVisualStyleBackColor = true;
+            this.btnMostrar1.Click += new System.EventHandler(this.btnMostrar1_Click);
+            // 
+            // btnMostrar2
+            // 
+            this.btnMostrar2.Location = new System.Drawing.Point(296, 140);
+            this.btnMostrar2.Name = "btnMostrar2";
+            this.btnMostrar2.Size = new System.Drawing.Size(40, 23);
+            this.btnMostrar2.TabIndex = 11;
+            this.btnMostrar2.Text = "o";
+            this.btnMostrar2.UseVisualStyleBackColor = true;
+            this.btnMostrar2.Click += new System.EventHandler(this.btnMostrar2_Click);
+            // 
             // txtRepeticionC
             // 
             this.txtRepeticionC.Location = new System.Drawing.Point(35, 138);
@@ -176,46 +217,6 @@ namespace Hilton.View
             this.label3.Size = new System.Drawing.Size(175, 18);
             this.label3.TabIndex = 7;
             this.label3.Text = "Contraseña nueva:";
-            // 
-            // btnMostrar2
-            // 
-            this.btnMostrar2.Location = new System.Drawing.Point(296, 140);
-            this.btnMostrar2.Name = "btnMostrar2";
-            this.btnMostrar2.Size = new System.Drawing.Size(40, 23);
-            this.btnMostrar2.TabIndex = 11;
-            this.btnMostrar2.Text = "o";
-            this.btnMostrar2.UseVisualStyleBackColor = true;
-            this.btnMostrar2.Click += new System.EventHandler(this.btnMostrar2_Click);
-            // 
-            // btnMostrar1
-            // 
-            this.btnMostrar1.Location = new System.Drawing.Point(296, 56);
-            this.btnMostrar1.Name = "btnMostrar1";
-            this.btnMostrar1.Size = new System.Drawing.Size(40, 23);
-            this.btnMostrar1.TabIndex = 5;
-            this.btnMostrar1.Text = "o";
-            this.btnMostrar1.UseVisualStyleBackColor = true;
-            this.btnMostrar1.Click += new System.EventHandler(this.btnMostrar1_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(63, 177);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(89, 29);
-            this.btnGuardar.TabIndex = 6;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(183, 177);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(91, 29);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmMiCuenta
             // 
