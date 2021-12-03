@@ -46,7 +46,7 @@ namespace Hilton.View
                 MessageBox.Show("Datos Ingresados", "Sistema Hilton", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Creado = true;
                 idCliente = CCliente.IdultimoClienteRegistrado();
-                Nombre = $"{txtPNombre.Text} + {txtPApellido.Text}";
+                Nombre = $"{txtPNombre.Text} {txtPApellido.Text}";
                 Close();
             }
             else

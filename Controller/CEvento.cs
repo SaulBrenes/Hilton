@@ -10,6 +10,32 @@ namespace Hilton.Controller
 {
     class CEvento
     {
+
+        public static string AgregarEvento(DateTime fecha, DateTime HoraInicio, DateTime HoraFinal,
+                                            int numeropersonas, string descripcion, int IdCliente)
+        {
+            return MEventos.GuardarEvento(fecha, HoraInicio, HoraFinal, numeropersonas, descripcion, IdCliente);
+        }
+
+        public static int ObtenerIDUltimoEvento()
+        {
+            return MEventos.IdultimoEventoRegistrado();
+        }
+
+        public static string AgregarReservacion(int idEvento, int idSalon)
+        {
+            return MEventos.GuardarReservacion(idEvento, idSalon);
+        }
+
+        public static string AgregarServicios(int idEvento, int idServicio)
+        {
+            return MEventos.GuardarServicio(idEvento, idServicio);
+        }
+
+        public static string AgregarContratacionExterna(int idEvento, string nombre, string descripcion, float precio)
+        {
+            return MEventos.AgregarContratacionExterna(idEvento,nombre,descripcion, precio);
+        }
         public static DataTable MostrarEventos()
         {
             return MEventos.Mostrar();

@@ -154,6 +154,12 @@
     <Compile Include="View\FrmMiCuenta.Designer.cs">
       <DependentUpon>FrmMiCuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmPago.Designer.cs">
+      <DependentUpon>FrmPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmMiCuenta.resx">
       <DependentUpon>FrmMiCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmPago.resx">
+      <DependentUpon>FrmPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

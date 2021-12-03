@@ -31,7 +31,7 @@ namespace Hilton.Model
             }
             catch (Exception)
             {
-                return -1;
+                return -1; 
             }
 
             return Convert.ToInt32(DtResultado.Rows[0][0]);

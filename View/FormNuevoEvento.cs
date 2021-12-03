@@ -23,7 +23,6 @@ namespace Hilton.View
 
         int capacidad = 0;
 
-
         DataTable dtSalonesDisponibles;
 
         DataTable dtReservaciones;
@@ -153,7 +152,7 @@ namespace Hilton.View
                         Convert.ToInt32(dgvSalonesDisponibles.CurrentRow.Cells[3].Value);
 
                 capacidad += Convert.ToInt32(dgvSalonesDisponibles.CurrentRow.Cells[3].Value);
-                txtCapacidadActual.Text = $"{capacidad} personas";
+                txtCapacidadActual.Text = $"{capacidad}";
             }
             else
             {
@@ -233,7 +232,116 @@ namespace Hilton.View
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            bool seGuarda = ValidarGuardadoEvento();
+            if (seGuarda)
+            {
+                string respuesta = CEvento.AgregarEvento(dtpFechaEvento.Value, dtpHoraInicio.Value, dtpHoraFin.Value,
+                    Int32.Parse(nudPersonas.Value.ToString()), txtDescripcion.Text, idCliente);
 
+                if (respuesta != "OK")
+                {
+                    MessageBox.Show(respuesta);
+                    return;
+                }
+
+                int idEvento = CEvento.ObtenerIDUltimoEvento();
+
+                if (dtReservaciones == null)
+                {
+                    dtReservaciones = new DataTable();
+                }
+
+                for (int i = 0; i < dtReservaciones.Rows.Count; i++)
+                {
+                    int idSalon = int.Parse(dtReservaciones.Rows[i][0].ToString());
+                    respuesta = CEvento.AgregarReservacion(idEvento, idSalon);
+                    if (respuesta != "OK")
+                    {
+                        MessageBox.Show("No se pudieron agregar las reservaciones al evento:" +respuesta);
+                        return;
+                    }
+                }
+
+                for (int i = 0; i < servicios.Count; i++)
+                {
+                    int idServicio = servicios.ElementAt(i);
+                    respuesta = CEvento.AgregarServicios(idEvento, idServicio);
+                    if (respuesta != "OK")
+                    {
+                        MessageBox.Show("No se pudieron agregar todos los servicios:" + respuesta);
+                        return;
+                    }
+                }
+
+                if (dtContratacion == null)
+                {
+                    dtContratacion = new DataTable();
+                }
+
+
+                    for (int i = 0; i < dtContratacion.Rows.Count; i++)
+                {
+                    string nombre = dtContratacion.Rows[i][0].ToString();
+                    string descripcion = dtContratacion.Rows[i][1].ToString();
+                    float precio = float.Parse(dtContratacion.Rows[i][2].ToString());
+                    respuesta = CEvento.AgregarContratacionExterna(idEvento, nombre, descripcion, precio);
+                    if (respuesta != "OK")
+                    {
+                        MessageBox.Show("No se pudieron agregar todas las contrataciones:" + respuesta);
+                        return;
+                    }
+                }
+                MessageBox.Show("Se agrego evento correctamente");
+                Close();
+            }
+        }
+
+        private bool ValidarGuardadoEvento()
+        {
+            //Validando que haya registrado un salon
+            if(dtReservaciones.Rows.Count == 0)
+            {
+                MessageBox.Show("Se necesita reservar al menos un salón");
+                return false;
+            }
+
+            //Validando que la capacidad total sea >= que la cantidad de personas asitentes
+            if(Int32.Parse(nudPersonas.Value.ToString()) > Int32.Parse(txtCapacidadActual.Text))
+            {
+                MessageBox.Show("Las reervaciones actuales no cubren la cantidad de personas asistentes");
+                return false;
+            }
+
+            //Validando campos vacios
+            if(txtDescripcion.Text == string.Empty)
+            {
+                MessageBox.Show("No escribió la descripción del evento");
+                txtDescripcion.Focus();
+                return false;
+            }
+
+            if (txtCliente.Text == string.Empty)
+            {
+                MessageBox.Show("No se ingreso al cliente del evento");
+                btnCliente.Focus();
+                return false;
+            }
+
+            if(Int32.Parse(txtCantHoras.Text)<= 0)
+            {
+                MessageBox.Show("Ingrese un intervalo de hora correcto al evento");
+                dtpHoraFin.Focus();
+                return false;
+            }
+
+            if(nudPersonas.Value == 0)
+            {
+                MessageBox.Show("Ingrese la cantidad de asistentes al evento");
+                nudPersonas.Focus();
+                return false;
+            }
+
+            return true;
         }
 
         private void btnQuitarS_Click(object sender, EventArgs e)
