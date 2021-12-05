@@ -33,20 +33,39 @@ namespace Hilton.Reports
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSetFactura = new Hilton.Reports.DataSetFactura();
             this.ObtenerPagoDeEventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ObtenerPagoDeEventoTableAdapter = new Hilton.Reports.DataSetFacturaTableAdapters.ObtenerPagoDeEventoTableAdapter();
+            this.DataSetFactura = new Hilton.Reports.DataSetFactura();
             this.SalonesEventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SalonesEventoTableAdapter = new Hilton.Reports.DataSetFacturaTableAdapters.SalonesEventoTableAdapter();
             this.ServiciosEventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ObtenerPagoDeEventoTableAdapter = new Hilton.Reports.DataSetFacturaTableAdapters.ObtenerPagoDeEventoTableAdapter();
+            this.SalonesEventoTableAdapter = new Hilton.Reports.DataSetFacturaTableAdapters.SalonesEventoTableAdapter();
             this.ServiciosEventoTableAdapter = new Hilton.Reports.DataSetFacturaTableAdapters.ServiciosEventoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ObtenerPagoDeEventoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalonesEventoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServiciosEventoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ObtenerPagoDeEventoBindingSource
+            // 
+            this.ObtenerPagoDeEventoBindingSource.DataMember = "ObtenerPagoDeEvento";
+            this.ObtenerPagoDeEventoBindingSource.DataSource = this.DataSetFactura;
+            // 
+            // DataSetFactura
+            // 
+            this.DataSetFactura.DataSetName = "DataSetFactura";
+            this.DataSetFactura.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // SalonesEventoBindingSource
+            // 
+            this.SalonesEventoBindingSource.DataMember = "SalonesEvento";
+            this.SalonesEventoBindingSource.DataSource = this.DataSetFactura;
+            // 
+            // ServiciosEventoBindingSource
+            // 
+            this.ServiciosEventoBindingSource.DataMember = "ServiciosEvento";
+            this.ServiciosEventoBindingSource.DataSource = this.DataSetFactura;
             // 
             // reportViewer1
             // 
@@ -64,36 +83,16 @@ namespace Hilton.Reports
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(517, 520);
+            this.reportViewer1.Size = new System.Drawing.Size(531, 520);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // DataSetFactura
-            // 
-            this.DataSetFactura.DataSetName = "DataSetFactura";
-            this.DataSetFactura.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ObtenerPagoDeEventoBindingSource
-            // 
-            this.ObtenerPagoDeEventoBindingSource.DataMember = "ObtenerPagoDeEvento";
-            this.ObtenerPagoDeEventoBindingSource.DataSource = this.DataSetFactura;
             // 
             // ObtenerPagoDeEventoTableAdapter
             // 
             this.ObtenerPagoDeEventoTableAdapter.ClearBeforeFill = true;
             // 
-            // SalonesEventoBindingSource
-            // 
-            this.SalonesEventoBindingSource.DataMember = "SalonesEvento";
-            this.SalonesEventoBindingSource.DataSource = this.DataSetFactura;
-            // 
             // SalonesEventoTableAdapter
             // 
             this.SalonesEventoTableAdapter.ClearBeforeFill = true;
-            // 
-            // ServiciosEventoBindingSource
-            // 
-            this.ServiciosEventoBindingSource.DataMember = "ServiciosEvento";
-            this.ServiciosEventoBindingSource.DataSource = this.DataSetFactura;
             // 
             // ServiciosEventoTableAdapter
             // 
@@ -103,15 +102,14 @@ namespace Hilton.Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 520);
+            this.ClientSize = new System.Drawing.Size(531, 520);
             this.Controls.Add(this.reportViewer1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Factura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Factura";
             this.Load += new System.EventHandler(this.Factura_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetFactura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ObtenerPagoDeEventoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetFactura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalonesEventoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServiciosEventoBindingSource)).EndInit();
             this.ResumeLayout(false);

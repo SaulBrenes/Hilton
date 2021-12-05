@@ -228,20 +228,20 @@ namespace Hilton
             // 
             this.eventosToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_calendario_de_rasgar_las_hojas_96;
             this.eventosToolStripMenuItem.Name = "eventosToolStripMenuItem";
-            this.eventosToolStripMenuItem.Size = new System.Drawing.Size(273, 28);
+            this.eventosToolStripMenuItem.Size = new System.Drawing.Size(269, 28);
             this.eventosToolStripMenuItem.Text = "Gestión de Eventos";
             this.eventosToolStripMenuItem.Click += new System.EventHandler(this.eventosToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(270, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(266, 6);
             // 
             // manetenimientoToolStripMenuItem
             // 
             this.manetenimientoToolStripMenuItem.Image = global::Hilton.Properties.Resources.icons8_edificio_del_hotel_64__1_;
             this.manetenimientoToolStripMenuItem.Name = "manetenimientoToolStripMenuItem";
-            this.manetenimientoToolStripMenuItem.Size = new System.Drawing.Size(273, 28);
+            this.manetenimientoToolStripMenuItem.Size = new System.Drawing.Size(269, 28);
             this.manetenimientoToolStripMenuItem.Text = "Mantenimiento";
             this.manetenimientoToolStripMenuItem.Click += new System.EventHandler(this.manetenimientoToolStripMenuItem_Click);
             // 
@@ -254,6 +254,7 @@ namespace Hilton
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(170, 70);
             this.reportesToolStripMenuItem.Text = "Reportes";
+            this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
             // 
             // seguridadToolStripMenuItem
             // 

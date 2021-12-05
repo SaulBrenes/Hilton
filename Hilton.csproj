@@ -57,6 +57,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -78,16 +79,30 @@
     <Compile Include="Controller\CSalon.cs" />
     <Compile Include="Controller\CServicio.cs" />
     <Compile Include="Controller\CUsuario.cs" />
+    <Compile Include="Reports\DataSetFactura.cs">
+      <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\DataSetFactura.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSetReportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\Factura.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmReporteIngresoMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReporteIngresoMensual.Designer.cs">
+      <DependentUpon>FrmReporteIngresoMensual.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormEventos.cs">
       <SubType>Form</SubType>
@@ -124,6 +139,12 @@
     </Compile>
     <Compile Include="View\FormNuevoEvento.Designer.cs">
       <DependentUpon>FormNuevoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormReportes.Designer.cs">
+      <DependentUpon>FormReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormSeleccionarEmpresaM.cs">
       <SubType>Form</SubType>
@@ -226,7 +247,11 @@
     <EmbeddedResource Include="Reports\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmReporteIngresoMensual.resx">
+      <DependentUpon>FrmReporteIngresoMensual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportFactura.rdlc" />
+    <EmbeddedResource Include="Reports\ReportIngresoMensual.rdlc" />
     <EmbeddedResource Include="View\FormEventos.resx">
       <DependentUpon>FormEventos.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormNuevoEvento.resx">
       <DependentUpon>FormNuevoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormReportes.resx">
+      <DependentUpon>FormReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormSeleccionarEmpresaM.resx">
       <DependentUpon>FormSeleccionarEmpresaM.cs</DependentUpon>
@@ -325,6 +353,17 @@
     </None>
     <None Include="Reports\DataSetFactura.xss">
       <DependentUpon>DataSetFactura.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSetReportes.xsc">
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSetReportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReportes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSetReportes.xss">
+      <DependentUpon>DataSetReportes.xsd</DependentUpon>
     </None>
     <None Include="Resources\Hilton.png" />
   </ItemGroup>

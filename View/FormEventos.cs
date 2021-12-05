@@ -222,13 +222,14 @@ namespace Hilton
                 IdEvento = int.Parse(dgvEventos.SelectedRows[0].Cells[0].Value.ToString());
                 FrmPago frm = new FrmPago(nombreEmpleado, idEmpleado, IdEvento);
                 frm.ShowDialog();
-                cmbFiltro_SelectedIndexChanged(sender, e);
                 if (frm.imprimir)
                 {
                     Factura f = new Factura();
                     f.idEvento = IdEvento;
                     f.ShowDialog();
                 }
+                cmbFiltro_SelectedIndexChanged(sender, e);
+
             }
             else
             {

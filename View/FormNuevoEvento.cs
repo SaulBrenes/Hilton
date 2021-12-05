@@ -37,6 +37,8 @@ namespace Hilton.View
         DateTime MinFin = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 9, 0, 0);
         DateTime MaxFin = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 23, 0, 0);
 
+        
+
         public FormNuevoEvento()
         {
             InitializeComponent();
@@ -61,6 +63,8 @@ namespace Hilton.View
             dtpHoraFin.MaxDate = MaxFin;
 
             nudPersonas.Maximum = 900;
+
+            nudCostoContra.Maximum = Decimal.MaxValue;
 
             //Configurando datagridview
             dtReservaciones = new DataTable();
