@@ -53,12 +53,12 @@ namespace Hilton.View
             this.iTalk_HeaderLabel4 = new ProjectCinematica.iTalk_HeaderLabel();
             this.iTalk_Panel5 = new ProjectCinematica.iTalk_Panel();
             this.btnCE = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpCE = new System.Windows.Forms.DateTimePicker();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.iTalk_HeaderLabel5 = new ProjectCinematica.iTalk_HeaderLabel();
             this.iTalk_Panel6 = new ProjectCinematica.iTalk_Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnCS = new System.Windows.Forms.Button();
+            this.dtpCS = new System.Windows.Forms.DateTimePicker();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.iTalk_HeaderLabel6 = new ProjectCinematica.iTalk_HeaderLabel();
             this.flowLayoutPanel1.SuspendLayout();
@@ -168,6 +168,7 @@ namespace Hilton.View
             this.btnRS.TabIndex = 3;
             this.btnRS.Text = "Aceptar";
             this.btnRS.UseVisualStyleBackColor = true;
+            this.btnRS.Click += new System.EventHandler(this.btnRS_Click);
             // 
             // dtpRS
             // 
@@ -229,6 +230,7 @@ namespace Hilton.View
             this.btnCM.TabIndex = 3;
             this.btnCM.Text = "Aceptar";
             this.btnCM.UseVisualStyleBackColor = true;
+            this.btnCM.Click += new System.EventHandler(this.btnCM_Click);
             // 
             // dtpCM
             // 
@@ -290,6 +292,7 @@ namespace Hilton.View
             this.btnMS.TabIndex = 3;
             this.btnMS.Text = "Aceptar";
             this.btnMS.UseVisualStyleBackColor = true;
+            this.btnMS.Click += new System.EventHandler(this.btnMS_Click);
             // 
             // dtpMS
             // 
@@ -331,7 +334,7 @@ namespace Hilton.View
             // 
             this.iTalk_Panel5.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Panel5.Controls.Add(this.btnCE);
-            this.iTalk_Panel5.Controls.Add(this.dateTimePicker2);
+            this.iTalk_Panel5.Controls.Add(this.dtpCE);
             this.iTalk_Panel5.Controls.Add(this.textBox5);
             this.iTalk_Panel5.Controls.Add(this.iTalk_HeaderLabel5);
             this.iTalk_Panel5.Location = new System.Drawing.Point(3, 281);
@@ -349,20 +352,21 @@ namespace Hilton.View
             this.btnCE.TabIndex = 3;
             this.btnCE.Text = "Aceptar";
             this.btnCE.UseVisualStyleBackColor = true;
+            this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
             // 
-            // dateTimePicker2
+            // dtpCE
             // 
-            this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.Black;
-            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.AliceBlue;
-            this.dateTimePicker2.CustomFormat = "yyyy";
-            this.dateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(414, 23);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.ShowUpDown = true;
-            this.dateTimePicker2.Size = new System.Drawing.Size(89, 35);
-            this.dateTimePicker2.TabIndex = 2;
+            this.dtpCE.CalendarTitleBackColor = System.Drawing.Color.Black;
+            this.dtpCE.CalendarTitleForeColor = System.Drawing.Color.AliceBlue;
+            this.dtpCE.CustomFormat = "yyyy";
+            this.dtpCE.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpCE.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCE.Location = new System.Drawing.Point(414, 23);
+            this.dtpCE.Name = "dtpCE";
+            this.dtpCE.ShowUpDown = true;
+            this.dtpCE.Size = new System.Drawing.Size(89, 35);
+            this.dtpCE.TabIndex = 2;
             // 
             // textBox5
             // 
@@ -390,8 +394,8 @@ namespace Hilton.View
             // iTalk_Panel6
             // 
             this.iTalk_Panel6.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Panel6.Controls.Add(this.button1);
-            this.iTalk_Panel6.Controls.Add(this.dateTimePicker1);
+            this.iTalk_Panel6.Controls.Add(this.btnCS);
+            this.iTalk_Panel6.Controls.Add(this.dtpCS);
             this.iTalk_Panel6.Controls.Add(this.textBox6);
             this.iTalk_Panel6.Controls.Add(this.iTalk_HeaderLabel6);
             this.iTalk_Panel6.Location = new System.Drawing.Point(539, 281);
@@ -401,28 +405,29 @@ namespace Hilton.View
             this.iTalk_Panel6.TabIndex = 5;
             this.iTalk_Panel6.Text = "iTalk_Panel6";
             // 
-            // button1
+            // btnCS
             // 
-            this.button1.Location = new System.Drawing.Point(408, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 35);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCS.Location = new System.Drawing.Point(408, 83);
+            this.btnCS.Name = "btnCS";
+            this.btnCS.Size = new System.Drawing.Size(95, 35);
+            this.btnCS.TabIndex = 3;
+            this.btnCS.Text = "Aceptar";
+            this.btnCS.UseVisualStyleBackColor = true;
+            this.btnCS.Click += new System.EventHandler(this.btnCS_Click);
             // 
-            // dateTimePicker1
+            // dtpCS
             // 
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.AliceBlue;
-            this.dateTimePicker1.CustomFormat = "yyyy";
-            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(414, 23);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(89, 35);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtpCS.CalendarTitleBackColor = System.Drawing.Color.Black;
+            this.dtpCS.CalendarTitleForeColor = System.Drawing.Color.AliceBlue;
+            this.dtpCS.CustomFormat = "yyyy";
+            this.dtpCS.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpCS.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCS.Location = new System.Drawing.Point(414, 23);
+            this.dtpCS.Name = "dtpCS";
+            this.dtpCS.ShowUpDown = true;
+            this.dtpCS.Size = new System.Drawing.Size(89, 35);
+            this.dtpCS.TabIndex = 2;
             // 
             // textBox6
             // 
@@ -501,12 +506,12 @@ namespace Hilton.View
         private ProjectCinematica.iTalk_HeaderLabel iTalk_HeaderLabel4;
         private ProjectCinematica.iTalk_Panel iTalk_Panel5;
         private System.Windows.Forms.Button btnCE;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpCE;
         private System.Windows.Forms.TextBox textBox5;
         private ProjectCinematica.iTalk_HeaderLabel iTalk_HeaderLabel5;
         private ProjectCinematica.iTalk_Panel iTalk_Panel6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnCS;
+        private System.Windows.Forms.DateTimePicker dtpCS;
         private System.Windows.Forms.TextBox textBox6;
         private ProjectCinematica.iTalk_HeaderLabel iTalk_HeaderLabel6;
     }

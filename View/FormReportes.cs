@@ -23,5 +23,37 @@ namespace Hilton.View
             FrmReporteIngresoMensual fRVentasMensual = new FrmReporteIngresoMensual(dtpRM.Value.Year);
             fRVentasMensual.ShowDialog();
         }
+
+        private void btnRS_Click(object sender, EventArgs e)
+        {
+            FrmReportIngresoSalon frmReport = new FrmReportIngresoSalon(dtpRS.Value.Year);
+            frmReport.ShowDialog();
+        }
+
+        private void btnCM_Click(object sender, EventArgs e)
+        {
+            FrmReporteCostoTotalMatenimiento frmReporte = new FrmReporteCostoTotalMatenimiento(dtpCM.Value.Year);
+            frmReporte.ShowDialog();
+        }
+
+        private void btnMS_Click(object sender, EventArgs e)
+        {
+            FrmReportCostoMantenimientoSalon frmReport = new FrmReportCostoMantenimientoSalon(dtpMS.Value.Year);
+            frmReport.ShowDialog();
+
+            
+        }
+
+        private void btnCE_Click(object sender, EventArgs e)
+        {
+            FrmReportNoEventosSalon frmReport = new FrmReportNoEventosSalon(dtpCE.Value.Year);
+            frmReport.ShowDialog();
+        }
+
+        private void btnCS_Click(object sender, EventArgs e)
+        {
+            FrmReportNoServicio frmReport = new FrmReportNoServicio(dtpCS.Value.Year);
+            frmReport.ShowDialog();
+        }
     }
 }

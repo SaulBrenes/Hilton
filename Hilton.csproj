@@ -98,11 +98,41 @@
     <Compile Include="Reports\Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FrmReportCostoMantenimientoSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReportCostoMantenimientoSalon.Designer.cs">
+      <DependentUpon>FrmReportCostoMantenimientoSalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmReporteCostoTotalMatenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReporteCostoTotalMatenimiento.Designer.cs">
+      <DependentUpon>FrmReporteCostoTotalMatenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FrmReporteIngresoMensual.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\FrmReporteIngresoMensual.Designer.cs">
       <DependentUpon>FrmReporteIngresoMensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmReportIngresoSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReportIngresoSalon.Designer.cs">
+      <DependentUpon>FrmReportIngresoSalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmReportNoEventosSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReportNoEventosSalon.Designer.cs">
+      <DependentUpon>FrmReportNoEventosSalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmReportNoServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReportNoServicio.Designer.cs">
+      <DependentUpon>FrmReportNoServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormEventos.cs">
       <SubType>Form</SubType>
@@ -247,11 +277,31 @@
     <EmbeddedResource Include="Reports\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmReportCostoMantenimientoSalon.resx">
+      <DependentUpon>FrmReportCostoMantenimientoSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmReporteCostoTotalMatenimiento.resx">
+      <DependentUpon>FrmReporteCostoTotalMatenimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FrmReporteIngresoMensual.resx">
       <DependentUpon>FrmReporteIngresoMensual.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmReportIngresoSalon.resx">
+      <DependentUpon>FrmReportIngresoSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmReportNoEventosSalon.resx">
+      <DependentUpon>FrmReportNoEventosSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmReportNoServicio.resx">
+      <DependentUpon>FrmReportNoServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportCostoMantenimientoSalon.rdlc" />
+    <EmbeddedResource Include="Reports\ReportCostoMatenimientoAnual.rdlc" />
     <EmbeddedResource Include="Reports\ReportFactura.rdlc" />
     <EmbeddedResource Include="Reports\ReportIngresoMensual.rdlc" />
+    <EmbeddedResource Include="Reports\ReportIngresoSalon.rdlc" />
+    <EmbeddedResource Include="Reports\ReportNoEventosSalones.rdlc" />
+    <EmbeddedResource Include="Reports\ReportNoServicio.rdlc" />
     <EmbeddedResource Include="View\FormEventos.resx">
       <DependentUpon>FormEventos.cs</DependentUpon>
     </EmbeddedResource>
