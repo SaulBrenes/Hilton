@@ -113,7 +113,7 @@ namespace Hilton
             this.dgvEventos.AllowUserToAddRows = false;
             this.dgvEventos.AllowUserToDeleteRows = false;
             this.dgvEventos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
             this.dgvEventos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEventos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -172,7 +172,7 @@ namespace Hilton
             this.dgvReservacionesEventos.AllowUserToAddRows = false;
             this.dgvReservacionesEventos.AllowUserToDeleteRows = false;
             this.dgvReservacionesEventos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Lavender;
             this.dgvReservacionesEventos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvReservacionesEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReservacionesEventos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -222,7 +222,7 @@ namespace Hilton
             this.dgvServicios.AllowUserToAddRows = false;
             this.dgvServicios.AllowUserToDeleteRows = false;
             this.dgvServicios.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lavender;
             this.dgvServicios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvServicios.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -271,7 +271,7 @@ namespace Hilton
             this.dgvContrataciones.AllowUserToAddRows = false;
             this.dgvContrataciones.AllowUserToDeleteRows = false;
             this.dgvContrataciones.AllowUserToResizeRows = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Lavender;
             this.dgvContrataciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvContrataciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvContrataciones.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -320,6 +320,7 @@ namespace Hilton
             this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnFactura
             // 
@@ -448,7 +449,7 @@ namespace Hilton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1172, 639);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.txtFecha);

@@ -69,6 +69,8 @@ namespace Hilton
                     break;
             }
             dgvEventos.DataSource = dt;
+            //añadida el 6/12/2021
+            dgvEventos.Columns[0].Visible = false;
             if(dgvEventos.Rows.Count > 0)
             {
                 dgvEventos.Rows[0].Selected = true;
@@ -85,7 +87,6 @@ namespace Hilton
             if (dgvEventos.SelectedRows.Count == 1)
             {
                 IdEvento = Convert.ToInt32(dgvEventos.SelectedRows[0].Cells[0].Value);
-                CambiarCampos();
                 dtSalones = CEvento.ReservacionesEvento(IdEvento);
                 dgvReservacionesEventos.DataSource = dtSalones;
                 dtServicios = CEvento.ServiciosEventos(IdEvento);
@@ -93,6 +94,8 @@ namespace Hilton
                 dtContrataciones = CEvento.ContratacionesExternaEvento(IdEvento);
                 dgvContrataciones.DataSource = dtContrataciones;
                 EstadoEvento(dgvEventos.CurrentRow.Cells[8].Value.ToString());
+                CambiarCampos();
+
             }
             else if (dgvEventos.SelectedRows.Count == 0 && dgvEventos.Rows.Count > 0 && dgvServicios.Rows.Count > 0)
             {
@@ -123,6 +126,7 @@ namespace Hilton
                 btnMostrarF.Enabled = false;
                 btnEstado.Enabled = true;
                 btnEstado.Text = "Reservar";
+                EventoCancelado();
                 return;
             }
 
@@ -258,6 +262,39 @@ namespace Hilton
             txtEvento.Text = dgvEventos.CurrentRow.Cells[1].Value.ToString();
             txtFecha.Text = dgvEventos.CurrentRow.Cells[2].Value.ToString();
             txtCliente.Text = dgvEventos.CurrentRow.Cells[3].Value.ToString();
+  
+        }
+
+        private void EventoCancelado()
+        {
+            DateTime date = Convert.ToDateTime(dgvEventos.CurrentRow.Cells[2].Value.ToString());
+            if (DateTime.Compare(DateTime.Now, date)>= 0)
+            {
+                btnEstado.Enabled = false;
+            }
+            else
+            {
+                btnEstado.Enabled = true;
+            }
+            
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvEventos.SelectedRows.Count > 0)
+            {
+                IdEvento = int.Parse(dgvEventos.SelectedRows[0].Cells[0].Value.ToString());
+
+                FrmEditarEvento frm = new FrmEditarEvento(IdEvento);
+                frm.ShowDialog();
+                txtBuscar.Text = string.Empty;
+                cmbFiltro.SelectedIndex = 0;
+                cmbFiltro_SelectedIndexChanged(sender, e);
+                if (dgvEventos.Rows.Count > 0)
+                {
+                    dgvEventos.Rows[0].Selected = true;
+                }
+            }
         }
     }
 }

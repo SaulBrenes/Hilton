@@ -81,6 +81,14 @@ namespace Hilton.View
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if(txtContrasena.Text.Length < 8)
+            {
+                MessageBox.Show("La contraseña debe ser al menos de 8 dígitos");
+                txtContrasena.Focus();
+                return;
+            }
+
+            
             if (txtContrasena.Text.Equals(string.Empty))
             {
                 MessageBox.Show("Llene el campo de contraseña");

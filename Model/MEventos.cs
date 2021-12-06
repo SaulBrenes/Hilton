@@ -110,6 +110,81 @@ namespace Hilton.Model
             return dt;
         }
 
+        public static DataTable IdServiciosEvento(int idEvento)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection sqlconnection = new SqlConnection();
+            try
+            {
+                sqlconnection.ConnectionString = Conexión.Cn;
+                SqlCommand sqlCom = new SqlCommand();
+                sqlCom.Connection = sqlconnection;
+                sqlCom.CommandType = CommandType.StoredProcedure;
+                sqlCom.CommandText = "ObtenerIdServiciosContratadoEvento";
+
+                SqlParameter ParIdEvento = new SqlParameter("@idEvento", SqlDbType.Int);
+                ParIdEvento.Value = idEvento;
+
+                sqlCom.Parameters.Add(ParIdEvento);
+
+                SqlDataAdapter sqlData = new SqlDataAdapter(sqlCom);
+                sqlData.Fill(dt);
+
+            }
+            catch (Exception)
+            {
+                dt = null;
+            }
+            finally
+            {
+                if (sqlconnection.State == ConnectionState.Open)
+                {
+                    sqlconnection.Close();
+                }
+            }
+            return dt;
+        }
+
+        public static string EditarAsistentesEvento(int idEvento, int Asistentes)
+        {
+            string respuesta = "";
+            SqlConnection sqlConnection = new SqlConnection();
+            try
+            {
+                sqlConnection.ConnectionString = Conexión.Cn;
+                sqlConnection.Open();
+                SqlCommand sqlCom = new SqlCommand();
+                sqlCom.Connection = sqlConnection;
+                sqlCom.CommandType = CommandType.StoredProcedure;
+                sqlCom.CommandText = "EditarAsistenteEvento";
+
+
+                SqlParameter ParIdEvento = new SqlParameter("@idEvento", SqlDbType.Int);
+                ParIdEvento.Value = idEvento;
+
+                SqlParameter ParIdSalon = new SqlParameter("@asistentes", SqlDbType.Int);
+                ParIdSalon.Value = Asistentes;
+
+                sqlCom.Parameters.Add(ParIdEvento);
+                sqlCom.Parameters.Add(ParIdSalon);
+
+                respuesta = sqlCom.ExecuteNonQuery() == 1 ? "OK" : "No se pudo editar asistentes";
+
+            }
+            catch (Exception ex)
+            {
+                respuesta = "Error al editar asistentes: " + ex.Message;
+            }
+            finally
+            {
+                if (sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+            return respuesta;
+        }
+
         public static DataTable SeviciosEvento(int idEvento)
         {
             DataTable dt = new DataTable();
@@ -144,6 +219,42 @@ namespace Hilton.Model
             }
             return dt;
         }
+
+        public static DataTable ObtenerEventoEditar(int idEvento)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection sqlconnection = new SqlConnection();
+            try
+            {
+                sqlconnection.ConnectionString = Conexión.Cn;
+                SqlCommand sqlCom = new SqlCommand();
+                sqlCom.Connection = sqlconnection;
+                sqlCom.CommandType = CommandType.StoredProcedure;
+                sqlCom.CommandText = "ObtenerEventoEditar";
+
+                SqlParameter ParIdEvento = new SqlParameter("@idEvento", SqlDbType.Int);
+                ParIdEvento.Value = idEvento;
+
+                sqlCom.Parameters.Add(ParIdEvento);
+
+                SqlDataAdapter sqlData = new SqlDataAdapter(sqlCom);
+                sqlData.Fill(dt);
+
+            }
+            catch (Exception)
+            {
+                dt = null;
+            }
+            finally
+            {
+                if (sqlconnection.State == ConnectionState.Open)
+                {
+                    sqlconnection.Close();
+                }
+            }
+            return dt;
+        }
+
 
         public static DataTable ContratacionesEvento(int idEvento)
         {

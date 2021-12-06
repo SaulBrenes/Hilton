@@ -13,8 +13,14 @@ namespace Hilton.View
     public partial class SeleccionarSalon : Form
     {
         public bool Elegido;
+
+        public bool EditaEvento;
         public int idSalon { get; set; }
         public string Nombre { get; set; }
+
+        public float precio { get; set; }
+
+        public int Capacidad { get; set; }
 
         public DataTable dt { get; set; }
 
@@ -32,6 +38,11 @@ namespace Hilton.View
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
+            if (EditaEvento)
+            {
+                dt.DefaultView.RowFilter = $"Nombre Like '{txtBuscar.Text}%'";
+                return;
+            }
             dt.DefaultView.RowFilter = $"Nombre Like '{txtBuscar.Text}%' or " +
                 $"Código Like '{txtBuscar.Text}%'";
         }
@@ -46,8 +57,21 @@ namespace Hilton.View
         {
             if (dgvSalon.SelectedRows.Count == 1)
             {
+                if (EditaEvento)
+                {
+                    idSalon = Convert.ToInt32(dgvSalon.SelectedRows[0].Cells[0].Value.ToString());
+                    Nombre = dgvSalon.SelectedRows[0].Cells[1].Value.ToString();
+                    precio = float.Parse(dgvSalon.SelectedRows[0].Cells[2].Value.ToString());
+                    Capacidad = int.Parse(dgvSalon.SelectedRows[0].Cells[3].Value.ToString());
+                    Elegido = true;
+                    Close();
+                    return;
+                }
+                
+                
                 idSalon = Convert.ToInt32(dgvSalon.SelectedRows[0].Cells[0].Value.ToString());
                 Nombre = dgvSalon.SelectedRows[0].Cells[2].Value.ToString();
+                    
                 Elegido = true;
                 Close();
             }

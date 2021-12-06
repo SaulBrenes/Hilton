@@ -173,7 +173,7 @@ namespace Hilton.View
                 {
                     int index = dgvReservacion.SelectedRows[0].Index;
                     capacidad -= Convert.ToInt32(dgvReservacion.CurrentRow.Cells[3].Value);
-                    txtCapacidadActual.Text = $"{capacidad} personas";
+                    txtCapacidadActual.Text = $"{capacidad}";
                     dtReservaciones.Rows.RemoveAt(index);
                 }
                 else
@@ -313,7 +313,7 @@ namespace Hilton.View
             //Validando que la capacidad total sea >= que la cantidad de personas asitentes
             if(Int32.Parse(nudPersonas.Value.ToString()) > Int32.Parse(txtCapacidadActual.Text))
             {
-                MessageBox.Show("Las reervaciones actuales no cubren la cantidad de personas asistentes");
+                MessageBox.Show("Las reservaciones actuales no cubren la cantidad de personas asistentes");
                 return false;
             }
 
@@ -397,11 +397,7 @@ namespace Hilton.View
             }
         }
 
-        private void btnFacturar_Click(object sender, EventArgs e)
-        {
-            btnGuardar_Click(sender, e);
-
-        }
+       
     }
 
 }

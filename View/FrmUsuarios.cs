@@ -207,6 +207,15 @@ namespace Hilton.View
 
             else if (IsContrasena)
             {
+
+                if (contraseña1.Length < 8)
+                {
+                    MessageBox.Show("La contraseña debe ser al menos de 8 dígitos");
+                    txtContraseña.Focus();
+                    return;
+                }
+
+
                 if (contraseña1.Equals(string.Empty))
                 {
                     MessageBox.Show("Rellene el campo de contraseña");

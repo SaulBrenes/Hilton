@@ -3,10 +3,48 @@
   <Body>
     <ReportItems>
       <Rectangle Name="Rectangle1">
+        <ReportItems>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>FACTURA</Value>
+                    <Style>
+                      <FontFamily>georgia</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.03528cm</Top>
+            <Left>5.45137cm</Left>
+            <Height>0.56403cm</Height>
+            <Width>2.36773cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>2.33467cm</Top>
+        <Top>2.33509cm</Top>
         <Left>0.55245cm</Left>
-        <Height>0.85507cm</Height>
+        <Height>0.77528cm</Height>
         <Width>12.76458cm</Width>
         <Style>
           <Border>
@@ -19,7 +57,7 @@
         <Source>Embedded</Source>
         <Value>Hilton_hOTELS</Value>
         <Sizing>FitProportional</Sizing>
-        <Top>0.2614cm</Top>
+        <Top>0.29709cm</Top>
         <Left>0.68015cm</Left>
         <Height>1.89688cm</Height>
         <Width>2.5cm</Width>
@@ -49,8 +87,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>0.2614cm</Top>
-        <Left>4.39301cm</Left>
+        <Top>0.26181cm</Top>
+        <Left>4.37663cm</Left>
         <Height>0.6cm</Height>
         <Width>5.75438cm</Width>
         <ZIndex>2</ZIndex>
@@ -82,8 +120,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>1.45203cm</Top>
-        <Left>4.78988cm</Left>
+        <Top>1.48772cm</Top>
+        <Left>4.44986cm</Left>
         <Height>0.70625cm</Height>
         <Width>5.60791cm</Width>
         <ZIndex>3</ZIndex>
@@ -851,7 +889,7 @@
         <Top>8.87772cm</Top>
         <Left>0.55245cm</Left>
         <Height>1.2cm</Height>
-        <Width>12.76458cm</Width>
+        <Width>12.76457cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -1610,46 +1648,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>0.7462cm</Top>
-        <Left>4.39301cm</Left>
+        <Top>0.74661cm</Top>
+        <Left>4.37663cm</Left>
         <Height>0.6cm</Height>
         <Width>5.75438cm</Width>
         <ZIndex>29</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox9">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>FACTURA</Value>
-                <Style>
-                  <FontFamily>GEorgia</FontFamily>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>White</Color>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>2.48391cm</Top>
-        <Left>5.87154cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>30</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
