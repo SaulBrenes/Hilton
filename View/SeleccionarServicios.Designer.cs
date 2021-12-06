@@ -29,6 +29,7 @@ namespace Hilton.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeleccionarServicios));
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@ namespace Hilton.View
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(109, 342);
+            this.btnSeleccionar.Location = new System.Drawing.Point(171, 342);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(122, 32);
             this.btnSeleccionar.TabIndex = 1;
@@ -50,7 +51,7 @@ namespace Hilton.View
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(296, 342);
+            this.btnCancelar.Location = new System.Drawing.Point(358, 342);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(122, 32);
             this.btnCancelar.TabIndex = 2;
@@ -66,7 +67,7 @@ namespace Hilton.View
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(531, 302);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(611, 302);
             this.iTalk_GroupBox1.TabIndex = 0;
             this.iTalk_GroupBox1.Text = "SERVICIOS DISPONIBLES";
             // 
@@ -74,21 +75,28 @@ namespace Hilton.View
             // 
             this.dgvServicios.AllowUserToAddRows = false;
             this.dgvServicios.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.dgvServicios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvServicios.BackgroundColor = System.Drawing.Color.White;
+            this.dgvServicios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvServicios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvServicios.Location = new System.Drawing.Point(5, 28);
             this.dgvServicios.MultiSelect = false;
             this.dgvServicios.Name = "dgvServicios";
             this.dgvServicios.ReadOnly = true;
+            this.dgvServicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvServicios.RowHeadersVisible = false;
             this.dgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvServicios.Size = new System.Drawing.Size(521, 269);
+            this.dgvServicios.Size = new System.Drawing.Size(601, 269);
             this.dgvServicios.TabIndex = 0;
             // 
             // SeleccionarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 386);
+            this.ClientSize = new System.Drawing.Size(661, 386);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.iTalk_GroupBox1);

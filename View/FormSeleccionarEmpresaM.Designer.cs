@@ -29,6 +29,7 @@ namespace Hilton.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSeleccionarEmpresaM));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -40,21 +41,23 @@ namespace Hilton.View
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(144, 264);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(105, 32);
             this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
+            this.btnAceptar.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Location = new System.Drawing.Point(27, 264);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(98, 32);
             this.btnAceptar.TabIndex = 8;
-            this.btnAceptar.Text = "ACEPTAR";
+            this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
@@ -62,25 +65,35 @@ namespace Hilton.View
             // 
             this.dgvEmpresas.AllowUserToAddRows = false;
             this.dgvEmpresas.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgvEmpresas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmpresas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmpresas.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpresas.GridColor = System.Drawing.Color.White;
             this.dgvEmpresas.Location = new System.Drawing.Point(24, 63);
+            this.dgvEmpresas.MultiSelect = false;
             this.dgvEmpresas.Name = "dgvEmpresas";
             this.dgvEmpresas.ReadOnly = true;
+            this.dgvEmpresas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvEmpresas.RowHeadersVisible = false;
+            this.dgvEmpresas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpresas.Size = new System.Drawing.Size(567, 180);
+            this.dgvEmpresas.Size = new System.Drawing.Size(677, 180);
             this.dgvEmpresas.TabIndex = 7;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(99, 20);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(492, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(602, 27);
             this.txtBuscar.TabIndex = 6;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(24, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 18);
@@ -91,7 +104,7 @@ namespace Hilton.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 322);
+            this.ClientSize = new System.Drawing.Size(728, 322);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dgvEmpresas);
@@ -100,6 +113,8 @@ namespace Hilton.View
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormSeleccionarEmpresaM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SELECCIONE LA EMPRESA DE MANTENIMIENTO";

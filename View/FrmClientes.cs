@@ -59,6 +59,7 @@ namespace Hilton.View
             txtSApellido.Text = string.Empty;
             mtxtTelefono.Text = string.Empty;
             mtxtCedula.Text = string.Empty;
+            txtBuscar.Text = string.Empty;
         }
 
         private void MostrarDatos()
@@ -86,7 +87,7 @@ namespace Hilton.View
                 try
                 {
 
-                    rpta = CUsuario.EstadoUsuario(Convert.ToInt32(this.dgvClientes.CurrentRow.Cells[0].Value));
+                    rpta = CCliente.EstadoCliente(Convert.ToInt32(this.dgvClientes.CurrentRow.Cells[0].Value));
                     if (rpta == "OK")
                         MessageBox.Show("El estado ha sido actualizado", "Sistema Hilton", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
@@ -196,5 +197,7 @@ namespace Hilton.View
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
+
     }
 }

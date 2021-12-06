@@ -163,7 +163,7 @@ namespace Hilton.View
             {
                 string rpta = "";
 
-                if (this.IsNuevo)
+                if (this.IsNuevo && ValidarCampos())
                 {
                     rpta = CMantenimiento.CrearMantenimiento(idSalon,idEmpleado,idEmpresa,
                         float.Parse(nudCosto.Value.ToString()), txtDescripcion.Text, dtpFecha.Value);
@@ -252,6 +252,35 @@ namespace Hilton.View
                 idEmpresa = sm.idEmpresa;
                 txtEmpresa.Text = sm.nombreEmpresa;
             }
+        }
+
+        private bool ValidarCampos()
+        {
+            if(txtDescripcion.Text== string.Empty)
+            {
+                MessageBox.Show("El campo de descripción esta vacío", "Falta de campos");
+                return false;
+            }
+
+            if(txtEmpleado.Text == string.Empty)
+            {
+                MessageBox.Show("Eliga el empleado que superviso el mantenimiento", "Falta de campos");
+                return false;
+            }
+
+            if(txtEmpresa.Text == string.Empty)
+            {
+                MessageBox.Show("Eliga la empresa que realizo el mantenimiento", "Falta de campos");
+                return false;
+            }
+
+            if (txtSalon.Text == string.Empty)
+            {
+                MessageBox.Show("Eliga el salón donde se hizó mantenimiento", "Falta de campos");
+                return false;
+            }
+
+            return true;
         }
     }
 }

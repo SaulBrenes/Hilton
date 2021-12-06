@@ -59,7 +59,6 @@ namespace Hilton.View
                 nombreEmpleado += " " + dgvEmpleados.SelectedRows[0].Cells[2].Value.ToString();
                 nombreEmpleado += " " + dgvEmpleados.SelectedRows[0].Cells[3].Value.ToString();
                 nombreEmpleado += " " + dgvEmpleados.SelectedRows[0].Cells[4].Value.ToString();
-                MessageBox.Show(idEmpleado + " " + nombreEmpleado);
                 Elegido = true;
                 Close();
             }

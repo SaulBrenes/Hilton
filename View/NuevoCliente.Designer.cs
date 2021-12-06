@@ -62,6 +62,7 @@ namespace Hilton.View
             this.mtxtCedula.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtCedula.Location = new System.Drawing.Point(199, 320);
             this.mtxtCedula.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.mtxtCedula.Mask = "000-000000-0000L";
             this.mtxtCedula.Name = "mtxtCedula";
             this.mtxtCedula.Size = new System.Drawing.Size(326, 27);
             this.mtxtCedula.TabIndex = 36;
@@ -106,6 +107,7 @@ namespace Hilton.View
             this.mtxtTelefono.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtTelefono.Location = new System.Drawing.Point(198, 262);
             this.mtxtTelefono.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.mtxtTelefono.Mask = "00000000";
             this.mtxtTelefono.Name = "mtxtTelefono";
             this.mtxtTelefono.Size = new System.Drawing.Size(326, 27);
             this.mtxtTelefono.TabIndex = 29;
@@ -211,7 +213,9 @@ namespace Hilton.View
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "NuevoCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Datos de nuevo cliente";

@@ -30,14 +30,13 @@ namespace Hilton.View
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
-            this.panel2 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnNuevaContrasena = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEstado = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,22 +53,9 @@ namespace Hilton.View
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnNuevaContrasena = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtBuscar);
-            this.panel2.Controls.Add(this.label5);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
             // 
             // txtBuscar
             // 
@@ -82,17 +68,12 @@ namespace Hilton.View
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
             // 
-            // groupBox2
+            // btnNuevaContrasena
             // 
-            this.groupBox2.Controls.Add(this.btnNuevaContrasena);
-            this.groupBox2.Controls.Add(this.btnNuevo);
-            this.groupBox2.Controls.Add(this.btnEditar);
-            this.groupBox2.Controls.Add(this.btnEstado);
-            this.groupBox2.Controls.Add(this.panel1);
-            this.groupBox2.Controls.Add(this.groupBox1);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
+            resources.ApplyResources(this.btnNuevaContrasena, "btnNuevaContrasena");
+            this.btnNuevaContrasena.Name = "btnNuevaContrasena";
+            this.btnNuevaContrasena.UseVisualStyleBackColor = true;
+            this.btnNuevaContrasena.Click += new System.EventHandler(this.btnNuevaContrasena_Click);
             // 
             // btnNuevo
             // 
@@ -115,20 +96,23 @@ namespace Hilton.View
             this.btnEstado.UseVisualStyleBackColor = true;
             this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dgvUsuarios);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
             // dgvUsuarios
             // 
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.dgvUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.White;
+            this.dgvUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dgvUsuarios, "dgvUsuarios");
+            this.dgvUsuarios.MultiSelect = false;
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
+            this.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvUsuarios.RowHeadersVisible = false;
+            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             // 
             // groupBox1
             // 
@@ -188,8 +172,8 @@ namespace Hilton.View
             // cmbRol
             // 
             this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRol.FormattingEnabled = true;
             resources.ApplyResources(this.cmbRol, "cmbRol");
+            this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Name = "cmbRol";
             // 
             // btnMostrar
@@ -234,41 +218,34 @@ namespace Hilton.View
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // btnNuevaContrasena
-            // 
-            resources.ApplyResources(this.btnNuevaContrasena, "btnNuevaContrasena");
-            this.btnNuevaContrasena.Name = "btnNuevaContrasena";
-            this.btnNuevaContrasena.UseVisualStyleBackColor = true;
-            this.btnNuevaContrasena.Click += new System.EventHandler(this.btnNuevaContrasena_Click);
-            // 
             // FrmUsuarios
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnNuevaContrasena);
+            this.Controls.Add(this.dgvUsuarios);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.btnEstado);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmUsuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnMostrar;
@@ -284,7 +261,6 @@ namespace Hilton.View
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.TextBox txtEmpleado;
         private System.Windows.Forms.Button btnEmpleado;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtRepeticionC;
         private System.Windows.Forms.Label label4;

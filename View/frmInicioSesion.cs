@@ -82,5 +82,19 @@ namespace Hilton.View
                 btnAceptar_Click(sender, e);
             }
         }
+
+        private void btnMirar_Click(object sender, EventArgs e)
+        {
+            if(btnMirar.Text.Equals("O"))
+            {
+                btnMirar.Text = "*";
+                txtContraseña.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                btnMirar.Text = "O";
+                txtContraseña.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

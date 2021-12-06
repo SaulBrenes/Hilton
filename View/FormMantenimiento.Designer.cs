@@ -29,6 +29,7 @@ namespace Hilton.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEstado = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -64,40 +65,44 @@ namespace Hilton.View
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 31);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(56, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 19);
+            this.label1.Size = new System.Drawing.Size(69, 19);
             this.label1.TabIndex = 1;
-            this.label1.Text = "BUSCAR:";
+            this.label1.Text = "Buscar:";
             // 
             // btnEstado
             // 
+            this.btnEstado.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstado.Location = new System.Drawing.Point(940, 24);
             this.btnEstado.Name = "btnEstado";
             this.btnEstado.Size = new System.Drawing.Size(92, 33);
             this.btnEstado.TabIndex = 4;
-            this.btnEstado.Text = "ESTADO";
+            this.btnEstado.Text = "Estado";
             this.btnEstado.UseVisualStyleBackColor = true;
             this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
             // 
             // btnEditar
             // 
+            this.btnEditar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(815, 24);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(92, 33);
             this.btnEditar.TabIndex = 3;
-            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
+            this.btnNuevo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Location = new System.Drawing.Point(691, 24);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(92, 33);
             this.btnNuevo.TabIndex = 2;
-            this.btnNuevo.Text = "NUEVO";
+            this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -120,7 +125,7 @@ namespace Hilton.View
             this.iTalk_GroupBox2.Controls.Add(this.btnSalon);
             this.iTalk_GroupBox2.Controls.Add(this.txtSalon);
             this.iTalk_GroupBox2.Controls.Add(this.label2);
-            this.iTalk_GroupBox2.Location = new System.Drawing.Point(46, 308);
+            this.iTalk_GroupBox2.Location = new System.Drawing.Point(41, 331);
             this.iTalk_GroupBox2.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox2.Name = "iTalk_GroupBox2";
             this.iTalk_GroupBox2.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
@@ -139,9 +144,9 @@ namespace Hilton.View
             0,
             0,
             0});
-            this.nudCosto.Location = new System.Drawing.Point(658, 40);
+            this.nudCosto.Location = new System.Drawing.Point(645, 40);
             this.nudCosto.Name = "nudCosto";
-            this.nudCosto.Size = new System.Drawing.Size(187, 27);
+            this.nudCosto.Size = new System.Drawing.Size(134, 27);
             this.nudCosto.TabIndex = 6;
             this.nudCosto.ThousandsSeparator = true;
             // 
@@ -151,7 +156,7 @@ namespace Hilton.View
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(102, 33);
             this.btnCancelar.TabIndex = 12;
-            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -161,7 +166,7 @@ namespace Hilton.View
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(102, 33);
             this.btnGuardar.TabIndex = 11;
-            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -169,6 +174,7 @@ namespace Hilton.View
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_GroupBox1.Controls.Add(this.txtDescripcion);
+            this.iTalk_GroupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_GroupBox1.Location = new System.Drawing.Point(583, 83);
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
@@ -181,6 +187,7 @@ namespace Hilton.View
             // txtDescripcion
             // 
             this.txtDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDescripcion.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(5, 28);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -190,6 +197,7 @@ namespace Hilton.View
             // 
             // btnEmpresa
             // 
+            this.btnEmpresa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpresa.Location = new System.Drawing.Point(496, 170);
             this.btnEmpresa.Name = "btnEmpresa";
             this.btnEmpresa.Size = new System.Drawing.Size(51, 27);
@@ -210,14 +218,16 @@ namespace Hilton.View
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(86, 171);
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(86, 174);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 19);
+            this.label6.Size = new System.Drawing.Size(85, 19);
             this.label6.TabIndex = 26;
-            this.label6.Text = "EMPRESA:";
+            this.label6.Text = "Empresa:";
             // 
             // btnEmpleado
             // 
+            this.btnEmpleado.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpleado.Location = new System.Drawing.Point(496, 127);
             this.btnEmpleado.Name = "btnEmpleado";
             this.btnEmpleado.Size = new System.Drawing.Size(51, 27);
@@ -238,11 +248,12 @@ namespace Hilton.View
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(74, 127);
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(77, 131);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 19);
+            this.label7.Size = new System.Drawing.Size(95, 19);
             this.label7.TabIndex = 23;
-            this.label7.Text = "EMPLEADO:";
+            this.label7.Text = "Empleado:";
             // 
             // dtpFecha
             // 
@@ -254,23 +265,26 @@ namespace Hilton.View
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(108, 44);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(107, 44);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 19);
+            this.label5.Size = new System.Drawing.Size(62, 19);
             this.label5.TabIndex = 21;
-            this.label5.Text = "FECHA:";
+            this.label5.Text = "Fecha:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(584, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 19);
+            this.label3.Size = new System.Drawing.Size(61, 19);
             this.label3.TabIndex = 20;
-            this.label3.Text = "COSTO:";
+            this.label3.Text = "Costo:";
             // 
             // btnSalon
             // 
+            this.btnSalon.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalon.Location = new System.Drawing.Point(496, 83);
             this.btnSalon.Name = "btnSalon";
             this.btnSalon.Size = new System.Drawing.Size(51, 27);
@@ -291,34 +305,49 @@ namespace Hilton.View
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 83);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(108, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 19);
+            this.label2.Size = new System.Drawing.Size(60, 19);
             this.label2.TabIndex = 17;
-            this.label2.Text = "SALÓN:";
+            this.label2.Text = "Salón:";
             // 
             // iTalk_Panel1
             // 
+            this.iTalk_Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.iTalk_Panel1.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Panel1.Controls.Add(this.dgvMantenimientos);
             this.iTalk_Panel1.Location = new System.Drawing.Point(41, 80);
             this.iTalk_Panel1.Name = "iTalk_Panel1";
             this.iTalk_Panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.iTalk_Panel1.Size = new System.Drawing.Size(1109, 193);
+            this.iTalk_Panel1.Size = new System.Drawing.Size(1109, 232);
             this.iTalk_Panel1.TabIndex = 5;
-            this.iTalk_Panel1.Text = "iTalk_Panel1";
+            this.iTalk_Panel1.Text = "Mantenimientos registrados";
             // 
             // dgvMantenimientos
             // 
             this.dgvMantenimientos.AllowUserToAddRows = false;
             this.dgvMantenimientos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.BlanchedAlmond;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvMantenimientos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMantenimientos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMantenimientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMantenimientos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvMantenimientos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvMantenimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMantenimientos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMantenimientos.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvMantenimientos.Location = new System.Drawing.Point(5, 5);
+            this.dgvMantenimientos.MultiSelect = false;
             this.dgvMantenimientos.Name = "dgvMantenimientos";
             this.dgvMantenimientos.ReadOnly = true;
+            this.dgvMantenimientos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvMantenimientos.RowHeadersVisible = false;
+            this.dgvMantenimientos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvMantenimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMantenimientos.Size = new System.Drawing.Size(1099, 183);
+            this.dgvMantenimientos.Size = new System.Drawing.Size(1099, 219);
             this.dgvMantenimientos.TabIndex = 0;
             this.dgvMantenimientos.TabStop = false;
             // 
@@ -334,6 +363,7 @@ namespace Hilton.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1190, 624);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.iTalk_GroupBox2);

@@ -38,6 +38,7 @@ namespace Hilton.View
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMirar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +48,7 @@ namespace Hilton.View
             this.txtUsuario.BackColor = System.Drawing.SystemColors.Menu;
             this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUsuario.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(50, 70);
+            this.txtUsuario.Location = new System.Drawing.Point(42, 83);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(274, 26);
@@ -58,10 +59,9 @@ namespace Hilton.View
             // 
             this.txtContraseña.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtContraseña.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(50, 159);
+            this.txtContraseña.Location = new System.Drawing.Point(42, 189);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(274, 26);
             this.txtContraseña.TabIndex = 1;
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -73,7 +73,7 @@ namespace Hilton.View
             this.btnAceptar.BackColor = System.Drawing.Color.DarkBlue;
             this.btnAceptar.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(50, 221);
+            this.btnAceptar.Location = new System.Drawing.Point(63, 244);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(108, 42);
@@ -86,7 +86,7 @@ namespace Hilton.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(130, 27);
+            this.label1.Location = new System.Drawing.Point(122, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 23);
             this.label1.TabIndex = 3;
@@ -96,7 +96,7 @@ namespace Hilton.View
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 116);
+            this.label2.Location = new System.Drawing.Point(99, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 23);
             this.label2.TabIndex = 4;
@@ -104,6 +104,7 @@ namespace Hilton.View
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnMirar);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
@@ -111,9 +112,9 @@ namespace Hilton.View
             this.panel1.Controls.Add(this.txtContraseña);
             this.panel1.Controls.Add(this.btnAceptar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(345, 8);
+            this.panel1.Location = new System.Drawing.Point(418, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(383, 294);
+            this.panel1.Size = new System.Drawing.Size(383, 315);
             this.panel1.TabIndex = 5;
             // 
             // btnCerrar
@@ -121,7 +122,7 @@ namespace Hilton.View
             this.btnCerrar.BackColor = System.Drawing.Color.Crimson;
             this.btnCerrar.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCerrar.Location = new System.Drawing.Point(216, 221);
+            this.btnCerrar.Location = new System.Drawing.Point(229, 244);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(108, 42);
@@ -136,17 +137,28 @@ namespace Hilton.View
             this.pictureBox1.Image = global::Hilton.Properties.Resources.Hilton_hOTELS;
             this.pictureBox1.Location = new System.Drawing.Point(8, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 294);
+            this.pictureBox1.Size = new System.Drawing.Size(410, 315);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnMirar
+            // 
+            this.btnMirar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMirar.Location = new System.Drawing.Point(322, 189);
+            this.btnMirar.Name = "btnMirar";
+            this.btnMirar.Size = new System.Drawing.Size(38, 26);
+            this.btnMirar.TabIndex = 6;
+            this.btnMirar.Text = "O";
+            this.btnMirar.UseVisualStyleBackColor = true;
+            this.btnMirar.Click += new System.EventHandler(this.btnMirar_Click);
             // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(736, 310);
+            this.ClientSize = new System.Drawing.Size(809, 331);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -174,5 +186,6 @@ namespace Hilton.View
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnMirar;
     }
 }

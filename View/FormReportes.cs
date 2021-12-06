@@ -55,5 +55,10 @@ namespace Hilton.View
             FrmReportNoServicio frmReport = new FrmReportNoServicio(dtpCS.Value.Year);
             frmReport.ShowDialog();
         }
+
+        private void iTalk_Panel1_MouseEnter(object sender, EventArgs e)
+        {
+       
+        }
     }
 }

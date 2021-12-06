@@ -104,7 +104,6 @@ namespace Hilton.View
         {
             this.IsNuevo = false;
             this.IsEditar = false;
-            gbCampos.Visible = false;
             this.Botones();
             this.Limpiar();
             this.dgvSalones.CurrentCell = null;
@@ -114,7 +113,6 @@ namespace Hilton.View
         {
             this.IsNuevo = true;
             this.IsEditar = false;
-            gbCampos.Visible = true;
             this.Botones();
             this.Limpiar();
             this.mtxtCodigo.Focus();
@@ -132,7 +130,6 @@ namespace Hilton.View
                 this.IsNuevo = false;
                 this.IsEditar = true;
                 this.Botones();
-                gbCampos.Visible = true;
                 this.mtxtCodigo.Focus();
 
             }
@@ -179,7 +176,6 @@ namespace Hilton.View
 
                 this.IsNuevo = false;
                 this.IsEditar = false;
-                gbCampos.Visible = false;
                 this.Botones();
                 this.Limpiar();
                
@@ -207,6 +203,9 @@ namespace Hilton.View
             nudcapacidadmax.ResetText();
         }
 
-        
+        private void gbCampos_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

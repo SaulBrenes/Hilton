@@ -103,7 +103,7 @@ namespace Hilton
             this.txtRol,
             this.toolStripSeparator4,
             this.btnCerrarSesion});
-            this.uSUARIOToolStripMenuItem1.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uSUARIOToolStripMenuItem1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uSUARIOToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.uSUARIOToolStripMenuItem1.Name = "uSUARIOToolStripMenuItem1";
             this.uSUARIOToolStripMenuItem1.Size = new System.Drawing.Size(170, 70);
@@ -111,10 +111,10 @@ namespace Hilton
             // 
             // txtRol
             // 
-            this.txtRol.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRol.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRol.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtRol.Name = "txtRol";
-            this.txtRol.Size = new System.Drawing.Size(245, 22);
+            this.txtRol.Size = new System.Drawing.Size(289, 28);
             this.txtRol.Text = "ROL";
             this.txtRol.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.txtRol.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
@@ -123,15 +123,17 @@ namespace Hilton
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(242, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(286, 6);
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.Red;
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.S)));
-            this.btnCerrarSesion.Size = new System.Drawing.Size(245, 22);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(289, 28);
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 

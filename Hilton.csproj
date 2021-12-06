@@ -152,12 +152,6 @@
     <Compile Include="Model\MUsuario.cs" />
     <Compile Include="Model\Roles.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="View\AgregarSalon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\AgregarSalon.Designer.cs">
-      <DependentUpon>AgregarSalon.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\FormMantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,9 +309,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\AgregarSalon.resx">
-      <DependentUpon>AgregarSalon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\FormMantenimiento.resx">
       <DependentUpon>FormMantenimiento.cs</DependentUpon>
     </EmbeddedResource>

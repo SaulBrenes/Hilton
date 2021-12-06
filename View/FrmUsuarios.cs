@@ -146,6 +146,8 @@ namespace Hilton.View
                 this.txtUsuario.Text = Convert.ToString(this.dgvUsuarios.CurrentRow.Cells[1].Value);
                 this.txtEmpleado.Text = Convert.ToString(this.dgvUsuarios.CurrentRow.Cells[3].Value);
                 cmbRol.SelectedItem = Convert.ToString(this.dgvUsuarios.CurrentRow.Cells[4].Value);
+               
+
                 idEmpleado = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells[2].Value);
 
                 this.IsNuevo = false;
@@ -156,6 +158,10 @@ namespace Hilton.View
                 txtContraseña.Enabled = false;
                 txtRepeticionC.Enabled = false;
                 btnMostrar.Enabled = false;
+                if (cmbRol.SelectedIndex == 0)
+                {
+                    cmbRol.Enabled = false;
+                }
                 this.txtUsuario.Focus();
 
             }
@@ -308,5 +314,6 @@ namespace Hilton.View
                 MessageBox.Show("Debe seleccionar una fila antes", "Sistema HILTON", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
     }
 }

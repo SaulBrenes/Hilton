@@ -29,6 +29,7 @@ namespace Hilton.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeleccionarSalon));
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -51,7 +52,7 @@ namespace Hilton.View
             // 
             this.txtBuscar.Location = new System.Drawing.Point(87, 16);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(424, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(572, 27);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -59,12 +60,21 @@ namespace Hilton.View
             // 
             this.dgvSalon.AllowUserToAddRows = false;
             this.dgvSalon.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.dgvSalon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSalon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSalon.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSalon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvSalon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSalon.GridColor = System.Drawing.Color.White;
             this.dgvSalon.Location = new System.Drawing.Point(12, 59);
+            this.dgvSalon.MultiSelect = false;
             this.dgvSalon.Name = "dgvSalon";
             this.dgvSalon.ReadOnly = true;
+            this.dgvSalon.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvSalon.RowHeadersVisible = false;
             this.dgvSalon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSalon.Size = new System.Drawing.Size(499, 180);
+            this.dgvSalon.Size = new System.Drawing.Size(647, 180);
             this.dgvSalon.TabIndex = 2;
             // 
             // btnAceptar
@@ -91,7 +101,7 @@ namespace Hilton.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 304);
+            this.ClientSize = new System.Drawing.Size(671, 304);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dgvSalon);
@@ -101,6 +111,8 @@ namespace Hilton.View
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SeleccionarSalon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Seleccionar salón:";

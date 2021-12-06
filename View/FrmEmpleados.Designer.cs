@@ -29,10 +29,9 @@ namespace Hilton.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -49,76 +48,45 @@ namespace Hilton.View
             this.mtxtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gboxCampos = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.txtDirección = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.mtxtCedula = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDirección = new System.Windows.Forms.TextBox();
-            this.panel2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.gboxCampos.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panel2.Controls.Add(this.txtBuscar);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(934, 53);
-            this.panel2.TabIndex = 8;
-            // 
             // txtBuscar
             // 
-            this.txtBuscar.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(85, 15);
+            this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(94, 15);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscar.MaximumSize = new System.Drawing.Size(748, 30);
+            this.txtBuscar.MaximumSize = new System.Drawing.Size(831, 30);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(748, 25);
+            this.txtBuscar.Size = new System.Drawing.Size(476, 27);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 18);
+            this.label4.Location = new System.Drawing.Point(20, 18);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 18);
+            this.label4.Size = new System.Drawing.Size(69, 18);
             this.label4.TabIndex = 0;
             this.label4.Text = "Buscar:";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnGuardar);
-            this.groupBox2.Controls.Add(this.btnNuevo);
-            this.groupBox2.Controls.Add(this.btnCancelar);
-            this.groupBox2.Controls.Add(this.btnEditar);
-            this.groupBox2.Controls.Add(this.btnEstado);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 423);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(934, 82);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Opciones:";
-            // 
             // btnGuardar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(510, 35);
+            this.btnGuardar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(776, 159);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(108, 34);
+            this.btnGuardar.Size = new System.Drawing.Size(120, 34);
             this.btnGuardar.TabIndex = 23;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -126,11 +94,11 @@ namespace Hilton.View
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(21, 35);
+            this.btnNuevo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Location = new System.Drawing.Point(594, 13);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(108, 34);
+            this.btnNuevo.Size = new System.Drawing.Size(120, 34);
             this.btnNuevo.TabIndex = 19;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -138,11 +106,11 @@ namespace Hilton.View
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(673, 37);
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(925, 159);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(108, 34);
+            this.btnCancelar.Size = new System.Drawing.Size(120, 34);
             this.btnCancelar.TabIndex = 22;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -150,11 +118,11 @@ namespace Hilton.View
             // 
             // btnEditar
             // 
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(184, 35);
+            this.btnEditar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(744, 13);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(108, 34);
+            this.btnEditar.Size = new System.Drawing.Size(120, 34);
             this.btnEditar.TabIndex = 20;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -162,11 +130,11 @@ namespace Hilton.View
             // 
             // btnEstado
             // 
-            this.btnEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstado.Location = new System.Drawing.Point(347, 35);
+            this.btnEstado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstado.Location = new System.Drawing.Point(894, 13);
             this.btnEstado.Margin = new System.Windows.Forms.Padding(4);
             this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(108, 34);
+            this.btnEstado.Size = new System.Drawing.Size(120, 34);
             this.btnEstado.TabIndex = 21;
             this.btnEstado.Text = "Estado";
             this.btnEstado.UseVisualStyleBackColor = true;
@@ -174,110 +142,119 @@ namespace Hilton.View
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 39);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(57, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 25);
+            this.label1.Size = new System.Drawing.Size(134, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Primer nombre:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 80);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 25);
+            this.label2.Size = new System.Drawing.Size(152, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Segundo nombre:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtSNombre
             // 
-            this.txtSNombre.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSNombre.Location = new System.Drawing.Point(156, 78);
+            this.txtSNombre.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSNombre.Location = new System.Drawing.Point(201, 76);
             this.txtSNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtSNombre.Name = "txtSNombre";
-            this.txtSNombre.Size = new System.Drawing.Size(160, 25);
+            this.txtSNombre.Size = new System.Drawing.Size(281, 27);
             this.txtSNombre.TabIndex = 2;
             this.txtSNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 121);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(568, 36);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 26);
+            this.label6.Size = new System.Drawing.Size(138, 18);
             this.label6.TabIndex = 8;
             this.label6.Text = "Primer apellido:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 163);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(550, 77);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 23);
+            this.label5.Size = new System.Drawing.Size(156, 18);
             this.label5.TabIndex = 9;
             this.label5.Text = "Segundo apellido:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtSApellido
             // 
-            this.txtSApellido.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSApellido.Location = new System.Drawing.Point(156, 156);
+            this.txtSApellido.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSApellido.Location = new System.Drawing.Point(714, 72);
             this.txtSApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtSApellido.Name = "txtSApellido";
-            this.txtSApellido.Size = new System.Drawing.Size(160, 25);
+            this.txtSApellido.Size = new System.Drawing.Size(302, 27);
             this.txtSApellido.TabIndex = 4;
             this.txtSApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPNombre
             // 
-            this.txtPNombre.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPNombre.Location = new System.Drawing.Point(156, 39);
+            this.txtPNombre.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPNombre.Location = new System.Drawing.Point(201, 36);
             this.txtPNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtPNombre.Name = "txtPNombre";
-            this.txtPNombre.Size = new System.Drawing.Size(160, 25);
+            this.txtPNombre.Size = new System.Drawing.Size(281, 27);
             this.txtPNombre.TabIndex = 1;
             this.txtPNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPApellido
             // 
-            this.txtPApellido.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPApellido.Location = new System.Drawing.Point(156, 117);
+            this.txtPApellido.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPApellido.Location = new System.Drawing.Point(714, 32);
             this.txtPApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtPApellido.Name = "txtPApellido";
-            this.txtPApellido.Size = new System.Drawing.Size(160, 25);
+            this.txtPApellido.Size = new System.Drawing.Size(302, 27);
             this.txtPApellido.TabIndex = 3;
             this.txtPApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mtxtTelefono
             // 
-            this.mtxtTelefono.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTelefono.Location = new System.Drawing.Point(156, 195);
+            this.mtxtTelefono.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtTelefono.Location = new System.Drawing.Point(202, 116);
             this.mtxtTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxtTelefono.Mask = "00000000";
             this.mtxtTelefono.Name = "mtxtTelefono";
-            this.mtxtTelefono.Size = new System.Drawing.Size(160, 25);
+            this.mtxtTelefono.Size = new System.Drawing.Size(281, 27);
             this.mtxtTelefono.TabIndex = 10;
+            this.mtxtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(65, 202);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(101, 120);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 21);
+            this.label3.Size = new System.Drawing.Size(84, 18);
             this.label3.TabIndex = 12;
             this.label3.Text = "Teléfono:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gboxCampos
             // 
+            this.gboxCampos.Controls.Add(this.btnGuardar);
+            this.gboxCampos.Controls.Add(this.btnCancelar);
             this.gboxCampos.Controls.Add(this.txtDirección);
             this.gboxCampos.Controls.Add(this.label8);
             this.gboxCampos.Controls.Add(this.label7);
@@ -292,26 +269,66 @@ namespace Hilton.View
             this.gboxCampos.Controls.Add(this.txtSNombre);
             this.gboxCampos.Controls.Add(this.label2);
             this.gboxCampos.Controls.Add(this.label1);
-            this.gboxCampos.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gboxCampos.Location = new System.Drawing.Point(595, 27);
+            this.gboxCampos.Location = new System.Drawing.Point(47, 381);
             this.gboxCampos.Margin = new System.Windows.Forms.Padding(4);
             this.gboxCampos.Name = "gboxCampos";
             this.gboxCampos.Padding = new System.Windows.Forms.Padding(4);
-            this.gboxCampos.Size = new System.Drawing.Size(330, 334);
+            this.gboxCampos.Size = new System.Drawing.Size(1092, 211);
             this.gboxCampos.TabIndex = 3;
             this.gboxCampos.TabStop = false;
             this.gboxCampos.Text = "Campos";
-            this.gboxCampos.Visible = false;
+            // 
+            // txtDirección
+            // 
+            this.txtDirección.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDirección.Location = new System.Drawing.Point(201, 154);
+            this.txtDirección.Multiline = true;
+            this.txtDirección.Name = "txtDirección";
+            this.txtDirección.Size = new System.Drawing.Size(514, 41);
+            this.txtDirección.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(96, 167);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 18);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Dirección:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(635, 118);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 18);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Cédula:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // mtxtCedula
+            // 
+            this.mtxtCedula.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCedula.Location = new System.Drawing.Point(714, 112);
+            this.mtxtCedula.Margin = new System.Windows.Forms.Padding(4);
+            this.mtxtCedula.Mask = "000-000000-0000L";
+            this.mtxtCedula.Name = "mtxtCedula";
+            this.mtxtCedula.Size = new System.Drawing.Size(302, 27);
+            this.mtxtCedula.TabIndex = 13;
+            this.mtxtCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvEmpleados);
-            this.groupBox3.Controls.Add(this.gboxCampos);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(0, 53);
+            this.groupBox3.Location = new System.Drawing.Point(47, 64);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(9);
-            this.groupBox3.Size = new System.Drawing.Size(934, 370);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.groupBox3.Size = new System.Drawing.Size(1092, 310);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             // 
@@ -319,85 +336,55 @@ namespace Hilton.View
             // 
             this.dgvEmpleados.AllowUserToAddRows = false;
             this.dgvEmpleados.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
+            this.dgvEmpleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmpleados.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEmpleados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEmpleados.Location = new System.Drawing.Point(9, 27);
-            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(22, 21, 22, 21);
+            this.dgvEmpleados.Location = new System.Drawing.Point(10, 29);
+            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(24, 21, 24, 21);
+            this.dgvEmpleados.MultiSelect = false;
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
-            this.dgvEmpleados.Size = new System.Drawing.Size(586, 334);
+            this.dgvEmpleados.RowHeadersVisible = false;
+            this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmpleados.Size = new System.Drawing.Size(1072, 272);
             this.dgvEmpleados.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(65, 239);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 21);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Cédula:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // mtxtCedula
-            // 
-            this.mtxtCedula.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCedula.Location = new System.Drawing.Point(156, 234);
-            this.mtxtCedula.Margin = new System.Windows.Forms.Padding(4);
-            this.mtxtCedula.Name = "mtxtCedula";
-            this.mtxtCedula.Size = new System.Drawing.Size(160, 25);
-            this.mtxtCedula.TabIndex = 13;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(65, 276);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 21);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Dirección:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtDirección
-            // 
-            this.txtDirección.Location = new System.Drawing.Point(156, 273);
-            this.txtDirección.Multiline = true;
-            this.txtDirección.Name = "txtDirección";
-            this.txtDirección.Size = new System.Drawing.Size(160, 41);
-            this.txtDirección.TabIndex = 16;
             // 
             // FrmEmpleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 505);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(1184, 621);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Controls.Add(this.btnEstado);
+            this.Controls.Add(this.gboxCampos);
+            this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PLANILLA DE EMPLEADOS";
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.gboxCampos.ResumeLayout(false);
             this.gboxCampos.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnCancelar;

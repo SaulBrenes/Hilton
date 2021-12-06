@@ -29,6 +29,9 @@ namespace Hilton.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPago));
             this.lblSubtotalServicio = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,7 +72,7 @@ namespace Hilton.View
             // 
             this.lblSubtotalServicio.AutoSize = true;
             this.lblSubtotalServicio.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotalServicio.Location = new System.Drawing.Point(380, 500);
+            this.lblSubtotalServicio.Location = new System.Drawing.Point(466, 503);
             this.lblSubtotalServicio.Name = "lblSubtotalServicio";
             this.lblSubtotalServicio.Size = new System.Drawing.Size(99, 18);
             this.lblSubtotalServicio.TabIndex = 2;
@@ -78,7 +81,7 @@ namespace Hilton.View
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(187, 500);
+            this.label2.Location = new System.Drawing.Point(273, 503);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(193, 18);
             this.label2.TabIndex = 3;
@@ -87,7 +90,7 @@ namespace Hilton.View
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(234, 538);
+            this.label3.Location = new System.Drawing.Point(320, 541);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 18);
             this.label3.TabIndex = 4;
@@ -97,7 +100,7 @@ namespace Hilton.View
             // 
             this.lblTotalEvento.AutoSize = true;
             this.lblTotalEvento.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalEvento.Location = new System.Drawing.Point(386, 538);
+            this.lblTotalEvento.Location = new System.Drawing.Point(472, 541);
             this.lblTotalEvento.Name = "lblTotalEvento";
             this.lblTotalEvento.Size = new System.Drawing.Size(99, 18);
             this.lblTotalEvento.TabIndex = 5;
@@ -107,7 +110,7 @@ namespace Hilton.View
             // 
             this.lblSubtotalSalon.AutoSize = true;
             this.lblSubtotalSalon.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotalSalon.Location = new System.Drawing.Point(386, 295);
+            this.lblSubtotalSalon.Location = new System.Drawing.Point(472, 298);
             this.lblSubtotalSalon.Name = "lblSubtotalSalon";
             this.lblSubtotalSalon.Size = new System.Drawing.Size(99, 18);
             this.lblSubtotalSalon.TabIndex = 7;
@@ -116,7 +119,7 @@ namespace Hilton.View
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(165, 295);
+            this.label6.Location = new System.Drawing.Point(251, 298);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(215, 18);
             this.label6.TabIndex = 6;
@@ -137,7 +140,7 @@ namespace Hilton.View
             this.iTalk_GroupBox4.Controls.Add(this.txtEmpleado);
             this.iTalk_GroupBox4.Controls.Add(this.label8);
             this.iTalk_GroupBox4.Controls.Add(this.label7);
-            this.iTalk_GroupBox4.Location = new System.Drawing.Point(635, 21);
+            this.iTalk_GroupBox4.Location = new System.Drawing.Point(603, 78);
             this.iTalk_GroupBox4.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox4.Name = "iTalk_GroupBox4";
             this.iTalk_GroupBox4.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
@@ -272,7 +275,7 @@ namespace Hilton.View
             this.iTalk_GroupBox3.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox3.Name = "iTalk_GroupBox3";
             this.iTalk_GroupBox3.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox3.Size = new System.Drawing.Size(494, 149);
+            this.iTalk_GroupBox3.Size = new System.Drawing.Size(555, 149);
             this.iTalk_GroupBox3.TabIndex = 1;
             this.iTalk_GroupBox3.Text = "Total por servicios contratados";
             // 
@@ -280,6 +283,11 @@ namespace Hilton.View
             // 
             this.dgvServicios.AllowUserToAddRows = false;
             this.dgvServicios.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.dgvServicios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvServicios.BackgroundColor = System.Drawing.Color.White;
+            this.dgvServicios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvServicios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvServicios.Location = new System.Drawing.Point(5, 28);
@@ -287,9 +295,11 @@ namespace Hilton.View
             this.dgvServicios.MultiSelect = false;
             this.dgvServicios.Name = "dgvServicios";
             this.dgvServicios.ReadOnly = true;
+            this.dgvServicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvServicios.RowHeadersVisible = false;
             this.dgvServicios.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             this.dgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvServicios.Size = new System.Drawing.Size(484, 116);
+            this.dgvServicios.Size = new System.Drawing.Size(545, 116);
             this.dgvServicios.TabIndex = 1;
             // 
             // iTalk_GroupBox2
@@ -300,7 +310,7 @@ namespace Hilton.View
             this.iTalk_GroupBox2.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox2.Name = "iTalk_GroupBox2";
             this.iTalk_GroupBox2.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox2.Size = new System.Drawing.Size(489, 154);
+            this.iTalk_GroupBox2.Size = new System.Drawing.Size(555, 154);
             this.iTalk_GroupBox2.TabIndex = 0;
             this.iTalk_GroupBox2.Text = "Total por salones reservados";
             // 
@@ -308,6 +318,11 @@ namespace Hilton.View
             // 
             this.dgvSalones.AllowUserToAddRows = false;
             this.dgvSalones.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
+            this.dgvSalones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSalones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSalones.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSalones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvSalones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSalones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSalones.Location = new System.Drawing.Point(5, 28);
@@ -315,9 +330,11 @@ namespace Hilton.View
             this.dgvSalones.MultiSelect = false;
             this.dgvSalones.Name = "dgvSalones";
             this.dgvSalones.ReadOnly = true;
+            this.dgvSalones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvSalones.RowHeadersVisible = false;
             this.dgvSalones.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             this.dgvSalones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSalones.Size = new System.Drawing.Size(479, 121);
+            this.dgvSalones.Size = new System.Drawing.Size(545, 121);
             this.dgvSalones.TabIndex = 1;
             // 
             // iTalk_GroupBox1
@@ -328,7 +345,7 @@ namespace Hilton.View
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(513, 107);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(555, 107);
             this.iTalk_GroupBox1.TabIndex = 0;
             this.iTalk_GroupBox1.Text = "Datos del evento";
             // 
@@ -336,6 +353,11 @@ namespace Hilton.View
             // 
             this.dgvEventos.AllowUserToAddRows = false;
             this.dgvEventos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Lavender;
+            this.dgvEventos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEventos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEventos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEventos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEventos.Location = new System.Drawing.Point(5, 28);
@@ -343,9 +365,11 @@ namespace Hilton.View
             this.dgvEventos.MultiSelect = false;
             this.dgvEventos.Name = "dgvEventos";
             this.dgvEventos.ReadOnly = true;
+            this.dgvEventos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvEventos.RowHeadersVisible = false;
             this.dgvEventos.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             this.dgvEventos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEventos.Size = new System.Drawing.Size(503, 74);
+            this.dgvEventos.Size = new System.Drawing.Size(545, 74);
             this.dgvEventos.TabIndex = 1;
             // 
             // FrmPago

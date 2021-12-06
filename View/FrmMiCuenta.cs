@@ -25,6 +25,7 @@ namespace Hilton.View
 
         private void FrmMiCuenta_Load(object sender, EventArgs e)
         {
+            this.Size = new Size( 360,308);
             this.Controls.Remove(this.groupBox1);
         }
 
@@ -37,6 +38,7 @@ namespace Hilton.View
         {
             groupBox1.Visible = true;
             this.Controls.Add(this.groupBox1);
+            this.Size = new Size(360, 530);
             btnContrasena.Enabled = false;
         }
 
@@ -69,6 +71,7 @@ namespace Hilton.View
 
             this.Controls.Remove(this.groupBox1);
             groupBox1.Visible = false;
+            this.Size = new Size(360, 308);
             btnContrasena.Enabled = true;
             txtContrasena.Text = string.Empty;
             txtRepeticionC.Text = string.Empty;

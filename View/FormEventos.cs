@@ -35,7 +35,6 @@ namespace Hilton
         private void FrmPrueba_Load(object sender, EventArgs e)
         {
             cmbFiltro.SelectedIndex = 0;
-            
         }
 
         private void cmbFiltro_SelectedIndexChanged(object sender, EventArgs e)
@@ -86,6 +85,7 @@ namespace Hilton
             if (dgvEventos.SelectedRows.Count == 1)
             {
                 IdEvento = Convert.ToInt32(dgvEventos.SelectedRows[0].Cells[0].Value);
+                CambiarCampos();
                 dtSalones = CEvento.ReservacionesEvento(IdEvento);
                 dgvReservacionesEventos.DataSource = dtSalones;
                 dtServicios = CEvento.ServiciosEventos(IdEvento);
@@ -251,6 +251,13 @@ namespace Hilton
             {
                 MessageBox.Show("Seleccione una fila");
             }
+        }
+
+        private void CambiarCampos()
+        {
+            txtEvento.Text = dgvEventos.CurrentRow.Cells[1].Value.ToString();
+            txtFecha.Text = dgvEventos.CurrentRow.Cells[2].Value.ToString();
+            txtCliente.Text = dgvEventos.CurrentRow.Cells[3].Value.ToString();
         }
     }
 }
