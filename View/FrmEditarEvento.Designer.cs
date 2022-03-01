@@ -39,18 +39,6 @@ namespace Hilton.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditarEvento));
             this.tabOpciones = new System.Windows.Forms.TabControl();
             this.tabSalones = new System.Windows.Forms.TabPage();
-            this.tabServicios = new System.Windows.Forms.TabPage();
-            this.btnAgregarS = new System.Windows.Forms.Button();
-            this.btnQuitarS = new System.Windows.Forms.Button();
-            this.tabContrataciones = new System.Windows.Forms.TabPage();
-            this.btnQuitarContrataciones = new System.Windows.Forms.Button();
-            this.nudCostoContra = new System.Windows.Forms.NumericUpDown();
-            this.txtDescripcionContratacon = new System.Windows.Forms.TextBox();
-            this.txtNombreContratacion = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnAgregarC = new System.Windows.Forms.Button();
             this.iTalk_GroupBox3 = new ProjectCinematica.iTalk_GroupBox();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.txtCapacidadActual = new System.Windows.Forms.TextBox();
@@ -59,12 +47,24 @@ namespace Hilton.View
             this.dgvSaloneAgregados = new System.Windows.Forms.DataGridView();
             this.iTalk_GroupBox2 = new ProjectCinematica.iTalk_GroupBox();
             this.dgvSalonesReservados = new System.Windows.Forms.DataGridView();
+            this.tabServicios = new System.Windows.Forms.TabPage();
             this.iTalk_GroupBox7 = new ProjectCinematica.iTalk_GroupBox();
             this.dgvServiciosAgregados = new System.Windows.Forms.DataGridView();
+            this.btnAgregarS = new System.Windows.Forms.Button();
+            this.btnQuitarS = new System.Windows.Forms.Button();
             this.iTalk_GroupBox4 = new ProjectCinematica.iTalk_GroupBox();
             this.dgvServicios = new System.Windows.Forms.DataGridView();
+            this.tabContrataciones = new System.Windows.Forms.TabPage();
             this.iTalk_GroupBox8 = new ProjectCinematica.iTalk_GroupBox();
             this.dgvContratacionesAgregadas = new System.Windows.Forms.DataGridView();
+            this.btnQuitarContrataciones = new System.Windows.Forms.Button();
+            this.nudCostoContra = new System.Windows.Forms.NumericUpDown();
+            this.txtDescripcionContratacon = new System.Windows.Forms.TextBox();
+            this.txtNombreContratacion = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnAgregarC = new System.Windows.Forms.Button();
             this.iTalk_GroupBox5 = new ProjectCinematica.iTalk_GroupBox();
             this.dgvContrataciones = new System.Windows.Forms.DataGridView();
             this.iTalk_GroupBox1 = new ProjectCinematica.iTalk_GroupBox();
@@ -88,19 +88,19 @@ namespace Hilton.View
             this.btnGuardar = new System.Windows.Forms.Button();
             this.tabOpciones.SuspendLayout();
             this.tabSalones.SuspendLayout();
-            this.tabServicios.SuspendLayout();
-            this.tabContrataciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCostoContra)).BeginInit();
             this.iTalk_GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaloneAgregados)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalonesReservados)).BeginInit();
+            this.tabServicios.SuspendLayout();
             this.iTalk_GroupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiciosAgregados)).BeginInit();
             this.iTalk_GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServicios)).BeginInit();
+            this.tabContrataciones.SuspendLayout();
             this.iTalk_GroupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContratacionesAgregadas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCostoContra)).BeginInit();
             this.iTalk_GroupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContrataciones)).BeginInit();
             this.iTalk_GroupBox1.SuspendLayout();
@@ -133,141 +133,6 @@ namespace Hilton.View
             this.tabSalones.TabIndex = 0;
             this.tabSalones.Text = "Salones";
             this.tabSalones.UseVisualStyleBackColor = true;
-            // 
-            // tabServicios
-            // 
-            this.tabServicios.Controls.Add(this.iTalk_GroupBox7);
-            this.tabServicios.Controls.Add(this.btnAgregarS);
-            this.tabServicios.Controls.Add(this.btnQuitarS);
-            this.tabServicios.Controls.Add(this.iTalk_GroupBox4);
-            this.tabServicios.Location = new System.Drawing.Point(4, 27);
-            this.tabServicios.Name = "tabServicios";
-            this.tabServicios.Padding = new System.Windows.Forms.Padding(3);
-            this.tabServicios.Size = new System.Drawing.Size(647, 590);
-            this.tabServicios.TabIndex = 1;
-            this.tabServicios.Text = "Servicios";
-            this.tabServicios.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregarS
-            // 
-            this.btnAgregarS.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarS.Location = new System.Drawing.Point(216, 468);
-            this.btnAgregarS.Name = "btnAgregarS";
-            this.btnAgregarS.Size = new System.Drawing.Size(97, 29);
-            this.btnAgregarS.TabIndex = 2;
-            this.btnAgregarS.Text = "Agregar";
-            this.btnAgregarS.UseVisualStyleBackColor = true;
-            this.btnAgregarS.Click += new System.EventHandler(this.btnAgregarS_Click);
-            // 
-            // btnQuitarS
-            // 
-            this.btnQuitarS.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitarS.Location = new System.Drawing.Point(353, 468);
-            this.btnQuitarS.Name = "btnQuitarS";
-            this.btnQuitarS.Size = new System.Drawing.Size(97, 29);
-            this.btnQuitarS.TabIndex = 1;
-            this.btnQuitarS.Text = "Quitar";
-            this.btnQuitarS.UseVisualStyleBackColor = true;
-            this.btnQuitarS.Click += new System.EventHandler(this.btnQuitarS_Click);
-            // 
-            // tabContrataciones
-            // 
-            this.tabContrataciones.Controls.Add(this.iTalk_GroupBox8);
-            this.tabContrataciones.Controls.Add(this.btnQuitarContrataciones);
-            this.tabContrataciones.Controls.Add(this.nudCostoContra);
-            this.tabContrataciones.Controls.Add(this.txtDescripcionContratacon);
-            this.tabContrataciones.Controls.Add(this.txtNombreContratacion);
-            this.tabContrataciones.Controls.Add(this.label12);
-            this.tabContrataciones.Controls.Add(this.label11);
-            this.tabContrataciones.Controls.Add(this.label10);
-            this.tabContrataciones.Controls.Add(this.btnAgregarC);
-            this.tabContrataciones.Controls.Add(this.iTalk_GroupBox5);
-            this.tabContrataciones.Location = new System.Drawing.Point(4, 27);
-            this.tabContrataciones.Name = "tabContrataciones";
-            this.tabContrataciones.Size = new System.Drawing.Size(647, 590);
-            this.tabContrataciones.TabIndex = 2;
-            this.tabContrataciones.Text = "Contrataciones Ext.";
-            this.tabContrataciones.UseVisualStyleBackColor = true;
-            // 
-            // btnQuitarContrataciones
-            // 
-            this.btnQuitarContrataciones.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitarContrataciones.Location = new System.Drawing.Point(467, 330);
-            this.btnQuitarContrataciones.Name = "btnQuitarContrataciones";
-            this.btnQuitarContrataciones.Size = new System.Drawing.Size(97, 29);
-            this.btnQuitarContrataciones.TabIndex = 1;
-            this.btnQuitarContrataciones.Text = "Quitar";
-            this.btnQuitarContrataciones.UseVisualStyleBackColor = true;
-            this.btnQuitarContrataciones.Click += new System.EventHandler(this.btnQuitarContrataciones_Click);
-            // 
-            // nudCostoContra
-            // 
-            this.nudCostoContra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudCostoContra.Cursor = System.Windows.Forms.Cursors.Default;
-            this.nudCostoContra.DecimalPlaces = 2;
-            this.nudCostoContra.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudCostoContra.Location = new System.Drawing.Point(132, 333);
-            this.nudCostoContra.Name = "nudCostoContra";
-            this.nudCostoContra.Size = new System.Drawing.Size(187, 27);
-            this.nudCostoContra.TabIndex = 10;
-            this.nudCostoContra.ThousandsSeparator = true;
-            // 
-            // txtDescripcionContratacon
-            // 
-            this.txtDescripcionContratacon.Location = new System.Drawing.Point(132, 268);
-            this.txtDescripcionContratacon.Multiline = true;
-            this.txtDescripcionContratacon.Name = "txtDescripcionContratacon";
-            this.txtDescripcionContratacon.Size = new System.Drawing.Size(467, 54);
-            this.txtDescripcionContratacon.TabIndex = 9;
-            // 
-            // txtNombreContratacion
-            // 
-            this.txtNombreContratacion.Location = new System.Drawing.Point(132, 234);
-            this.txtNombreContratacion.Name = "txtNombreContratacion";
-            this.txtNombreContratacion.Size = new System.Drawing.Size(467, 27);
-            this.txtNombreContratacion.TabIndex = 8;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(62, 337);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 18);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Precio:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 286);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 18);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Descripción:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(48, 238);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 18);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Nombre:";
-            // 
-            // btnAgregarC
-            // 
-            this.btnAgregarC.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarC.Location = new System.Drawing.Point(347, 331);
-            this.btnAgregarC.Name = "btnAgregarC";
-            this.btnAgregarC.Size = new System.Drawing.Size(97, 29);
-            this.btnAgregarC.TabIndex = 4;
-            this.btnAgregarC.Text = "Agregar";
-            this.btnAgregarC.UseVisualStyleBackColor = true;
-            this.btnAgregarC.Click += new System.EventHandler(this.btnAgregarC_Click);
             // 
             // iTalk_GroupBox3
             // 
@@ -380,6 +245,20 @@ namespace Hilton.View
             this.dgvSalonesReservados.Size = new System.Drawing.Size(572, 132);
             this.dgvSalonesReservados.TabIndex = 0;
             // 
+            // tabServicios
+            // 
+            this.tabServicios.Controls.Add(this.iTalk_GroupBox7);
+            this.tabServicios.Controls.Add(this.btnAgregarS);
+            this.tabServicios.Controls.Add(this.btnQuitarS);
+            this.tabServicios.Controls.Add(this.iTalk_GroupBox4);
+            this.tabServicios.Location = new System.Drawing.Point(4, 27);
+            this.tabServicios.Name = "tabServicios";
+            this.tabServicios.Padding = new System.Windows.Forms.Padding(3);
+            this.tabServicios.Size = new System.Drawing.Size(647, 590);
+            this.tabServicios.TabIndex = 1;
+            this.tabServicios.Text = "Servicios";
+            this.tabServicios.UseVisualStyleBackColor = true;
+            // 
             // iTalk_GroupBox7
             // 
             this.iTalk_GroupBox7.BackColor = System.Drawing.Color.Transparent;
@@ -412,6 +291,28 @@ namespace Hilton.View
             this.dgvServiciosAgregados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvServiciosAgregados.Size = new System.Drawing.Size(572, 158);
             this.dgvServiciosAgregados.TabIndex = 0;
+            // 
+            // btnAgregarS
+            // 
+            this.btnAgregarS.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarS.Location = new System.Drawing.Point(216, 468);
+            this.btnAgregarS.Name = "btnAgregarS";
+            this.btnAgregarS.Size = new System.Drawing.Size(97, 29);
+            this.btnAgregarS.TabIndex = 2;
+            this.btnAgregarS.Text = "Agregar";
+            this.btnAgregarS.UseVisualStyleBackColor = true;
+            this.btnAgregarS.Click += new System.EventHandler(this.btnAgregarS_Click);
+            // 
+            // btnQuitarS
+            // 
+            this.btnQuitarS.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarS.Location = new System.Drawing.Point(353, 468);
+            this.btnQuitarS.Name = "btnQuitarS";
+            this.btnQuitarS.Size = new System.Drawing.Size(97, 29);
+            this.btnQuitarS.TabIndex = 1;
+            this.btnQuitarS.Text = "Quitar";
+            this.btnQuitarS.UseVisualStyleBackColor = true;
+            this.btnQuitarS.Click += new System.EventHandler(this.btnQuitarS_Click);
             // 
             // iTalk_GroupBox4
             // 
@@ -446,6 +347,25 @@ namespace Hilton.View
             this.dgvServicios.Size = new System.Drawing.Size(572, 158);
             this.dgvServicios.TabIndex = 0;
             // 
+            // tabContrataciones
+            // 
+            this.tabContrataciones.Controls.Add(this.iTalk_GroupBox8);
+            this.tabContrataciones.Controls.Add(this.btnQuitarContrataciones);
+            this.tabContrataciones.Controls.Add(this.nudCostoContra);
+            this.tabContrataciones.Controls.Add(this.txtDescripcionContratacon);
+            this.tabContrataciones.Controls.Add(this.txtNombreContratacion);
+            this.tabContrataciones.Controls.Add(this.label12);
+            this.tabContrataciones.Controls.Add(this.label11);
+            this.tabContrataciones.Controls.Add(this.label10);
+            this.tabContrataciones.Controls.Add(this.btnAgregarC);
+            this.tabContrataciones.Controls.Add(this.iTalk_GroupBox5);
+            this.tabContrataciones.Location = new System.Drawing.Point(4, 27);
+            this.tabContrataciones.Name = "tabContrataciones";
+            this.tabContrataciones.Size = new System.Drawing.Size(647, 590);
+            this.tabContrataciones.TabIndex = 2;
+            this.tabContrataciones.Text = "Contrataciones Ext.";
+            this.tabContrataciones.UseVisualStyleBackColor = true;
+            // 
             // iTalk_GroupBox8
             // 
             this.iTalk_GroupBox8.BackColor = System.Drawing.Color.Transparent;
@@ -478,6 +398,86 @@ namespace Hilton.View
             this.dgvContratacionesAgregadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvContratacionesAgregadas.Size = new System.Drawing.Size(534, 148);
             this.dgvContratacionesAgregadas.TabIndex = 0;
+            // 
+            // btnQuitarContrataciones
+            // 
+            this.btnQuitarContrataciones.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarContrataciones.Location = new System.Drawing.Point(467, 330);
+            this.btnQuitarContrataciones.Name = "btnQuitarContrataciones";
+            this.btnQuitarContrataciones.Size = new System.Drawing.Size(97, 29);
+            this.btnQuitarContrataciones.TabIndex = 1;
+            this.btnQuitarContrataciones.Text = "Quitar";
+            this.btnQuitarContrataciones.UseVisualStyleBackColor = true;
+            this.btnQuitarContrataciones.Click += new System.EventHandler(this.btnQuitarContrataciones_Click);
+            // 
+            // nudCostoContra
+            // 
+            this.nudCostoContra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudCostoContra.Cursor = System.Windows.Forms.Cursors.Default;
+            this.nudCostoContra.DecimalPlaces = 2;
+            this.nudCostoContra.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudCostoContra.Location = new System.Drawing.Point(132, 333);
+            this.nudCostoContra.Name = "nudCostoContra";
+            this.nudCostoContra.Size = new System.Drawing.Size(187, 27);
+            this.nudCostoContra.TabIndex = 10;
+            this.nudCostoContra.ThousandsSeparator = true;
+            // 
+            // txtDescripcionContratacon
+            // 
+            this.txtDescripcionContratacon.Location = new System.Drawing.Point(132, 268);
+            this.txtDescripcionContratacon.Multiline = true;
+            this.txtDescripcionContratacon.Name = "txtDescripcionContratacon";
+            this.txtDescripcionContratacon.Size = new System.Drawing.Size(467, 54);
+            this.txtDescripcionContratacon.TabIndex = 9;
+            // 
+            // txtNombreContratacion
+            // 
+            this.txtNombreContratacion.Location = new System.Drawing.Point(132, 234);
+            this.txtNombreContratacion.Name = "txtNombreContratacion";
+            this.txtNombreContratacion.Size = new System.Drawing.Size(467, 27);
+            this.txtNombreContratacion.TabIndex = 8;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(62, 337);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 18);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Precio:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(18, 286);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 18);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Descripción:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(48, 238);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 18);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Nombre:";
+            // 
+            // btnAgregarC
+            // 
+            this.btnAgregarC.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarC.Location = new System.Drawing.Point(347, 331);
+            this.btnAgregarC.Name = "btnAgregarC";
+            this.btnAgregarC.Size = new System.Drawing.Size(97, 29);
+            this.btnAgregarC.TabIndex = 4;
+            this.btnAgregarC.Text = "Agregar";
+            this.btnAgregarC.UseVisualStyleBackColor = true;
+            this.btnAgregarC.Click += new System.EventHandler(this.btnAgregarC_Click);
             // 
             // iTalk_GroupBox5
             // 
@@ -642,7 +642,6 @@ namespace Hilton.View
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
-            this.txtDescripcion.Enabled = false;
             this.txtDescripcion.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtDescripcion.Location = new System.Drawing.Point(157, 95);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -772,21 +771,21 @@ namespace Hilton.View
             this.Load += new System.EventHandler(this.FrmEditarEvento_Load);
             this.tabOpciones.ResumeLayout(false);
             this.tabSalones.ResumeLayout(false);
-            this.tabServicios.ResumeLayout(false);
-            this.tabContrataciones.ResumeLayout(false);
-            this.tabContrataciones.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCostoContra)).EndInit();
             this.iTalk_GroupBox3.ResumeLayout(false);
             this.iTalk_GroupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaloneAgregados)).EndInit();
             this.iTalk_GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalonesReservados)).EndInit();
+            this.tabServicios.ResumeLayout(false);
             this.iTalk_GroupBox7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServiciosAgregados)).EndInit();
             this.iTalk_GroupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServicios)).EndInit();
+            this.tabContrataciones.ResumeLayout(false);
+            this.tabContrataciones.PerformLayout();
             this.iTalk_GroupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContratacionesAgregadas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCostoContra)).EndInit();
             this.iTalk_GroupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContrataciones)).EndInit();
             this.iTalk_GroupBox1.ResumeLayout(false);

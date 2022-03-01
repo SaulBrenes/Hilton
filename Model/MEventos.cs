@@ -145,7 +145,7 @@ namespace Hilton.Model
             return dt;
         }
 
-        public static string EditarAsistentesEvento(int idEvento, int Asistentes)
+        public static string EditarAsistentesEvento(int idEvento, string descripcion,int Asistentes)
         {
             string respuesta = "";
             SqlConnection sqlConnection = new SqlConnection();
@@ -162,11 +162,15 @@ namespace Hilton.Model
                 SqlParameter ParIdEvento = new SqlParameter("@idEvento", SqlDbType.Int);
                 ParIdEvento.Value = idEvento;
 
-                SqlParameter ParIdSalon = new SqlParameter("@asistentes", SqlDbType.Int);
-                ParIdSalon.Value = Asistentes;
+                SqlParameter ParAsistencia = new SqlParameter("@asistentes", SqlDbType.Int);
+                ParAsistencia.Value = Asistentes;
+
+                SqlParameter ParDescripcion = new SqlParameter("@Descripcion", SqlDbType.Text);
+                ParDescripcion.Value = descripcion;
 
                 sqlCom.Parameters.Add(ParIdEvento);
-                sqlCom.Parameters.Add(ParIdSalon);
+                sqlCom.Parameters.Add(ParAsistencia);
+                sqlCom.Parameters.Add(ParDescripcion);
 
                 respuesta = sqlCom.ExecuteNonQuery() == 1 ? "OK" : "No se pudo editar asistentes";
 

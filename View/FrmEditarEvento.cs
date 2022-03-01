@@ -205,7 +205,7 @@ namespace Hilton.View
             if (seGuarda)
             {
 
-                respuesta = CEvento.EditarAsistenciaEvento(IdEvento, int.Parse(nudPersonas.Value.ToString()));
+                respuesta = CEvento.EditarAsistenciaEvento(IdEvento, txtDescripcion.Text ,int.Parse(nudPersonas.Value.ToString()));
                 if (respuesta != "OK")
                 {
                     MessageBox.Show("No se pudo editar asistencia del evento, cambios descartados:" + respuesta);

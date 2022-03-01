@@ -63,7 +63,7 @@ namespace Hilton.View
                     imprimir = true;
                     Close();
                 }
-
+                Close();
             }
             else
             {

@@ -23,9 +23,9 @@ namespace Hilton.Controller
             return MEventos.IdServiciosEvento(idEvento);
         }
 
-        public static string EditarAsistenciaEvento(int idEvento, int Asistencia)
+        public static string EditarAsistenciaEvento(int idEvento,  string descripcion, int Asistencia)
         {
-            return MEventos.EditarAsistentesEvento(idEvento, Asistencia);
+            return MEventos.EditarAsistentesEvento(idEvento,  descripcion, Asistencia);
         }
 
 
