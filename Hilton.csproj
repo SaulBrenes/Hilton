@@ -52,7 +52,7 @@
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -134,6 +134,7 @@
     <Compile Include="Reports\FrmReportNoServicio.Designer.cs">
       <DependentUpon>FrmReportNoServicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="View\FormEventos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,7 +152,6 @@
     <Compile Include="Model\MServicios.cs" />
     <Compile Include="Model\MUsuario.cs" />
     <Compile Include="Model\Roles.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="View\FormMantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -420,7 +420,6 @@
   <ItemGroup>
     <Content Include="HIcon.ico" />
     <Content Include="IconoApp.ico" />
-    <None Include="Resources\building-icon_34475.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -434,6 +433,7 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\building-icon_34475.png" />
     <None Include="Resources\Hilton_hOTELS.jpg" />
     <None Include="Resources\icons8-hotel-64.png" />
     <None Include="Resources\icons8-analytics-64.png" />

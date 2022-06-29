@@ -9,6 +9,6 @@ namespace Hilton.Model
     class Conexión
     {
 
-        public static string Cn = "Data Source= DESKTOP-7S2DJ8P; Initial Catalog=Hilton; user=adminHilton; password =2357";
+        public static string Cn = "Data Source= .; Initial Catalog=Hilton; user=sa; password =123456";
     }
 }
