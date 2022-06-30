@@ -66,6 +66,7 @@ namespace Hilton.View
         private void MostrarDatos()
         {
             dgvServicios.DataSource = CServicio.MostrarServicios();
+            dgvServicios.Columns[0].Visible = false;
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)

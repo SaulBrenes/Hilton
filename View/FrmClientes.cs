@@ -65,6 +65,7 @@ namespace Hilton.View
         private void MostrarDatos()
         {
             dgvClientes.DataSource = CCliente.MostrarClientes();
+            dgvClientes.Columns[0].Visible = false;
         }
 
         private void FrmClientes_Load(object sender, EventArgs e)

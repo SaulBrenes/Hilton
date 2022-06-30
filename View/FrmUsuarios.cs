@@ -30,6 +30,8 @@ namespace Hilton.View
         public void mostrarDatos()
         {
             dgvUsuarios.DataSource = CUsuario.MostrarUsuario();
+            dgvUsuarios.Columns[0].Visible = false;
+            dgvUsuarios.Columns[2].Visible = false;
         }
 
         private void Botones()

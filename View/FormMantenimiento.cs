@@ -71,9 +71,11 @@ namespace Hilton.View
         private void MostrarDatos()
         {
             dgvMantenimientos.DataSource = CMantenimiento.MostrarMatenimientos();
+            dgvMantenimientos.Columns[0].Visible = false;
             dgvMantenimientos.Columns[1].Visible = false;
             dgvMantenimientos.Columns[4].Visible = false;
             dgvMantenimientos.Columns[6].Visible = false;
+            dgvMantenimientos.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
         }
 
@@ -86,9 +88,11 @@ namespace Hilton.View
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             dgvMantenimientos.DataSource = CMantenimiento.BuscarMantenimiento(txtBuscar.Text);
+            dgvMantenimientos.Columns[0].Visible = false;
             dgvMantenimientos.Columns[1].Visible = false;
             dgvMantenimientos.Columns[4].Visible = false;
             dgvMantenimientos.Columns[6].Visible = false;
+            dgvMantenimientos.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

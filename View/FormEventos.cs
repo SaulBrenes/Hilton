@@ -71,6 +71,8 @@ namespace Hilton
             dgvEventos.DataSource = dt;
             //añadida el 6/12/2021
             dgvEventos.Columns[0].Visible = false;
+            dgvEventos.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dgvEventos.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             if(dgvEventos.Rows.Count > 0)
             {
                 dgvEventos.Rows[0].Selected = true;

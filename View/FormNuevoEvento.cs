@@ -73,16 +73,16 @@ namespace Hilton.View
             dtReservaciones.Columns.Add("Precio $/h", typeof(float));
             dtReservaciones.Columns.Add("Cap. Máxima", typeof(Int32));
             dgvReservacion.DataSource = dtReservaciones;
+            dgvReservacion.Columns[0].Visible = false;
             ActulizarVistaSalones();
         }
 
         public void ActulizarVistaSalones()
         {
             dgvSalonesOcupados.DataSource = CEvento.HorarioSalonesOcupados(dtpFechaEvento.Value);
-
+            dgvSalonesOcupados.Columns[0].Visible = false;
             dtSalonesDisponibles = CEvento.SalonesDisponibles(dtpFechaEvento.Value,
                 dtpHoraInicio.Value, dtpHoraFin.Value);
-
             if (dtReservaciones != null && dtReservaciones.Rows.Count > 0)
             {
                 dtReservaciones.Rows.Clear();
@@ -99,6 +99,8 @@ namespace Hilton.View
                 lblAviso.Visible = false;
                 btnSeleccionar.Enabled = true;
                 dgvSalonesDisponibles.DataSource = dtSalonesDisponibles;
+                dgvSalonesDisponibles.Columns[0].Visible = false;
+
             }
         }
 

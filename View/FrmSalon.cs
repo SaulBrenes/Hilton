@@ -61,6 +61,7 @@ namespace Hilton.View
         private void FrmSalon_Load(object sender, EventArgs e)
         {
             dgvSalones.DataSource = CSalon.MostrarSalones();
+            dgvSalones.Columns[0].Visible = false;
             Botones();
             txtBuscar.Focus();
         }
@@ -68,6 +69,8 @@ namespace Hilton.View
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             dgvSalones.DataSource = CSalon.BuscarSalon(txtBuscar.Text);
+            dgvSalones.Columns[0].Visible = false;
+
         }
 
         private void btnEstado_Click(object sender, EventArgs e)
@@ -90,6 +93,8 @@ namespace Hilton.View
                     MessageBox.Show(ex.Message + ex.StackTrace);
                 }
                 dgvSalones.DataSource = CSalon.MostrarSalones();
+                dgvSalones.Columns[0].Visible = false;
+
             }
 
             else
@@ -181,6 +186,8 @@ namespace Hilton.View
                
                 dgvSalones.DataSource = CSalon.MostrarSalones();
                 dgvSalones.CurrentCell = null;
+                dgvSalones.Columns[0].Visible = false;
+
 
 
             }

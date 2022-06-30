@@ -67,6 +67,7 @@ namespace Hilton.View
         private void MostrarDatos()
         {
             dgvEmpleados.DataSource = CEmpleado.MostrarEmpleados();
+            dgvEmpleados.Columns[0].Visible = false;
         }
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
