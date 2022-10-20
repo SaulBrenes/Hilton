@@ -46,17 +46,18 @@ namespace Hilton.View
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(6);
             this.txtBuscar.MaximumSize = new System.Drawing.Size(1120, 30);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(624, 25);
+            this.txtBuscar.Size = new System.Drawing.Size(624, 29);
             this.txtBuscar.TabIndex = 24;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(26, 24);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 20);
+            this.label4.Size = new System.Drawing.Size(79, 25);
             this.label4.TabIndex = 23;
             this.label4.Text = "Buscar:";
             // 
@@ -77,6 +78,7 @@ namespace Hilton.View
             this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvEmpleados.RowHeadersVisible = false;
+            this.dgvEmpleados.RowHeadersWidth = 51;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmpleados.Size = new System.Drawing.Size(697, 360);
             this.dgvEmpleados.TabIndex = 20;
@@ -115,8 +117,9 @@ namespace Hilton.View
             // 
             // SeleccionEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(757, 475);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);

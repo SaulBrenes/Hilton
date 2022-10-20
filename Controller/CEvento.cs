@@ -10,9 +10,6 @@ namespace Hilton.Controller
 {
     class CEvento
     {
-
-
-
         public static DataTable ObtenerEventoEditar(int idEvento)
         {
             return MEventos.ObtenerEventoEditar(idEvento);

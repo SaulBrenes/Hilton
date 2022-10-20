@@ -68,13 +68,46 @@ namespace Hilton.View
             dgvEmpresas.DataSource = CEmpresaMantenimiento.MostrarEmpresas();
             dgvEmpresas.Columns[0].Visible = false;
         }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            //this.IsNuevo = false;
+            //this.IsEditar = false;
+            //this.Botones();
+            //this.Limpiar();
+            //this.dgvEmpresas.CurrentCell = null;
+            
+        }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar__TextChanged(object sender, EventArgs e)
         {
             dgvEmpresas.DataSource = CEmpresaMantenimiento.BuscarEmpresa(txtBuscar.Text);
         }
 
-        private void btnEstado_Click(object sender, EventArgs e)
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            if (this.dgvEmpresas.SelectedRows.Count == 1)
+            {
+                this.txtNombre.Text = Convert.ToString(this.dgvEmpresas.CurrentRow.Cells[1].Value);
+                this.mtxtTelefono.Text = (this.dgvEmpresas.CurrentRow.Cells[2].Value.ToString());
+                this.txtDireccion.Text = (this.dgvEmpresas.CurrentRow.Cells[3].Value.ToString());
+                this.IsNuevo = false;
+                this.IsEditar = true;
+                this.Botones();
+                this.txtNombre.Focus();
+
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una Fila antes de Editar", "Sistema HILTON", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnEstado_Click_1(object sender, EventArgs e)
         {
             string rpta;
             if (this.dgvEmpresas.SelectedRows.Count == 1)
@@ -101,17 +134,7 @@ namespace Hilton.View
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.IsNuevo = false;
-            this.IsEditar = false;
-            this.Botones();
-            this.Limpiar();
-            this.dgvEmpresas.CurrentCell = null;
-            
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             this.IsNuevo = true;
             this.IsEditar = false;
@@ -120,26 +143,7 @@ namespace Hilton.View
             this.txtNombre.Focus();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            if (this.dgvEmpresas.SelectedRows.Count == 1)
-            {
-                this.txtNombre.Text = Convert.ToString(this.dgvEmpresas.CurrentRow.Cells[1].Value);
-                this.mtxtTelefono.Text = (this.dgvEmpresas.CurrentRow.Cells[2].Value.ToString());
-                this.txtDireccion.Text =(this.dgvEmpresas.CurrentRow.Cells[3].Value.ToString());
-                this.IsNuevo = false;
-                this.IsEditar = true;
-                this.Botones();
-                this.txtNombre.Focus();
-
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar una Fila antes de Editar", "Sistema HILTON", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -147,7 +151,7 @@ namespace Hilton.View
 
                 if (this.IsNuevo)
                 {
-                    rpta = CEmpresaMantenimiento.AgregarEmpresa(txtNombre.Text,txtDireccion.Text, mtxtTelefono.Text);
+                    rpta = CEmpresaMantenimiento.AgregarEmpresa(txtNombre.Text, txtDireccion.Text, mtxtTelefono.Text);
 
                 }
                 else
@@ -185,6 +189,15 @@ namespace Hilton.View
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.IsNuevo = false;
+            this.IsEditar = false;
+            this.Botones();
+            this.Limpiar();
+            this.dgvEmpresas.CurrentCell = null;
         }
     }
 }

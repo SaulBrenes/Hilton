@@ -88,14 +88,16 @@ namespace Hilton.View
             this.dgvServicios.ReadOnly = true;
             this.dgvServicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvServicios.RowHeadersVisible = false;
+            this.dgvServicios.RowHeadersWidth = 51;
             this.dgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvServicios.Size = new System.Drawing.Size(601, 269);
             this.dgvServicios.TabIndex = 0;
             // 
             // SeleccionarServicios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(661, 386);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSeleccionar);
