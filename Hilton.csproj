@@ -36,6 +36,9 @@
     <ApplicationIcon>HIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\TEST\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 2.0\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -54,10 +57,15 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -274,6 +282,12 @@
     <Compile Include="View\SeleccionEmpleado.Designer.cs">
       <DependentUpon>SeleccionEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TEST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TEST.Designer.cs">
+      <DependentUpon>TEST.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Reports\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\SeleccionEmpleado.resx">
       <DependentUpon>SeleccionEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TEST.resx">
+      <DependentUpon>TEST.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

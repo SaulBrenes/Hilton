@@ -29,13 +29,10 @@ namespace Hilton.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEstado = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.richtxtdescripcion = new System.Windows.Forms.RichTextBox();
@@ -43,6 +40,9 @@ namespace Hilton.View
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEstado = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvServicios = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -84,6 +84,94 @@ namespace Hilton.View
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(513, 191);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(125, 32);
+            this.btnCancelar.TabIndex = 12;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.richtxtdescripcion);
+            this.groupBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(371, 33);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.groupBox2.Size = new System.Drawing.Size(646, 135);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Descripción:";
+            // 
+            // richtxtdescripcion
+            // 
+            this.richtxtdescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richtxtdescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richtxtdescripcion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richtxtdescripcion.Location = new System.Drawing.Point(12, 35);
+            this.richtxtdescripcion.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.richtxtdescripcion.Name = "richtxtdescripcion";
+            this.richtxtdescripcion.Size = new System.Drawing.Size(622, 90);
+            this.richtxtdescripcion.TabIndex = 0;
+            this.richtxtdescripcion.Text = "";
+            // 
+            // nudTarifa
+            // 
+            this.nudTarifa.DecimalPlaces = 2;
+            this.nudTarifa.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudTarifa.Location = new System.Drawing.Point(36, 141);
+            this.nudTarifa.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.nudTarifa.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.nudTarifa.Name = "nudTarifa";
+            this.nudTarifa.Size = new System.Drawing.Size(305, 32);
+            this.nudTarifa.TabIndex = 6;
+            this.nudTarifa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudTarifa.ThousandsSeparator = true;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(30, 65);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(302, 32);
+            this.txtNombre.TabIndex = 5;
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(154, 109);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tarifa:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(136, 33);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nombre:";
+            // 
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,92 +208,6 @@ namespace Hilton.View
             this.btnEstado.UseVisualStyleBackColor = true;
             this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(513, 191);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(125, 32);
-            this.btnCancelar.TabIndex = 12;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.richtxtdescripcion);
-            this.groupBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(371, 33);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(12, 10, 12, 10);
-            this.groupBox2.Size = new System.Drawing.Size(646, 135);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Descripción:";
-            // 
-            // richtxtdescripcion
-            // 
-            this.richtxtdescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richtxtdescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richtxtdescripcion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richtxtdescripcion.Location = new System.Drawing.Point(12, 30);
-            this.richtxtdescripcion.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.richtxtdescripcion.Name = "richtxtdescripcion";
-            this.richtxtdescripcion.Size = new System.Drawing.Size(622, 95);
-            this.richtxtdescripcion.TabIndex = 0;
-            this.richtxtdescripcion.Text = "";
-            // 
-            // nudTarifa
-            // 
-            this.nudTarifa.DecimalPlaces = 2;
-            this.nudTarifa.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudTarifa.Location = new System.Drawing.Point(36, 141);
-            this.nudTarifa.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.nudTarifa.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.nudTarifa.Name = "nudTarifa";
-            this.nudTarifa.Size = new System.Drawing.Size(305, 27);
-            this.nudTarifa.TabIndex = 6;
-            this.nudTarifa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nudTarifa.ThousandsSeparator = true;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(30, 65);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(302, 27);
-            this.txtNombre.TabIndex = 5;
-            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(154, 109);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tarifa:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(136, 33);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre:";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dgvServicios);
@@ -220,8 +222,8 @@ namespace Hilton.View
             this.dgvServicios.AllowUserToAddRows = false;
             this.dgvServicios.AllowUserToDeleteRows = false;
             this.dgvServicios.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
-            this.dgvServicios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lavender;
+            this.dgvServicios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvServicios.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvServicios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -234,8 +236,9 @@ namespace Hilton.View
             this.dgvServicios.ReadOnly = true;
             this.dgvServicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvServicios.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvServicios.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvServicios.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvServicios.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvServicios.Size = new System.Drawing.Size(1021, 256);
             this.dgvServicios.TabIndex = 5;
@@ -247,24 +250,26 @@ namespace Hilton.View
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtBuscar.MaximumSize = new System.Drawing.Size(691, 30);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(528, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(528, 32);
             this.txtBuscar.TabIndex = 3;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(53, 29);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 18);
+            this.label5.Size = new System.Drawing.Size(89, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "Buscar:";
             // 
             // FrmServicios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1184, 621);
             this.ControlBox = false;
             this.Controls.Add(this.txtBuscar);

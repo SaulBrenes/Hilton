@@ -269,6 +269,7 @@ namespace Hilton
 
         private void EventoCancelado()
         {
+            // TODO: ROWS DGV
             DateTime date = Convert.ToDateTime(dgvEventos.CurrentRow.Cells[2].Value.ToString());
             if (DateTime.Compare(DateTime.Now, date)>= 0)
             {

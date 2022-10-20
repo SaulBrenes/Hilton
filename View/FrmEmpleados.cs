@@ -79,17 +79,30 @@ namespace Hilton.View
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            dgvEmpleados.DataSource = CEmpleado.BuscarEmpleado(txtBuscar.Text);
+
         }
 
-        private void btnEstado_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            //this.IsNuevo = false;
+            //this.IsEditar = false;
+            //this.Botones();
+            //this.Limpiar();
+            //this.dgvEmpleados.CurrentCell = null;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEstado_Click_1(object sender, EventArgs e)
         {
             string rpta;
             if (this.dgvEmpleados.SelectedRows.Count == 1)
             {
                 try
                 {
-
                     rpta = CEmpleado.EstadoEmpleado(Convert.ToInt32(this.dgvEmpleados.CurrentRow.Cells[0].Value));
                     if (rpta == "OK")
                         MessageBox.Show("El estado ha sido actualizado", "Sistema Hilton", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,25 +122,12 @@ namespace Hilton.View
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void txtBuscar__TextChanged(object sender, EventArgs e)
         {
-            this.IsNuevo = false;
-            this.IsEditar = false;
-            this.Botones();
-            this.Limpiar();
-            this.dgvEmpleados.CurrentCell = null;
+            dgvEmpleados.DataSource = CEmpleado.BuscarEmpleado(txtBuscar.Text);
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            this.IsNuevo = true;
-            this.IsEditar = false;
-            this.Botones();
-            this.Limpiar();
-            this.txtPNombre.Focus();
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnEditar_Click_1(object sender, EventArgs e)
         {
             if (this.dgvEmpleados.SelectedRows.Count == 1)
             {
@@ -153,7 +153,16 @@ namespace Hilton.View
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnNuevo_Click_1(object sender, EventArgs e)
+        {
+            this.IsNuevo = true;
+            this.IsEditar = false;
+            this.Botones();
+            this.Limpiar();
+            this.txtPNombre.Focus();
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -161,14 +170,14 @@ namespace Hilton.View
 
                 if (this.IsNuevo)
                 {
-                    rpta = CEmpleado.AgregarEmpleado(txtPNombre.Text, txtSNombre.Text, txtPApellido.Text, txtSApellido.Text, mtxtTelefono.Text, mtxtCedula.Text, txtDirección.Text );
+                    rpta = CEmpleado.AgregarEmpleado(txtPNombre.Text, txtSNombre.Text, txtPApellido.Text, txtSApellido.Text, mtxtTelefono.Text, mtxtCedula.Text, txtDirección.Text);
 
                 }
                 else
                 {
                     rpta = CEmpleado.ActualizarEmpleado(Convert.ToInt32(dgvEmpleados.CurrentRow.Cells[0].Value.ToString()),
-                                                        txtPNombre.Text, txtSNombre.Text, 
-                                                        txtPApellido.Text, txtSApellido.Text, 
+                                                        txtPNombre.Text, txtSNombre.Text,
+                                                        txtPApellido.Text, txtSApellido.Text,
                                                         mtxtTelefono.Text, mtxtCedula.Text, txtDirección.Text);
 
                 }
@@ -203,6 +212,11 @@ namespace Hilton.View
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

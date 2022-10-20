@@ -42,17 +42,18 @@ namespace Hilton.View
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 18);
+            this.label1.Size = new System.Drawing.Size(89, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar:";
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(87, 16);
+            this.txtBuscar.Location = new System.Drawing.Point(98, 16);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(572, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(572, 32);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -73,6 +74,7 @@ namespace Hilton.View
             this.dgvSalon.ReadOnly = true;
             this.dgvSalon.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvSalon.RowHeadersVisible = false;
+            this.dgvSalon.RowHeadersWidth = 51;
             this.dgvSalon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSalon.Size = new System.Drawing.Size(647, 180);
             this.dgvSalon.TabIndex = 2;
@@ -81,7 +83,7 @@ namespace Hilton.View
             // 
             this.btnAceptar.Location = new System.Drawing.Point(15, 260);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(98, 32);
+            this.btnAceptar.Size = new System.Drawing.Size(123, 32);
             this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -89,9 +91,9 @@ namespace Hilton.View
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(132, 260);
+            this.btnCancelar.Location = new System.Drawing.Point(154, 260);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(105, 32);
+            this.btnCancelar.Size = new System.Drawing.Size(136, 32);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -99,8 +101,9 @@ namespace Hilton.View
             // 
             // SeleccionarSalon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(671, 304);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);

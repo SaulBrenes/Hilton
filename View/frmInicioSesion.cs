@@ -23,8 +23,27 @@ namespace Hilton.View
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+
+            
+
+        }
+
+        private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Visible = true;
+            txtUsuario.Focus();
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnAceptar_Click_1(object sender, EventArgs e)
+        {
             DataTable dato;
-            dato = CUsuario.Validar_acceso(this.txtUsuario.Text, this.txtContraseña.Text);
+            dato = CUsuario.Validar_acceso(this.txtUsuario.Texts, this.txtContraseña.Texts);
 
             if (dato != null)
             {
@@ -36,7 +55,7 @@ namespace Hilton.View
                         MessageBox.Show("Bienvenido al Sistema", "Sistema Centro de convenciones HILTON", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         string Nombre = dato.Rows[0][1].ToString();
                         string rol = dato.Rows[0][2].ToString();
-                                                                         //Estado del usuario   
+                        //Estado del usuario   
                         FrmPrincipal fp = new FrmPrincipal(Nombre, rol, dato.Rows[0][4].ToString());
                         fp.usuario = txtUsuario.Text;
                         fp.Idusuario = Convert.ToInt32(dato.Rows[0][3].ToString());
@@ -59,42 +78,11 @@ namespace Hilton.View
             }
             else
                 MessageBox.Show("No hay conexión al servidor", "Sistema de Centro de convenciones HILTON", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
-
         }
 
-        private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Visible = true;
-            txtUsuario.Focus();
-
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                btnAceptar_Click(sender, e);
-            }
-        }
-
-        private void btnMirar_Click(object sender, EventArgs e)
-        {
-            if(btnMirar.Text.Equals("O"))
-            {
-                btnMirar.Text = "*";
-                txtContraseña.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                btnMirar.Text = "O";
-                txtContraseña.UseSystemPasswordChar = true;
-            }
+            this.Close();
         }
     }
 }

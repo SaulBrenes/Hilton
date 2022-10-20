@@ -49,28 +49,30 @@ namespace Hilton.View
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(115, 325);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(30, 322);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 18);
+            this.label7.Size = new System.Drawing.Size(90, 25);
             this.label7.TabIndex = 37;
             this.label7.Text = "Cédula:";
             // 
             // mtxtCedula
             // 
             this.mtxtCedula.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCedula.Location = new System.Drawing.Point(199, 320);
+            this.mtxtCedula.Location = new System.Drawing.Point(228, 322);
             this.mtxtCedula.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.mtxtCedula.Mask = "000-000000-0000L";
             this.mtxtCedula.Name = "mtxtCedula";
-            this.mtxtCedula.Size = new System.Drawing.Size(326, 27);
+            this.mtxtCedula.Size = new System.Drawing.Size(326, 32);
             this.mtxtCedula.TabIndex = 36;
             // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(144, 383);
+            this.btnGuardar.Location = new System.Drawing.Point(198, 399);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(125, 32);
@@ -82,7 +84,7 @@ namespace Hilton.View
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(292, 383);
+            this.btnCancelar.Location = new System.Drawing.Point(346, 399);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(125, 32);
@@ -94,109 +96,120 @@ namespace Hilton.View
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(110, 266);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(30, 264);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 18);
+            this.label3.Size = new System.Drawing.Size(105, 25);
             this.label3.TabIndex = 30;
             this.label3.Text = "Teléfono:";
             // 
             // mtxtTelefono
             // 
             this.mtxtTelefono.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTelefono.Location = new System.Drawing.Point(198, 262);
+            this.mtxtTelefono.Location = new System.Drawing.Point(227, 264);
             this.mtxtTelefono.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.mtxtTelefono.Mask = "00000000";
             this.mtxtTelefono.Name = "mtxtTelefono";
-            this.mtxtTelefono.Size = new System.Drawing.Size(326, 27);
+            this.mtxtTelefono.Size = new System.Drawing.Size(326, 32);
             this.mtxtTelefono.TabIndex = 29;
             // 
             // txtPApellido
             // 
             this.txtPApellido.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPApellido.Location = new System.Drawing.Point(198, 146);
+            this.txtPApellido.Location = new System.Drawing.Point(227, 148);
             this.txtPApellido.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPApellido.Name = "txtPApellido";
-            this.txtPApellido.Size = new System.Drawing.Size(326, 27);
+            this.txtPApellido.Size = new System.Drawing.Size(326, 32);
             this.txtPApellido.TabIndex = 25;
             // 
             // txtPNombre
             // 
             this.txtPNombre.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPNombre.Location = new System.Drawing.Point(196, 30);
+            this.txtPNombre.Location = new System.Drawing.Point(225, 32);
             this.txtPNombre.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPNombre.Name = "txtPNombre";
-            this.txtPNombre.Size = new System.Drawing.Size(326, 27);
+            this.txtPNombre.Size = new System.Drawing.Size(326, 32);
             this.txtPNombre.TabIndex = 22;
             // 
             // txtSApellido
             // 
             this.txtSApellido.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSApellido.Location = new System.Drawing.Point(198, 204);
+            this.txtSApellido.Location = new System.Drawing.Point(227, 206);
             this.txtSApellido.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtSApellido.Name = "txtSApellido";
-            this.txtSApellido.Size = new System.Drawing.Size(326, 27);
+            this.txtSApellido.Size = new System.Drawing.Size(326, 32);
             this.txtSApellido.TabIndex = 26;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(30, 207);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 18);
+            this.label5.Size = new System.Drawing.Size(194, 25);
             this.label5.TabIndex = 28;
             this.label5.Text = "Segundo apellido:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(52, 148);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(30, 148);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 18);
+            this.label6.Size = new System.Drawing.Size(173, 25);
             this.label6.TabIndex = 27;
             this.label6.Text = "Primer apellido:";
             // 
             // txtSNombre
             // 
             this.txtSNombre.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSNombre.Location = new System.Drawing.Point(196, 88);
+            this.txtSNombre.Location = new System.Drawing.Point(225, 90);
             this.txtSNombre.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtSNombre.Name = "txtSNombre";
-            this.txtSNombre.Size = new System.Drawing.Size(326, 27);
+            this.txtSNombre.Size = new System.Drawing.Size(326, 32);
             this.txtSNombre.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(30, 89);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 18);
+            this.label2.Size = new System.Drawing.Size(193, 25);
             this.label2.TabIndex = 23;
             this.label2.Text = "Segundo nombre:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 30);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(30, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 18);
+            this.label1.Size = new System.Drawing.Size(172, 25);
             this.label1.TabIndex = 21;
             this.label1.Text = "Primer nombre:";
             // 
             // NuevoCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 428);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(607, 477);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.mtxtCedula);
             this.Controls.Add(this.btnGuardar);

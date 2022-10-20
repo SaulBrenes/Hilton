@@ -30,143 +30,169 @@ namespace Hilton.View
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrar = new System.Windows.Forms.Button();
+            this.txtContraseña = new RJCodeAdvance.RJControls.RJTextBox();
+            this.txtUsuario = new RJCodeAdvance.RJControls.RJTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnMirar = new System.Windows.Forms.Button();
+            this.btnAceptar = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtUsuario.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(42, 83);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(274, 26);
-            this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtContraseña.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(42, 189);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(274, 26);
-            this.txtContraseña.TabIndex = 1;
-            this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtContraseña.UseSystemPasswordChar = true;
-            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnAceptar.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(63, 244);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(108, 42);
-            this.btnAceptar.TabIndex = 2;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(122, 33);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(63, 121);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 23);
+            this.label1.Size = new System.Drawing.Size(108, 27);
             this.label1.TabIndex = 3;
             this.label1.Text = "USUARIO:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(99, 143);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(63, 241);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 23);
+            this.label2.Size = new System.Drawing.Size(153, 27);
             this.label2.TabIndex = 4;
             this.label2.Text = "CONTRASEÑA:";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnMirar);
-            this.panel1.Controls.Add(this.btnCerrar);
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.btnAceptar);
+            this.panel1.Controls.Add(this.txtContraseña);
+            this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtUsuario);
-            this.panel1.Controls.Add(this.txtContraseña);
-            this.panel1.Controls.Add(this.btnAceptar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(418, 8);
+            this.panel1.Location = new System.Drawing.Point(616, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(383, 315);
+            this.panel1.Size = new System.Drawing.Size(394, 572);
             this.panel1.TabIndex = 5;
             // 
-            // btnCerrar
+            // txtContraseña
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Crimson;
-            this.btnCerrar.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCerrar.Location = new System.Drawing.Point(229, 244);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(108, 42);
-            this.btnCerrar.TabIndex = 5;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtContraseña.BackColor = System.Drawing.Color.Black;
+            this.txtContraseña.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(150)))), ((int)(((byte)(12)))));
+            this.txtContraseña.BorderFocusColor = System.Drawing.Color.Pink;
+            this.txtContraseña.BorderRadius = 0;
+            this.txtContraseña.BorderSize = 2;
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.ForeColor = System.Drawing.Color.White;
+            this.txtContraseña.Location = new System.Drawing.Point(55, 285);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContraseña.Multiline = false;
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContraseña.PasswordChar = true;
+            this.txtContraseña.PlaceholderColor = System.Drawing.Color.White;
+            this.txtContraseña.PlaceholderText = "Contraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(292, 35);
+            this.txtContraseña.TabIndex = 28;
+            this.txtContraseña.Texts = "";
+            this.txtContraseña.UnderlinedStyle = true;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtUsuario.BackColor = System.Drawing.Color.Black;
+            this.txtUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(150)))), ((int)(((byte)(12)))));
+            this.txtUsuario.BorderFocusColor = System.Drawing.Color.Pink;
+            this.txtUsuario.BorderRadius = 0;
+            this.txtUsuario.BorderSize = 2;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.White;
+            this.txtUsuario.Location = new System.Drawing.Point(55, 163);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.Multiline = false;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUsuario.PasswordChar = false;
+            this.txtUsuario.PlaceholderColor = System.Drawing.Color.White;
+            this.txtUsuario.PlaceholderText = "Usuario";
+            this.txtUsuario.Size = new System.Drawing.Size(292, 35);
+            this.txtUsuario.TabIndex = 27;
+            this.txtUsuario.Texts = "";
+            this.txtUsuario.UnderlinedStyle = true;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Hilton.Properties.Resources.Hilton_hOTELS;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(11, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(410, 315);
+            this.pictureBox1.Size = new System.Drawing.Size(605, 572);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // btnMirar
+            // btnAceptar
             // 
-            this.btnMirar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMirar.Location = new System.Drawing.Point(322, 189);
-            this.btnMirar.Name = "btnMirar";
-            this.btnMirar.Size = new System.Drawing.Size(38, 26);
-            this.btnMirar.TabIndex = 6;
-            this.btnMirar.Text = "O";
-            this.btnMirar.UseVisualStyleBackColor = true;
-            this.btnMirar.Click += new System.EventHandler(this.btnMirar_Click);
+            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAceptar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(110)))), ((int)(((byte)(20)))));
+            this.btnAceptar.BorderRadius = 10;
+            this.btnAceptar.CheckedState.Parent = this.btnAceptar;
+            this.btnAceptar.CustomImages.Parent = this.btnAceptar;
+            this.btnAceptar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(110)))), ((int)(((byte)(20)))));
+            this.btnAceptar.Font = new System.Drawing.Font("Verdana", 12F);
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.HoverState.Parent = this.btnAceptar;
+            this.btnAceptar.Location = new System.Drawing.Point(46, 352);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.ShadowDecoration.Parent = this.btnAceptar;
+            this.btnAceptar.Size = new System.Drawing.Size(301, 35);
+            this.btnAceptar.TabIndex = 29;
+            this.btnAceptar.Text = "Iniciar sesión";
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(110)))), ((int)(((byte)(20)))));
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(110)))), ((int)(((byte)(100)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Verdana", 12F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(46, 418);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(301, 35);
+            this.guna2Button1.TabIndex = 30;
+            this.guna2Button1.Text = "Cerrar";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // frmInicioSesion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(809, 331);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1021, 592);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmInicioSesion";
-            this.Padding = new System.Windows.Forms.Padding(8);
+            this.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceso al sistema Hilton";
             this.panel1.ResumeLayout(false);
@@ -177,15 +203,13 @@ namespace Hilton.View
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button btnMirar;
+        private RJCodeAdvance.RJControls.RJTextBox txtUsuario;
+        private RJCodeAdvance.RJControls.RJTextBox txtContraseña;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnAceptar;
     }
 }

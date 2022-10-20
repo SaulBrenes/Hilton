@@ -56,7 +56,7 @@ namespace Hilton.View
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(12, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 23);
+            this.label1.Size = new System.Drawing.Size(238, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Rol de la cuenta:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,7 +69,7 @@ namespace Hilton.View
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(12, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.Size = new System.Drawing.Size(125, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Usuario:";
             // 
@@ -79,10 +79,10 @@ namespace Hilton.View
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtUsuario.Location = new System.Drawing.Point(118, 87);
+            this.txtUsuario.Location = new System.Drawing.Point(132, 87);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ReadOnly = true;
-            this.txtUsuario.Size = new System.Drawing.Size(200, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(200, 25);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.TabStop = false;
             // 
@@ -114,9 +114,9 @@ namespace Hilton.View
             this.lblRolCuenta.BackColor = System.Drawing.Color.Transparent;
             this.lblRolCuenta.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRolCuenta.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblRolCuenta.Location = new System.Drawing.Point(211, 23);
+            this.lblRolCuenta.Location = new System.Drawing.Point(256, 23);
             this.lblRolCuenta.Name = "lblRolCuenta";
-            this.lblRolCuenta.Size = new System.Drawing.Size(39, 23);
+            this.lblRolCuenta.Size = new System.Drawing.Size(49, 29);
             this.lblRolCuenta.TabIndex = 9;
             this.lblRolCuenta.Text = "rol";
             this.lblRolCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -183,7 +183,7 @@ namespace Hilton.View
             // 
             this.txtRepeticionC.Location = new System.Drawing.Point(35, 138);
             this.txtRepeticionC.Name = "txtRepeticionC";
-            this.txtRepeticionC.Size = new System.Drawing.Size(255, 27);
+            this.txtRepeticionC.Size = new System.Drawing.Size(255, 32);
             this.txtRepeticionC.TabIndex = 4;
             this.txtRepeticionC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtRepeticionC.UseSystemPasswordChar = true;
@@ -192,7 +192,7 @@ namespace Hilton.View
             // 
             this.txtContrasena.Location = new System.Drawing.Point(35, 54);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(255, 27);
+            this.txtContrasena.Size = new System.Drawing.Size(255, 32);
             this.txtContrasena.TabIndex = 3;
             this.txtContrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContrasena.UseSystemPasswordChar = true;
@@ -205,7 +205,7 @@ namespace Hilton.View
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label4.Location = new System.Drawing.Point(99, 102);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 18);
+            this.label4.Size = new System.Drawing.Size(160, 25);
             this.label4.TabIndex = 8;
             this.label4.Text = "Nuevamente:";
             // 
@@ -217,13 +217,13 @@ namespace Hilton.View
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label3.Location = new System.Drawing.Point(75, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 18);
+            this.label3.Size = new System.Drawing.Size(220, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "Contraseña nueva:";
             // 
             // FrmMiCuenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
