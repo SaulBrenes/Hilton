@@ -29,7 +29,7 @@ namespace Hilton.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEstado = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -64,14 +64,15 @@ namespace Hilton.View
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 31);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Image = global::Hilton.Properties.Resources.busqueda;
+            this.label1.Location = new System.Drawing.Point(48, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 19);
+            this.label1.Size = new System.Drawing.Size(69, 41);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Buscar:";
             // 
             // btnEstado
             // 
@@ -329,9 +330,9 @@ namespace Hilton.View
             // 
             this.dgvMantenimientos.AllowUserToAddRows = false;
             this.dgvMantenimientos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.BlanchedAlmond;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvMantenimientos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.BlanchedAlmond;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvMantenimientos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMantenimientos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMantenimientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -363,7 +364,7 @@ namespace Hilton.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1190, 624);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.iTalk_GroupBox2);
@@ -373,6 +374,7 @@ namespace Hilton.View
             this.Controls.Add(this.iTalk_Panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMantenimiento";
             this.Text = "MANTENIMIENTOS";

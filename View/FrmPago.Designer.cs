@@ -72,6 +72,7 @@ namespace Hilton.View
             // 
             this.lblSubtotalServicio.AutoSize = true;
             this.lblSubtotalServicio.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtotalServicio.ForeColor = System.Drawing.Color.White;
             this.lblSubtotalServicio.Location = new System.Drawing.Point(466, 503);
             this.lblSubtotalServicio.Name = "lblSubtotalServicio";
             this.lblSubtotalServicio.Size = new System.Drawing.Size(99, 18);
@@ -81,6 +82,7 @@ namespace Hilton.View
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(273, 503);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(193, 18);
@@ -90,6 +92,7 @@ namespace Hilton.View
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(320, 541);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 18);
@@ -100,6 +103,7 @@ namespace Hilton.View
             // 
             this.lblTotalEvento.AutoSize = true;
             this.lblTotalEvento.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalEvento.ForeColor = System.Drawing.Color.White;
             this.lblTotalEvento.Location = new System.Drawing.Point(472, 541);
             this.lblTotalEvento.Name = "lblTotalEvento";
             this.lblTotalEvento.Size = new System.Drawing.Size(99, 18);
@@ -110,6 +114,7 @@ namespace Hilton.View
             // 
             this.lblSubtotalSalon.AutoSize = true;
             this.lblSubtotalSalon.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtotalSalon.ForeColor = System.Drawing.Color.White;
             this.lblSubtotalSalon.Location = new System.Drawing.Point(472, 298);
             this.lblSubtotalSalon.Name = "lblSubtotalSalon";
             this.lblSubtotalSalon.Size = new System.Drawing.Size(99, 18);
@@ -119,6 +124,7 @@ namespace Hilton.View
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(251, 298);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(215, 18);
@@ -376,6 +382,7 @@ namespace Hilton.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(985, 574);
             this.Controls.Add(this.iTalk_GroupBox4);
             this.Controls.Add(this.lblSubtotalSalon);

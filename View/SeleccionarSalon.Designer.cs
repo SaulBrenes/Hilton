@@ -42,6 +42,7 @@ namespace Hilton.View
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 18);
@@ -101,6 +102,7 @@ namespace Hilton.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(671, 304);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);

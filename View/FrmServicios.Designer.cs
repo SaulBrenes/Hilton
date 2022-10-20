@@ -33,9 +33,6 @@ namespace Hilton.View
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEstado = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.richtxtdescripcion = new System.Windows.Forms.RichTextBox();
@@ -43,6 +40,9 @@ namespace Hilton.View
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEstado = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvServicios = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -63,6 +63,7 @@ namespace Hilton.View
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(75, 357);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(83, 69, 83, 69);
             this.groupBox1.Name = "groupBox1";
@@ -75,6 +76,7 @@ namespace Hilton.View
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Location = new System.Drawing.Point(371, 191);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnGuardar.Name = "btnGuardar";
@@ -84,45 +86,10 @@ namespace Hilton.View
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(696, 22);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(125, 32);
-            this.btnNuevo.TabIndex = 9;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(833, 22);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(125, 32);
-            this.btnEditar.TabIndex = 10;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnEstado
-            // 
-            this.btnEstado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstado.Location = new System.Drawing.Point(970, 22);
-            this.btnEstado.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnEstado.Name = "btnEstado";
-            this.btnEstado.Size = new System.Drawing.Size(125, 32);
-            this.btnEstado.TabIndex = 11;
-            this.btnEstado.Text = "Estado";
-            this.btnEstado.UseVisualStyleBackColor = true;
-            this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Location = new System.Drawing.Point(513, 191);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnCancelar.Name = "btnCancelar";
@@ -136,6 +103,7 @@ namespace Hilton.View
             // 
             this.groupBox2.Controls.Add(this.richtxtdescripcion);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(371, 33);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox2.Name = "groupBox2";
@@ -188,6 +156,7 @@ namespace Hilton.View
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(154, 109);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
@@ -199,12 +168,49 @@ namespace Hilton.View
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(136, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre:";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Location = new System.Drawing.Point(696, 22);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(125, 32);
+            this.btnNuevo.TabIndex = 9;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(833, 22);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(125, 32);
+            this.btnEditar.TabIndex = 10;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEstado
+            // 
+            this.btnEstado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstado.Location = new System.Drawing.Point(970, 22);
+            this.btnEstado.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnEstado.Name = "btnEstado";
+            this.btnEstado.Size = new System.Drawing.Size(125, 32);
+            this.btnEstado.TabIndex = 11;
+            this.btnEstado.Text = "Estado";
+            this.btnEstado.UseVisualStyleBackColor = true;
+            this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
             // 
             // panel1
             // 
@@ -254,6 +260,7 @@ namespace Hilton.View
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(53, 29);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
@@ -265,6 +272,7 @@ namespace Hilton.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1184, 621);
             this.ControlBox = false;
             this.Controls.Add(this.txtBuscar);

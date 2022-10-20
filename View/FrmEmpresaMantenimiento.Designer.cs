@@ -29,10 +29,9 @@ namespace Hilton.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgvEmpresas = new System.Windows.Forms.DataGridView();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.gboxCampos = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.mtxtTelefono = new System.Windows.Forms.MaskedTextBox();
@@ -42,19 +41,21 @@ namespace Hilton.View
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dgvEmpresas = new System.Windows.Forms.DataGridView();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEstado = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnEstado = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.gboxCampos.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresas)).BeginInit();
-            this.gboxCampos.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.btnNuevo);
             this.panel1.Controls.Add(this.gboxCampos);
             this.panel1.Controls.Add(this.groupBox3);
@@ -69,39 +70,17 @@ namespace Hilton.View
             this.panel1.Size = new System.Drawing.Size(1184, 621);
             this.panel1.TabIndex = 7;
             // 
-            // groupBox3
+            // btnNuevo
             // 
-            this.groupBox3.Controls.Add(this.dgvEmpresas);
-            this.groupBox3.Location = new System.Drawing.Point(36, 70);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(13, 11, 13, 11);
-            this.groupBox3.Size = new System.Drawing.Size(1101, 310);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            // 
-            // dgvEmpresas
-            // 
-            this.dgvEmpresas.AllowUserToAddRows = false;
-            this.dgvEmpresas.AllowUserToDeleteRows = false;
-            this.dgvEmpresas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lavender;
-            this.dgvEmpresas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEmpresas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEmpresas.BackgroundColor = System.Drawing.Color.White;
-            this.dgvEmpresas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpresas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEmpresas.Location = new System.Drawing.Point(13, 31);
-            this.dgvEmpresas.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.dgvEmpresas.MultiSelect = false;
-            this.dgvEmpresas.Name = "dgvEmpresas";
-            this.dgvEmpresas.ReadOnly = true;
-            this.dgvEmpresas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvEmpresas.RowHeadersVisible = false;
-            this.dgvEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpresas.Size = new System.Drawing.Size(1075, 268);
-            this.dgvEmpresas.TabIndex = 8;
+            this.btnNuevo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Location = new System.Drawing.Point(695, 24);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(125, 32);
+            this.btnNuevo.TabIndex = 14;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // gboxCampos
             // 
@@ -114,6 +93,7 @@ namespace Hilton.View
             this.gboxCampos.Controls.Add(this.txtNombre);
             this.gboxCampos.Controls.Add(this.label2);
             this.gboxCampos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gboxCampos.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.gboxCampos.Location = new System.Drawing.Point(36, 387);
             this.gboxCampos.Margin = new System.Windows.Forms.Padding(83, 69, 83, 69);
             this.gboxCampos.Name = "gboxCampos";
@@ -162,6 +142,7 @@ namespace Hilton.View
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(656, 36);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
@@ -183,6 +164,7 @@ namespace Hilton.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(29, 121);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
@@ -203,6 +185,7 @@ namespace Hilton.View
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(41, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
@@ -210,17 +193,39 @@ namespace Hilton.View
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre:";
             // 
-            // btnNuevo
+            // groupBox3
             // 
-            this.btnNuevo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(695, 24);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(125, 32);
-            this.btnNuevo.TabIndex = 14;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.groupBox3.Controls.Add(this.dgvEmpresas);
+            this.groupBox3.Location = new System.Drawing.Point(36, 70);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(13, 11, 13, 11);
+            this.groupBox3.Size = new System.Drawing.Size(1101, 310);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            // 
+            // dgvEmpresas
+            // 
+            this.dgvEmpresas.AllowUserToAddRows = false;
+            this.dgvEmpresas.AllowUserToDeleteRows = false;
+            this.dgvEmpresas.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.dgvEmpresas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEmpresas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmpresas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEmpresas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpresas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEmpresas.Location = new System.Drawing.Point(13, 31);
+            this.dgvEmpresas.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.dgvEmpresas.MultiSelect = false;
+            this.dgvEmpresas.Name = "dgvEmpresas";
+            this.dgvEmpresas.ReadOnly = true;
+            this.dgvEmpresas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvEmpresas.RowHeadersVisible = false;
+            this.dgvEmpresas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmpresas.Size = new System.Drawing.Size(1075, 268);
+            this.dgvEmpresas.TabIndex = 8;
             // 
             // btnEditar
             // 
@@ -234,6 +239,17 @@ namespace Hilton.View
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(96, 24);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtBuscar.MaximumSize = new System.Drawing.Size(691, 30);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(564, 27);
+            this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
             // btnEstado
             // 
             this.btnEstado.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,20 +262,10 @@ namespace Hilton.View
             this.btnEstado.UseVisualStyleBackColor = true;
             this.btnEstado.Click += new System.EventHandler(this.btnEstado_Click);
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(96, 24);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtBuscar.MaximumSize = new System.Drawing.Size(691, 30);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(564, 27);
-            this.txtBuscar.TabIndex = 3;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(15, 28);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
@@ -283,10 +289,10 @@ namespace Hilton.View
             this.Load += new System.EventHandler(this.FrmEmpresaMantenimiento_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresas)).EndInit();
             this.gboxCampos.ResumeLayout(false);
             this.gboxCampos.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpresas)).EndInit();
             this.ResumeLayout(false);
 
         }

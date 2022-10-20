@@ -73,6 +73,7 @@ namespace Hilton.View
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.flowLayoutPanel1.Controls.Add(this.iTalk_Panel1);
             this.flowLayoutPanel1.Controls.Add(this.iTalk_Panel2);
             this.flowLayoutPanel1.Controls.Add(this.iTalk_Panel3);
@@ -87,7 +88,7 @@ namespace Hilton.View
             // 
             // iTalk_Panel1
             // 
-            this.iTalk_Panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.iTalk_Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iTalk_Panel1.Controls.Add(this.btnRM);
             this.iTalk_Panel1.Controls.Add(this.dtpRM);
             this.iTalk_Panel1.Controls.Add(this.textBox1);
@@ -151,7 +152,7 @@ namespace Hilton.View
             // 
             // iTalk_Panel2
             // 
-            this.iTalk_Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iTalk_Panel2.Controls.Add(this.btnRS);
             this.iTalk_Panel2.Controls.Add(this.dtpRS);
             this.iTalk_Panel2.Controls.Add(this.textBox2);
@@ -216,7 +217,7 @@ namespace Hilton.View
             // 
             // iTalk_Panel3
             // 
-            this.iTalk_Panel3.BackColor = System.Drawing.Color.SeaShell;
+            this.iTalk_Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iTalk_Panel3.Controls.Add(this.btnCM);
             this.iTalk_Panel3.Controls.Add(this.dtpCM);
             this.iTalk_Panel3.Controls.Add(this.textBox3);
@@ -281,7 +282,7 @@ namespace Hilton.View
             // 
             // iTalk_Panel4
             // 
-            this.iTalk_Panel4.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iTalk_Panel4.Controls.Add(this.btnMS);
             this.iTalk_Panel4.Controls.Add(this.dtpMS);
             this.iTalk_Panel4.Controls.Add(this.textBox4);
@@ -344,7 +345,7 @@ namespace Hilton.View
             // 
             // iTalk_Panel5
             // 
-            this.iTalk_Panel5.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iTalk_Panel5.Controls.Add(this.btnCE);
             this.iTalk_Panel5.Controls.Add(this.dtpCE);
             this.iTalk_Panel5.Controls.Add(this.textBox5);
@@ -408,7 +409,7 @@ namespace Hilton.View
             // 
             // iTalk_Panel6
             // 
-            this.iTalk_Panel6.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.iTalk_Panel6.Controls.Add(this.btnCS);
             this.iTalk_Panel6.Controls.Add(this.dtpCS);
             this.iTalk_Panel6.Controls.Add(this.textBox6);

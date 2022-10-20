@@ -69,6 +69,7 @@ namespace Hilton.View
             this.gbCampos.Controls.Add(this.label2);
             this.gbCampos.Controls.Add(this.label1);
             this.gbCampos.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbCampos.ForeColor = System.Drawing.Color.White;
             this.gbCampos.Location = new System.Drawing.Point(73, 327);
             this.gbCampos.Name = "gbCampos";
             this.gbCampos.Size = new System.Drawing.Size(1040, 206);
@@ -152,6 +153,7 @@ namespace Hilton.View
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(297, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 40);
@@ -162,6 +164,7 @@ namespace Hilton.View
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(27, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 39);
@@ -173,6 +176,7 @@ namespace Hilton.View
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(388, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 18);
@@ -183,6 +187,7 @@ namespace Hilton.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(72, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 18);
@@ -202,6 +207,7 @@ namespace Hilton.View
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(44, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 18);
@@ -223,7 +229,7 @@ namespace Hilton.View
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvSalones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -289,7 +295,7 @@ namespace Hilton.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1184, 621);
             this.Controls.Add(this.btnEstado);
             this.Controls.Add(this.txtBuscar);

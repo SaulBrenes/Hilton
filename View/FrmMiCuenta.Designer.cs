@@ -53,8 +53,8 @@ namespace Hilton.View
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(12, 23);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(59, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 23);
             this.label1.TabIndex = 0;
@@ -66,8 +66,8 @@ namespace Hilton.View
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(12, 84);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(107, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 1;
@@ -79,7 +79,7 @@ namespace Hilton.View
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtUsuario.Location = new System.Drawing.Point(118, 87);
+            this.txtUsuario.Location = new System.Drawing.Point(63, 141);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ReadOnly = true;
             this.txtUsuario.Size = new System.Drawing.Size(200, 20);
@@ -89,7 +89,7 @@ namespace Hilton.View
             // btnContrasena
             // 
             this.btnContrasena.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContrasena.Location = new System.Drawing.Point(77, 139);
+            this.btnContrasena.Location = new System.Drawing.Point(63, 175);
             this.btnContrasena.Name = "btnContrasena";
             this.btnContrasena.Size = new System.Drawing.Size(201, 46);
             this.btnContrasena.TabIndex = 1;
@@ -100,7 +100,7 @@ namespace Hilton.View
             // btnCerrar
             // 
             this.btnCerrar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(73, 213);
+            this.btnCerrar.Location = new System.Drawing.Point(62, 235);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(201, 35);
             this.btnCerrar.TabIndex = 2;
@@ -113,8 +113,8 @@ namespace Hilton.View
             this.lblRolCuenta.AutoSize = true;
             this.lblRolCuenta.BackColor = System.Drawing.Color.Transparent;
             this.lblRolCuenta.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRolCuenta.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblRolCuenta.Location = new System.Drawing.Point(211, 23);
+            this.lblRolCuenta.ForeColor = System.Drawing.Color.Goldenrod;
+            this.lblRolCuenta.Location = new System.Drawing.Point(137, 67);
             this.lblRolCuenta.Name = "lblRolCuenta";
             this.lblRolCuenta.Size = new System.Drawing.Size(39, 23);
             this.lblRolCuenta.TabIndex = 9;
@@ -202,7 +202,7 @@ namespace Hilton.View
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.ForeColor = System.Drawing.Color.Goldenrod;
             this.label4.Location = new System.Drawing.Point(99, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 18);
@@ -214,7 +214,7 @@ namespace Hilton.View
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.ForeColor = System.Drawing.Color.Goldenrod;
             this.label3.Location = new System.Drawing.Point(75, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(175, 18);
@@ -226,7 +226,7 @@ namespace Hilton.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(344, 491);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblRolCuenta);
